@@ -1,0 +1,51 @@
+{
+  "workspaces": [
+    {
+      "name": "General Assistant",
+      "slug": "general-assistant",
+      "description": "Gemini-powered general chat — no RAG. Demonstrates LiteLLM gateway.",
+      "llm_model": "gemini-pro",
+      "chat_mode": "chat",
+      "access": "all_users"
+    },
+    {
+      "name": "Company Knowledge",
+      "slug": "company-knowledge",
+      "description": "RAG over HR and policy documents with in-chat citations.",
+      "llm_model": "gemini-pro",
+      "chat_mode": "chat",
+      "access": "all_users",
+      "documents": [
+        "demo/documents/employee-handbook.md",
+        "demo/documents/security-policy.md",
+        "demo/documents/leave-policy.md"
+      ]
+    },
+    {
+      "name": "Agent Workspace",
+      "slug": "agent-workspace",
+      "description": "AnythingLLM agent with tool calling — admin/manager only.",
+      "llm_model": "gemini-pro",
+      "chat_mode": "chat",
+      "agent_enabled": true,
+      "access": ["admin", "manager-demo"]
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "role": "admin",
+      "note": "Created during first-time AnythingLLM setup"
+    },
+    {
+      "username": "manager-demo",
+      "role": "manager",
+      "password_hint": "Set via admin invite — suggest demo-manager-2024"
+    },
+    {
+      "username": "employee-demo",
+      "role": "default",
+      "password_hint": "Set via admin invite — suggest demo-employee-2024"
+    }
+  ]
+}

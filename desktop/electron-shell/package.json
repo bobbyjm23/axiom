@@ -1,0 +1,57 @@
+{
+  "name": "sovereign-ai-desktop",
+  "version": "0.1.0",
+  "description": "Sovereign AI — AnythingLLM desktop client (remote backend)",
+  "main": "main.js",
+  "author": "Sovereign AI Platform",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:frontend": "cd ../anything-llm/frontend && yarn build",
+    "copy:frontend": "rm -rf ../frontend-dist && cp -r ../anything-llm/frontend/dist ../frontend-dist",
+    "prepare:dist": "yarn build:frontend && yarn copy:frontend",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.sovereign.ai.desktop",
+    "productName": "Sovereign AI",
+    "directories": {
+      "output": "../dist",
+      "buildResources": "../assets"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "../config.json",
+      "../frontend-dist/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../config.json",
+        "to": "sovereign-config.json"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": ["dmg", "zip"],
+      "icon": "../assets/icon.icns"
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "../assets/icon.ico"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Office"
+    },
+    "publish": null
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}

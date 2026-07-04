@@ -1,0 +1,58 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-egress-app
+  namespace: sovereign-app
+spec:
+  podSelector: {}
+  policyTypes:
+    - Egress
+  egress:
+    # Allow DNS
+    - to:
+        - namespaceSelector: {}
+      ports:
+        - protocol: UDP
+          port: 53
+    # Allow LiteLLM → GPU namespace
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              sovereign.ai/tier: gpu
+    # Allow AnythingLLM → Data namespace
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              sovereign.ai/tier: data
+    # Allow internal app communication
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              sovereign.ai/tier: application
+    # Allow edge → app (ingress handled separately)
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              sovereign.ai/tier: edge
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: gpu-only-from-app
+  namespace: sovereign-gpu
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              sovereign.ai/tier: application
+  egress:
+    - to:
+        - namespaceSelector: {}
+      ports:
+        - protocol: UDP
+          port: 53

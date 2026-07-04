@@ -1,0 +1,26 @@
+.env
+.env.local
+.env.*.local
+!.env.poc.example
+!.env.onprem.example
+
+# Desktop fork (cloned upstream — gitignored)
+desktop/anything-llm/
+desktop/frontend-dist/
+desktop/dist/
+desktop/electron-shell/node_modules/
+
+# TLS certs (generate locally)
+platform/nginx/certs/
+*.pem
+*.key
+
+# Docker volumes
+data/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
+node_modules/

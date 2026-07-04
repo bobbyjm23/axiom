@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anythingllm
+  namespace: sovereign-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: anythingllm
+  template:
+    metadata:
+      labels:
+        app: anythingllm
+    spec:
+      containers:
+        - name: anythingllm
+          image: mintplexlabs/anythingllm:1.8.5
+          ports:
+            - containerPort: 3001
+          env:
+            - name: SERVER_PORT
+              value: "3001"
+            - name: STORAGE_DIR
+              value: /app/server/storage
+            - name: DISABLE_TELEMETRY
+              value: "true"
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sovereign-secrets
+                  key: JWT_SECRET
+            - name: LLM_PROVIDER
+              value: generic-openai
+            - name: GENERIC_OPEN_AI_BASE_PATH
+              value: http://litellm.sovereign-app.svc.cluster.local:4000/v1
+            - name: GENERIC_OPEN_AI_MODEL_PREF
+              value: llama3-enterprise
+            - name: GENERIC_OPEN_AI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sovereign-secrets
+                  key: LITELLM_MASTER_KEY
+            - name: VECTOR_DB
+              value: qdrant
+            - name: QDRANT_ENDPOINT
+              value: http://qdrant.sovereign-data.svc.cluster.local:6333
+            - name: EMBEDDING_ENGINE
+              value: ollama
+            - name: EMBEDDING_BASE_PATH
+              value: http://ollama.sovereign-gpu.svc.cluster.local:11434
+            - name: EMBEDDING_MODEL_PREF
+              value: nomic-embed-text
+          volumeMounts:
+            - name: storage
+              mountPath: /app/server/storage
+          securityContext:
+            capabilities:
+              add: [SYS_ADMIN]
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: anythingllm-pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: anythingllm-pvc
+  namespace: sovereign-app
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 100Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anythingllm
+  namespace: sovereign-app
+spec:
+  selector:
+    app: anythingllm
+  ports:
+    - port: 3001

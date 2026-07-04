@@ -1,0 +1,123 @@
+# On-prem overlay — merge with base compose:
+# docker compose -f docker-compose.yml -f docker-compose.onprem.yml --env-file .env.onprem up -d
+
+services:
+  litellm:
+    volumes:
+      - ./platform/litellm/config.onprem.yaml:/app/config.yaml:ro
+    environment:
+      GEMINI_API_KEY: ""
+
+  anythingllm:
+    environment:
+      GENERIC_OPEN_AI_BASE_PATH: http://vllm:8000/v1
+      GENERIC_OPEN_AI_MODEL_PREF: llama3-enterprise
+      GENERIC_OPEN_AI_API_KEY: none
+      EMBEDDING_ENGINE: ollama
+      EMBEDDING_BASE_PATH: http://ollama:11434
+      EMBEDDING_MODEL_PREF: nomic-embed-text
+      QDRANT_ENDPOINT: http://qdrant:6333
+      QDRANT_API_KEY: ""
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.5
+    container_name: sovereign-qdrant
+    restart: unless-stopped
+    volumes:
+      - qdrant_data:/qdrant/storage
+    ports:
+      - "6333:6333"
+    networks:
+      - sovereign-net
+
+  minio:
+    image: minio/minio:latest
+    container_name: sovereign-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      - sovereign-net
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: sovereign-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - sovereign-net
+    # Uncomment for GPU passthrough (requires nvidia-container-toolkit):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: sovereign-vllm
+    restart: unless-stopped
+    profiles:
+      - gpu
+    command: >
+      --model ${VLLM_MODEL:-meta-llama/Llama-3.3-70B-Instruct}
+      --host 0.0.0.0
+      --port 8000
+      --gpu-memory-utilization ${VLLM_GPU_MEMORY_UTILIZATION:-0.90}
+      --max-model-len ${VLLM_MAX_MODEL_LEN:-8192}
+    volumes:
+      - vllm_cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    networks:
+      - sovereign-net
+    # Requires NVIDIA GPU:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
+    container_name: sovereign-oauth2-proxy
+    restart: unless-stopped
+    profiles:
+      - sso
+    command:
+      - --http-address=0.0.0.0:4180
+      - --upstream=http://anythingllm:3001
+      - --email-domain=*
+      - --cookie-secure=false
+      - --provider=oidc
+      - --client-id=${OAUTH2_PROXY_CLIENT_ID}
+      - --client-secret=${OAUTH2_PROXY_CLIENT_SECRET}
+      - --cookie-secret=${OAUTH2_PROXY_COOKIE_SECRET}
+      - --oidc-issuer-url=${OAUTH2_PROXY_ISSUER_URL}
+      - --redirect-url=${PLATFORM_URL}/oauth2/callback
+    ports:
+      - "4180:4180"
+    depends_on:
+      - anythingllm
+    networks:
+      - sovereign-net
+
+volumes:
+  qdrant_data:
+  minio_data:
+  ollama_data:
+  vllm_cache:
