@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sovereign Warden — Angel investor pitch deck">
+  <title>Sovereign Warden — Investor Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #0a0f14;
+      --bg-slide: #0f1620;
+      --bg-card: #151f2e;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e8edf4;
+      --text-muted: #8b9cb3;
+      --accent: #2dd4bf;
+      --accent-dim: rgba(45, 212, 191, 0.15);
+      --accent-warm: #f59e0b;
+      --danger: #f87171;
+      --success: #4ade80;
+      --font-sans: "DM Sans", system-ui, sans-serif;
+      --font-serif: "Instrument Serif", Georgia, serif;
+      --slide-padding: clamp(2rem, 5vw, 4.5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg-deep);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Deck shell ── */
+    .deck {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--slide-padding);
+      padding-bottom: calc(var(--slide-padding) + 3rem);
+      background: var(--bg-slide);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(24px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      z-index: 1;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%;
+      height: 100%;
+      background: radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* ── Typography ── */
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 22ch;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .lead {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: var(--text-muted);
+      max-width: 42rem;
+      margin-top: 1.25rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    p { color: var(--text-muted); max-width: 40rem; }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    /* ── Layout helpers ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      max-width: 56rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 56rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 56rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+    }
+
+    .card-accent {
+      border-color: rgba(45, 212, 191, 0.25);
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(45, 212, 191, 0.05) 100%);
+    }
+
+    .stat {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    ul.clean {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      max-width: 56rem;
+      border-collapse: collapse;
+      margin-top: 1.25rem;
+      font-size: 0.88rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    td { color: var(--text); }
+    tr:last-child td { border-bottom: none; }
+
+    .highlight-row td {
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ── Architecture diagram ── */
+    .arch-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 28rem;
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      font-family: ui-monospace, monospace;
+    }
+
+    .arch-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      color: var(--text-muted);
+    }
+
+    .arch-box strong { color: var(--text); font-family: var(--font-sans); }
+    .arch-arrow { text-align: center; color: var(--accent); font-size: 0.75rem; }
+
+    /* ── Quote ── */
+    blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-top: 1.5rem;
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      color: var(--text);
+      max-width: 32rem;
+    }
+
+    /* ── Bar chart (CSS) ── */
+    .bar-chart { margin-top: 1.5rem; max-width: 36rem; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 7rem 1fr 4rem;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.82rem;
+    }
+
+    .bar-track {
+      height: 8px;
+      background: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #14b8a6);
+      border-radius: 4px;
+    }
+
+    .bar-fill.muted { background: rgba(139, 156, 179, 0.4); }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: flex;
+      gap: 0;
+      margin-top: 1.5rem;
+      max-width: 56rem;
+    }
+
+    .timeline-item {
+      flex: 1;
+      padding: 1rem;
+      border-top: 2px solid var(--border);
+      position: relative;
+    }
+
+    .timeline-item.active { border-color: var(--accent); }
+    .timeline-item .phase {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item h3 { font-size: 0.9rem; }
+    .timeline-item p { font-size: 0.78rem; margin-top: 0.35rem; }
+
+    /* ── Team placeholder ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 48rem;
+    }
+
+    .team-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      margin: 0 auto 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .team-card .role {
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+
+    /* ── Ask slide ── */
+    .ask-box {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .ask-amount {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 8vw, 5rem);
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .ask-detail {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .tag.warn {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-warm);
+    }
+
+    /* ── Navigation ── */
+    .nav-hint {
+      position: fixed;
+      bottom: 1.25rem;
+      left: var(--slide-padding);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      z-index: 100;
+      opacity: 0.6;
+    }
+
+    .progress {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      transition: width 0.35s ease;
+      z-index: 100;
+    }
+
+    .slide-counter {
+      position: fixed;
+      bottom: 1.25rem;
+      right: var(--slide-padding);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      z-index: 100;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .logo-mark {
+      position: fixed;
+      top: 1.5rem;
+      right: var(--slide-padding);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      z-index: 100;
+    }
+
+    .nav-buttons {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    /* ── Title slide special ── */
+    .slide-title {
+      justify-content: flex-end;
+      padding-bottom: calc(var(--slide-padding) + 2rem);
+    }
+
+    .slide-title h1 { max-width: 16ch; }
+
+    .confidential {
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Print / PDF ── */
+    @media print {
+      html, body { overflow: visible; height: auto; }
+      .deck { height: auto; }
+      .slide {
+        position: relative;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+      .nav-hint, .nav-buttons, .progress, .slide-counter, .logo-mark { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: Title -->
+  <section class="slide slide-title active" data-slide="1">
+    <p class="eyebrow">Pre-Seed · Angel Round · July 2026</p>
+    <h1>Sovereign Warden — private AI for organisations that <em>can't</em> use ChatGPT</h1>
+    <p class="lead">Productised private AI for Australian mid-market firms — ChatGPT-class UX, fixed pricing, full data control.</p>
+    <p class="confidential">Confidential — for accredited investor discussion only</p>
+  </section>
+
+  <!-- SLIDE 2: Problem -->
+  <section class="slide" data-slide="2">
+    <p class="eyebrow">The Problem</p>
+    <h2>Employees want AI. Compliance says no.</h2>
+    <div class="grid-2">
+      <div>
+        <ul class="clean">
+          <li><strong>Shadow AI is everywhere</strong> — staff paste client data into ChatGPT daily</li>
+          <li><strong>Public SaaS fails compliance</strong> — prompts leave Australia; Privacy Act risk</li>
+          <li><strong>Copilot isn't sovereign</strong> — ~$45/user/month, US infrastructure, M365 lock-in</li>
+          <li><strong>Custom builds take 6–12 months</strong> — $120k–600k before anyone logs in</li>
+        </ul>
+      </div>
+      <div class="card card-accent">
+        <p class="eyebrow" style="margin-bottom:0.5rem">Who feels this first</p>
+        <h3>Mid-market professional firms</h3>
+        <p style="margin-top:0.5rem;font-size:0.9rem">Law, accounting, wealth, health — 50–250 staff. Enough confidential data to care. Small enough to decide in weeks, not quarters.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <span class="stat" style="font-size:1.75rem">46%</span>
+          <p class="stat-label">of AU businesses report AI innovation activity (ABS 2024–25)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: Solution -->
+  <section class="slide" data-slide="3">
+    <p class="eyebrow">The Solution</p>
+    <h2>Approved AI your firm controls — live in days, not months</h2>
+    <p class="lead">Sovereign Warden Platform: a deployable stack with ChatGPT-quality desktop UX, document Q&amp;A with citations, and a clear path to on-premises or air-gap.</p>
+    <blockquote>"We're not renting intelligence — we're building infrastructure we own."</blockquote>
+    <div class="grid-3" style="margin-top:1.75rem">
+      <div class="card">
+        <h3>Familiar UX</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">AnythingLLM desktop app — employees don't need training</p>
+      </div>
+      <div class="card">
+        <h3>Document RAG</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">Query handbooks, policies, precedents — with source citations</p>
+      </div>
+      <div class="card">
+        <h3>Sovereignty path</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">POC today → on-prem GPUs tomorrow. Zero code changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: Why Now -->
+  <section class="slide" data-slide="4">
+    <p class="eyebrow">Why Now</p>
+    <h2>Three forces creating urgent demand in Australia</h2>
+    <div class="grid-3">
+      <div class="card">
+        <p class="eyebrow">Regulation</p>
+        <h3>Privacy Act reforms</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Stronger APP obligations and penalties. Boards asking where AI data goes.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">Economics</p>
+        <h3>Copilot cost backlash</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">50 users = $27k/yr. 500 users = $270k/yr. Recurring forever, data still offshore.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">Market proof</p>
+        <h3>Sovereign AI is real</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Cetus, Premya, Macquarie Launch AI — validated demand. Gap: fast, transparent, employee-ready.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.88rem"><strong>Open-source maturity:</strong> Llama 3.3, Mistral, Qwen at production quality — sovereign inference without frontier API dependency.</p>
+  </section>
+
+  <!-- SLIDE 5: Product -->
+  <section class="slide" data-slide="5">
+    <p class="eyebrow">Product</p>
+    <h2>How it works</h2>
+    <div class="grid-2">
+      <div class="arch-flow">
+        <div class="arch-box"><strong>Employees</strong> — Sovereign Warden Desktop (Electron)</div>
+        <div class="arch-arrow">↓ HTTPS</div>
+        <div class="arch-box"><strong>Edge</strong> — Nginx (TLS, streaming)</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-box"><strong>App</strong> — AnythingLLM (RAG, RBAC, agents)</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-box"><strong>Gateway</strong> — LiteLLM (routing, audit logs)</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-box"><strong>Inference</strong> — Gemini (POC) → vLLM (on-prem)</div>
+      </div>
+      <div>
+        <h3>Data sovereignty progression</h3>
+        <table>
+          <thead>
+            <tr><th>Data</th><th>POC</th><th>On-prem</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Documents</td><td>Your Qdrant</td><td>Local MinIO</td></tr>
+            <tr><td>Embeddings</td><td>Your tenant</td><td>Local Qdrant</td></tr>
+            <tr><td>Chat history</td><td>Your PostgreSQL</td><td>Local PostgreSQL</td></tr>
+            <tr><td>LLM prompts</td><td>Gemini API*</td><td>Never leaves rack</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.75rem;margin-top:0.5rem">*Documents are not sent to Google — only retrieved context chunks.</p>
+        <div style="margin-top:1rem">
+          <span class="tag">Working POC</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">Profile switch</span>
+          <span class="tag">Air-gap roadmap</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: Market -->
+  <section class="slide" data-slide="6">
+    <p class="eyebrow">Market Opportunity</p>
+    <h2>Start mid-market. Expand to enterprise.</h2>
+    <div class="grid-4">
+      <div class="card">
+        <p class="stat">~68k</p>
+        <p class="stat-label">AU businesses, 20–199 employees (ABS)</p>
+      </div>
+      <div class="card card-accent">
+        <p class="stat">~12k</p>
+        <p class="stat-label">Track A SAM — regulated knowledge work (50–250 staff)</p>
+      </div>
+      <div class="card">
+        <p class="stat">~5.3k</p>
+        <p class="stat-label">200+ employees — Track B expansion</p>
+      </div>
+      <div class="card">
+        <p class="stat">$2–4B</p>
+        <p class="stat-label">AU enterprise AI TAM by 2028</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item active">
+        <p class="phase">Year 1 · Track A</p>
+        <h3>Mid-market wedge</h3>
+        <p>Law, accounting, wealth — 50–250 staff. QuickStart in 5 days.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="phase">Year 2 · Track A+B</p>
+        <h3>Scale + move up</h3>
+        <p>22 logos. First enterprise deploy. SharePoint ingest.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="phase">Year 3+</p>
+        <h3>Enterprise &amp; banks</h3>
+        <p>References + IRAP docs unlock Big 4 and government.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: Business Model -->
+  <section class="slide" data-slide="7">
+    <p class="eyebrow">Business Model</p>
+    <h2>Land-and-expand with fixed pricing</h2>
+    <table>
+      <thead>
+        <tr><th>Package</th><th>Users</th><th>Price (AUD)</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>QuickStart</td><td>10–15</td><td>$12k – $18k</td><td>Land — 6 weeks, 1 RAG workspace</td></tr>
+        <tr><td>Team Pilot</td><td>15–30</td><td>$25k – $35k</td><td>Prove value — 2 workspaces, RBAC</td></tr>
+        <tr class="highlight-row"><td>Team Production</td><td>30–75</td><td>$55k – $90k</td><td>Expand — production deployment</td></tr>
+        <tr><td>Annual Support</td><td>—</td><td>$6k – $18k/yr</td><td>Retain — recurring revenue</td></tr>
+        <tr><td>Enterprise (Track B)</td><td>200+</td><td>$350k – $650k</td><td>Year 2+ — air-gap, K8s, HA</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem;font-size:0.88rem"><strong>100% pilot fee credited</strong> toward production if signed within 45 days. Copilot anchor: 50 users × $45/mo = $27k/yr — QuickStart matches one year of Copilot for half the team, then support-only Years 2+.</p>
+  </section>
+
+  <!-- SLIDE 8: Traction -->
+  <section class="slide" data-slide="8">
+    <p class="eyebrow">Traction &amp; Status</p>
+    <h2>Platform built. GTM starting.</h2>
+    <div class="grid-2">
+      <div>
+        <h3>What's done</h3>
+        <ul class="clean">
+          <li><strong>Working POC stack</strong> — AnythingLLM + LiteLLM + Qdrant + Gemini</li>
+          <li><strong>Desktop client</strong> — forked Electron app (ChatGPT-class UX)</li>
+          <li><strong>Profile-switch architecture</strong> — POC → on-prem with env swap, zero code changes</li>
+          <li><strong>Business plan</strong> — pricing, financials, competitor analysis complete</li>
+          <li><strong>Delivery runbooks</strong> — bootstrap scripts, demo workspaces, security policy templates</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pre-seed milestones (next 12 months)</h3>
+        <ul class="clean">
+          <li>First paid QuickStart — Month 2–3</li>
+          <li>8 pilot logos — Month 12</li>
+          <li>3 production conversions — Month 12</li>
+          <li>$60k+ ARR from support — Month 12</li>
+          <li>QuickStart deploy &lt;5 business days — Month 6</li>
+        </ul>
+        <div class="card" style="margin-top:1rem">
+          <p style="font-size:0.82rem"><span class="tag warn">Honest stage</span> Pre-revenue. Technical risk de-risked. Execution risk is GTM — this round funds first logos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: GTM -->
+  <section class="slide" data-slide="9">
+    <p class="eyebrow">Go-to-Market</p>
+    <h2>Vertical focus. Founder-led sales. Productised delivery.</h2>
+    <div class="grid-3">
+      <div class="card card-accent">
+        <p class="eyebrow">#1 Priority</p>
+        <h3>Mid-tier law</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Client confidentiality trigger. 4–8 week cycle. High reference value.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">#2 Priority</p>
+        <h3>Accounting / advisory</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Tax &amp; audit docs. M365 common. Partner-led buying.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">#3 Priority</p>
+        <h3>Wealth / regional finance</h3>
+        <p style="font-size:0.85rem;margin-top:0.5rem">APRA-adjacent without Big 4 procurement pain.</p>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:1rem">
+      <div class="card">
+        <h3>Sales motion</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">30-min fit call → fixed-price SOW → 50% deposit → templated deploy → success report → production upsell</p>
+      </div>
+      <div class="card">
+        <h3>Channels</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">Founder outbound · cybersecurity partner referrals · vertical events · founding customer case studies</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: Competition -->
+  <section class="slide" data-slide="10">
+    <p class="eyebrow">Competition</p>
+    <h2>Crowded market. Clear wedge.</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>Copilot</th><th>AU Sovereign (Cetus, Premya)</th><th>Sovereign Warden</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Data sovereignty</td><td>✗ US-hosted</td><td>✓ On-prem</td><td>✓ On-prem path</td></tr>
+        <tr><td>Employee chat UX</td><td>✓ M365 apps</td><td>△ Control plane / API</td><td>✓ Desktop chat app</td></tr>
+        <tr><td>Time to pilot</td><td>Days (trial)</td><td>Weeks (engagement)</td><td>✓ Days (platform built)</td></tr>
+        <tr><td>Transparent pricing</td><td>✓ Public</td><td>✗ Custom quote</td><td>✓ Fixed price card</td></tr>
+        <tr><td>Mid-market fit</td><td>△ Per-seat cost</td><td>△ Enterprise focus</td><td>✓ QuickStart $12–18k</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem;font-size:0.88rem"><strong>We don't compete on IRAP in Year 1.</strong> We win on speed, UX, and transparent pricing in professional services — then move upmarket with references.</p>
+  </section>
+
+  <!-- SLIDE 11: Unit Economics -->
+  <section class="slide" data-slide="11">
+    <p class="eyebrow">Unit Economics</p>
+    <h2>Healthy margins at every stage</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Customer lifecycle (3-year LTV)</h3>
+        <table>
+          <thead>
+            <tr><th>Stage</th><th>Revenue</th><th>Gross margin</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>QuickStart</td><td>$15,000</td><td>~67%</td></tr>
+            <tr><td>Team Production</td><td>$70,000</td><td>~46%</td></tr>
+            <tr><td>Support (3 yr)</td><td>$36,000</td><td>~75%</td></tr>
+            <tr class="highlight-row"><td>Total LTV</td><td>$121,000</td><td>~57%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>CAC &amp; payback</h3>
+        <div class="card" style="margin-top:0.5rem">
+          <p class="stat">$3–5k</p>
+          <p class="stat-label">Founder-led CAC (outbound)</p>
+        </div>
+        <div class="card" style="margin-top:0.75rem">
+          <p class="stat">14–23:1</p>
+          <p class="stat-label">LTV : CAC ratio</p>
+        </div>
+        <div class="card" style="margin-top:0.75rem">
+          <p class="stat">&lt;1 mo</p>
+          <p class="stat-label">CAC payback on QuickStart</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: Financials -->
+  <section class="slide" data-slide="12">
+    <p class="eyebrow">Financial Projections</p>
+    <h2>Base case — Track A primary</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Revenue</td><td>$492k</td><td>$1.91M</td><td>$3.30M</td></tr>
+        <tr><td>Gross margin</td><td>~48%</td><td>~50%</td><td>~52%</td></tr>
+        <tr><td>Pilot logos (cumul.)</td><td>8</td><td>22</td><td>42</td></tr>
+        <tr><td>Production customers</td><td>3</td><td>12</td><td>25</td></tr>
+        <tr><td>Headcount</td><td>2–3</td><td>6–7</td><td>9–11</td></tr>
+      </tbody>
+    </table>
+    <div class="bar-chart">
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem">Revenue growth (AUD)</p>
+      <div class="bar-row">
+        <span>Y1</span>
+        <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+        <span>$492k</span>
+      </div>
+      <div class="bar-row">
+        <span>Y2</span>
+        <div class="bar-track"><div class="bar-fill" style="width:58%"></div></div>
+        <span>$1.91M</span>
+      </div>
+      <div class="bar-row">
+        <span>Y3</span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        <span>$3.30M</span>
+      </div>
+    </div>
+    <p style="font-size:0.78rem;margin-top:0.75rem">Year 1 achievable with 8 QuickStarts + 3 production conversions. Operating cash positive Month 11–12 on base case.</p>
+  </section>
+
+  <!-- SLIDE 13: The Ask -->
+  <section class="slide" data-slide="13">
+    <p class="eyebrow">The Ask</p>
+    <h2>Pre-seed to prove the playbook</h2>
+    <div class="ask-box">
+      <span class="ask-amount">$650k</span>
+      <span class="ask-detail">AUD · SAFE or convertible note<br>$2.5–3.5M pre-money · 18–22 month runway</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h3>Use of funds</h3>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <span>Team 60%</span>
+            <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+            <span>$390k</span>
+          </div>
+          <div class="bar-row">
+            <span>GTM 20%</span>
+            <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+            <span>$130k</span>
+          </div>
+          <div class="bar-row">
+            <span>Platform 5%</span>
+            <div class="bar-track"><div class="bar-fill muted" style="width:5%"></div></div>
+            <span>$35k</span>
+          </div>
+          <div class="bar-row">
+            <span>Cloud 5%</span>
+            <div class="bar-track"><div class="bar-fill muted" style="width:5%"></div></div>
+            <span>$30k</span>
+          </div>
+          <div class="bar-row">
+            <span>Reserve 6%</span>
+            <div class="bar-track"><div class="bar-fill muted" style="width:6%"></div></div>
+            <span>$40k</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>12-month milestones</h3>
+        <ul class="clean">
+          <li>8 pilot logos (law + accounting verticals)</li>
+          <li>3 Team Production conversions (40%+ rate)</li>
+          <li>$60k+ ARR from support contracts</li>
+          <li>QuickStart deploy &lt;5 business days</li>
+          <li>2 published case studies</li>
+        </ul>
+        <p style="margin-top:1rem;font-size:0.85rem"><strong>Seed follow-on:</strong> $1.5M at Month 14–18 · 10+ logos · $350–500k ARR</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: Team -->
+  <section class="slide" data-slide="14">
+    <p class="eyebrow">Team</p>
+    <h2>Built to sell and deliver</h2>
+    <div class="team-grid">
+      <div class="card team-card">
+        <div class="avatar">?</div>
+        <h3>[Founder Name]</h3>
+        <p class="role">CEO · Sales &amp; GTM</p>
+        <p style="font-size:0.78rem;margin-top:0.5rem">[Domain expertise — e.g. legal tech, enterprise IT, or professional services background]</p>
+      </div>
+      <div class="card team-card">
+        <div class="avatar">?</div>
+        <h3>[Technical Lead]</h3>
+        <p class="role">CTO / Delivery · Platform</p>
+        <p style="font-size:0.78rem;margin-top:0.5rem">[Infrastructure, Docker/K8s, LLM deployment experience]</p>
+      </div>
+      <div class="card team-card">
+        <div class="avatar">+</div>
+        <h3>Hire #1 (Month 4)</h3>
+        <p class="role">Delivery Engineer</p>
+        <p style="font-size:0.78rem;margin-top:0.5rem">Funded by this round — productised QuickStart runbooks</p>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--text-muted)">← Replace placeholders with founder bios, photos, and relevant exits or domain credentials before sending to investors.</p>
+  </section>
+
+  <!-- SLIDE 15: Vision / Close -->
+  <section class="slide" data-slide="15">
+    <p class="eyebrow">Vision</p>
+    <h1 style="max-width:18ch">The default private AI platform for <em>Australian</em> professional services</h1>
+    <p class="lead" style="margin-top:1.5rem">Start with 50-person law firms. Scale to 500-person enterprises. Own the sovereignty layer that US SaaS can't.</p>
+    <div class="grid-3" style="margin-top:2rem">
+      <div class="card">
+        <h3>Path 1</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">Volume mid-market — 200 customers, $5M ARR</p>
+      </div>
+      <div class="card card-accent">
+        <h3>Path 2</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">Move upmarket — enterprise + banks with references</p>
+      </div>
+      <div class="card">
+        <h3>Path 3</h3>
+        <p style="font-size:0.85rem;margin-top:0.35rem">Platform licensing to MSPs (Year 4+)</p>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+      <p style="color:var(--text);font-size:1.1rem"><strong>[Founder Name]</strong> · [email] · [phone]</p>
+      <p style="font-size:0.82rem;margin-top:0.35rem">Sovereign Warden · sovereign-warden.com.au · GitHub: [repo if public]</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- UI chrome -->
+<div class="logo-mark">Sovereign Warden</div>
+<div class="progress" id="progress" style="width: 6.67%"></div>
+<div class="slide-counter" id="counter">1 / 15</div>
+<p class="nav-hint">← → arrow keys · space · click buttons</p>
+<div class="nav-buttons">
+  <button class="nav-btn" id="prev" aria-label="Previous slide">←</button>
+  <button class="nav-btn" id="next" aria-label="Next slide">→</button>
+</div>
+
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const total = slides.length;
+    let current = 0;
+
+    const progress = document.getElementById("progress");
+    const counter = document.getElementById("counter");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    function goTo(index) {
+      if (index < 0 || index >= total) return;
+      slides[current].classList.remove("active");
+      current = index;
+      slides[current].classList.add("active");
+      progress.style.width = ((current + 1) / total * 100) + "%";
+      counter.textContent = (current + 1) + " / " + total;
+      history.replaceState(null, "", "#slide-" + (current + 1));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    prevBtn.addEventListener("click", prev);
+    nextBtn.addEventListener("click", next);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+        e.preventDefault();
+        next();
+      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+        e.preventDefault();
+        prev();
+      } else if (e.key === "Home") {
+        goTo(0);
+      } else if (e.key === "End") {
+        goTo(total - 1);
+      }
+    });
+
+    // Deep link support
+    const hash = location.hash.match(/^#slide-(\d+)$/);
+    if (hash) goTo(Math.min(parseInt(hash[1], 10) - 1, total - 1));
+
+    // Touch swipe
+    let touchStartX = 0;
+    document.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.addEventListener("touchend", function (e) {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? prev() : next();
+      }
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
