@@ -1,0 +1,463 @@
+/* Sovereign Onum — Onum Home 7 inspired styles */
+
+:root {
+	--so-section-y: clamp(4.5rem, 8vw, 6.875rem);
+	--so-shadow-card: 0 12px 40px rgba(42, 67, 113, 0.12);
+	--so-shadow-btn: 12px 12px 20px rgba(254, 76, 28, 0.3);
+	--so-shadow-btn-cyan: 12px 12px 20px rgba(0, 195, 255, 0.25);
+}
+
+/* ── Section rhythm ── */
+main .wp-block-post-content > .wp-block-group.alignfull {
+	padding-top: var(--so-section-y) !important;
+	padding-bottom: var(--so-section-y) !important;
+}
+
+main .wp-block-columns {
+	gap: var(--wp--preset--spacing--xl) !important;
+}
+
+/* ── Eyebrow labels (Onum h6 style) ── */
+.so-eyebrow {
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--cyan);
+	margin-bottom: 0.75rem;
+}
+
+.so-eyebrow.is-primary {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ── Hero (Home 7 split layout) ── */
+.so-hero {
+	position: relative;
+	overflow: hidden;
+	background: var(--wp--preset--color--white);
+	padding-top: clamp(3rem, 6vw, 5rem) !important;
+	padding-bottom: clamp(3rem, 6vw, 5rem) !important;
+}
+
+.so-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: var(--wp--preset--gradient--hero-mesh);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.so-hero > .wp-block-group,
+.so-hero > .wp-block-columns {
+	position: relative;
+	z-index: 1;
+}
+
+.so-hero-illustration {
+	position: relative;
+}
+
+.so-hero-illustration img {
+	width: 100%;
+	height: auto;
+	max-width: 540px;
+	margin-left: auto;
+	display: block;
+	filter: drop-shadow(0 24px 48px rgba(1, 96, 231, 0.15));
+}
+
+.so-hero-blob {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, rgba(0, 195, 255, 0.35), rgba(1, 96, 231, 0.2));
+	filter: blur(2px);
+	z-index: -1;
+}
+
+.so-hero-blob--1 {
+	top: 10%;
+	right: 5%;
+}
+
+.so-hero-blob--2 {
+	bottom: 15%;
+	left: 10%;
+	width: 80px;
+	height: 80px;
+	background: linear-gradient(135deg, rgba(254, 76, 28, 0.25), rgba(254, 76, 28, 0.1));
+}
+
+/* ── Pill buttons ── */
+.wp-block-button__link {
+	box-shadow: var(--so-shadow-btn);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-2px);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	box-shadow: none;
+	border-radius: 25px;
+	border-width: 2px;
+}
+
+.so-btn-cyan .wp-block-button__link {
+	background: var(--wp--preset--color--cyan) !important;
+	color: var(--wp--preset--color--white) !important;
+	box-shadow: var(--so-shadow-btn-cyan);
+}
+
+/* ── Service icon cards ── */
+.so-service-card {
+	background: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 8px;
+	padding: var(--wp--preset--spacing--xl);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	height: 100%;
+}
+
+.so-service-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--so-shadow-card);
+}
+
+.so-service-icon {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: var(--wp--preset--color--white);
+	background: linear-gradient(145deg, #0039e4, #04dbf1);
+	margin-bottom: var(--wp--preset--spacing--lg);
+}
+
+.so-service-icon.is-orange {
+	background: linear-gradient(145deg, #fe4c1c, #ff8a5c);
+}
+
+.so-service-card .so-link {
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-weight: 700;
+	font-size: 0.9rem;
+	color: var(--wp--preset--color--cyan);
+	text-decoration: none;
+}
+
+.so-service-card .so-link:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ── About section with circular stats ── */
+.so-about-image img {
+	border-radius: 8px;
+	box-shadow: var(--so-shadow-card);
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.so-stat-ring {
+	text-align: center;
+}
+
+.so-stat-ring__value {
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 2rem;
+	font-weight: 900;
+	color: var(--wp--preset--color--text-dark);
+	line-height: 1;
+	margin-bottom: 0.25rem;
+}
+
+.so-stat-ring__circle {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	margin: 0 auto var(--wp--preset--spacing--md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: conic-gradient(var(--wp--preset--color--cyan) var(--so-pct, 75%), var(--wp--preset--color--surface-alt) 0);
+	position: relative;
+}
+
+.so-stat-ring__circle::after {
+	content: "";
+	position: absolute;
+	inset: 8px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--white);
+}
+
+.so-stat-ring__circle span {
+	position: relative;
+	z-index: 1;
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 1.35rem;
+	font-weight: 900;
+	color: var(--wp--preset--color--text-dark);
+}
+
+.so-stat-ring--75 .so-stat-ring__circle { --so-pct: 75%; }
+.so-stat-ring--43 .so-stat-ring__circle { --so-pct: 43%; background: conic-gradient(var(--wp--preset--color--primary) var(--so-pct), var(--wp--preset--color--surface-alt) 0); }
+.so-stat-ring--66 .so-stat-ring__circle { --so-pct: 66%; background: conic-gradient(var(--wp--preset--color--blue) var(--so-pct), var(--wp--preset--color--surface-alt) 0); }
+.so-stat-ring--15 .so-stat-ring__circle { --so-pct: 15%; background: conic-gradient(#a5b7d2 var(--so-pct), var(--wp--preset--color--surface-alt) 0); }
+
+/* ── Process steps (numbered) ── */
+.so-process-step {
+	position: relative;
+	padding: var(--wp--preset--spacing--xl);
+	background: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.so-process-step::before {
+	content: attr(data-step);
+	position: absolute;
+	top: -0.15em;
+	right: 0.25em;
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 5rem;
+	font-weight: 900;
+	line-height: 1;
+	color: rgba(0, 195, 255, 0.08);
+	pointer-events: none;
+}
+
+.so-section-alt {
+	background: var(--wp--preset--color--surface);
+}
+
+/* ── Pricing cards ── */
+.so-pricing-card {
+	background: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 12px;
+	padding: var(--wp--preset--spacing--2xl) var(--wp--preset--spacing--xl);
+	text-align: center;
+	height: 100%;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.so-pricing-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--so-shadow-card);
+}
+
+.so-pricing-card.is-featured {
+	border-color: var(--wp--preset--color--cyan);
+	box-shadow: 0 20px 50px rgba(0, 195, 255, 0.18);
+	transform: scale(1.03);
+}
+
+.so-pricing-card.is-featured:hover {
+	transform: scale(1.03) translateY(-4px);
+}
+
+.so-pricing-price {
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 2.75rem;
+	font-weight: 900;
+	color: var(--wp--preset--color--text-dark);
+	line-height: 1;
+	margin: var(--wp--preset--spacing--md) 0;
+}
+
+.so-pricing-price sup {
+	font-size: 1.25rem;
+	vertical-align: super;
+}
+
+.so-pricing-list {
+	list-style: none;
+	padding: 0;
+	margin: var(--wp--preset--spacing--lg) 0;
+	text-align: left;
+}
+
+.so-pricing-list li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--wp--preset--color--border);
+	font-size: 0.9rem;
+	color: var(--wp--preset--color--text);
+}
+
+.so-pricing-list li::before {
+	content: "✓";
+	color: var(--wp--preset--color--cyan);
+	font-weight: 700;
+	margin-right: 0.5rem;
+}
+
+/* ── Services grid (numbered 01–06) ── */
+.so-grid-service {
+	display: flex;
+	gap: var(--wp--preset--spacing--lg);
+	align-items: flex-start;
+	padding: var(--wp--preset--spacing--lg);
+	border-radius: 8px;
+	transition: background 0.2s ease;
+}
+
+.so-grid-service:hover {
+	background: var(--wp--preset--color--surface-alt);
+}
+
+.so-grid-service__num {
+	font-family: var(--wp--preset--font-family--red-hat-display);
+	font-size: 2.5rem;
+	font-weight: 900;
+	color: var(--wp--preset--color--cyan);
+	line-height: 1;
+	flex-shrink: 0;
+	min-width: 3rem;
+}
+
+.so-grid-service__thumb img {
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+}
+
+/* ── CTA band ── */
+.so-cta-band {
+	background: var(--wp--preset--gradient--cta-gradient) !important;
+	color: var(--wp--preset--color--white);
+	text-align: center;
+}
+
+.so-cta-band h2,
+.so-cta-band p {
+	color: var(--wp--preset--color--white) !important;
+}
+
+.so-cta-band .wp-block-button__link {
+	background: var(--wp--preset--color--white) !important;
+	color: var(--wp--preset--color--blue) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Header ── */
+.so-site-header {
+	background: var(--wp--preset--color--white);
+	border-bottom: 1px solid var(--wp--preset--color--border);
+	box-shadow: 0 2px 16px rgba(42, 67, 113, 0.06);
+}
+
+.so-site-header .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--text-dark);
+	font-weight: 500;
+}
+
+.so-site-header .wp-block-navigation-item__content:hover {
+	color: var(--wp--preset--color--cyan);
+}
+
+.so-header-cta .wp-block-button__link {
+	padding: 0.65rem 1.5rem;
+	font-size: 0.9rem;
+}
+
+/* ── Footer ── */
+.so-site-footer {
+	background: var(--wp--preset--gradient--footer-gradient) !important;
+	color: var(--wp--preset--color--text-muted);
+}
+
+.so-site-footer h4,
+.so-site-footer .wp-block-site-title a {
+	color: var(--wp--preset--color--white) !important;
+}
+
+.so-site-footer a {
+	color: var(--wp--preset--color--text-muted);
+	text-decoration: none;
+}
+
+.so-site-footer a:hover {
+	color: var(--wp--preset--color--cyan);
+}
+
+/* ── Images ── */
+.so-image img,
+.so-theme-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+/* ── Tables ── */
+.so-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9rem;
+}
+
+.so-table th,
+.so-table td {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--wp--preset--color--border);
+}
+
+.so-table th {
+	font-weight: 700;
+	background: var(--wp--preset--color--surface);
+	color: var(--wp--preset--color--text-dark);
+}
+
+.so-table tr.highlight td,
+.so-table td.highlight {
+	background: var(--wp--preset--color--cyan-dim);
+}
+
+/* ── Dark hero pages ── */
+.so-dark-hero {
+	background: var(--wp--preset--color--navy);
+	color: var(--wp--preset--color--text-light);
+	min-height: 320px;
+	display: flex;
+	align-items: center;
+}
+
+.so-dark-hero h1 {
+	color: var(--wp--preset--color--white);
+}
+
+@media (max-width: 781px) {
+	:root {
+		--so-section-y: clamp(3rem, 7vw, 4.5rem);
+	}
+
+	.so-pricing-card.is-featured {
+		transform: none;
+	}
+
+	.so-hero-illustration img {
+		max-width: 100%;
+		margin: var(--wp--preset--spacing--xl) auto 0;
+	}
+
+	.so-process-step::before {
+		font-size: 3.5rem;
+	}
+}
