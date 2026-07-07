@@ -1,4 +1,4 @@
-# Sovereign AI Platform
+# Sovereign Warden Platform
 
 On-premises AI platform giving employees a ChatGPT/Claude experience with full data sovereignty. Uses AnythingLLM (Docker backend), LiteLLM gateway, and a forked AnythingLLM Desktop Electron client (Option B).
 
@@ -63,6 +63,7 @@ demo/         # Sample documents and workspace setup
 - [POC Demo Script](docs/poc-demo-script.md)
 - [Hardware Sizing](docs/hardware-sizing.md)
 - [Desktop Fork Guide](desktop/UPSTREAM.md)
+- [Business Plan](docs/business/README.md)
 
 ## License
 
