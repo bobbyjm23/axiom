@@ -1,7 +1,22 @@
 # Competitive Positioning
 
 **Category:** Productised sovereign AI for mid-market professional services  
-**Lead competitors:** Copilot (default), Macquarie (hosted), Cetus (on-prem)
+**Lead competitors:** Copilot (default), Macquarie (hosted), Cetus (on-prem)  
+**Revenue focus:** Hosted wedge → **on-prem turnkey conversion** (open-source LLMs on customer hardware)
+
+---
+
+## Strategic economics
+
+| | Hosted wedge | On-prem turnkey |
+|--|--------------|-----------------|
+| **Role** | QuickStart entry | **Primary product (Y2+)** |
+| **Inference** | Gemini / cloud API | vLLM / Ollama on customer GPU |
+| **Your COGS** | ~$700–1,300/mo | Delivery labour only |
+| **Customer 3-yr TCO (50 users)** | ~$138k | **~$119k** + they own hardware |
+| **Sovereignty** | Partial | Full |
+
+Do not compete on AWS GPU hosting ($15–30k+/mo COGS). Full analysis: [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md).
 
 ---
 
@@ -35,15 +50,16 @@ MANAGED / CLOUD                     Copilot · Macquarie
 
 ---
 
-## Option A — On-prem (upsell)
+## Option A — On-prem (primary focus)
 
 | vs | We win because |
 |----|----------------|
 | **Cetus** | Weeks vs months; desktop UX; $12–35k pilot vs opaque enterprise quotes |
 | **Premya** | Flexible deploy; same stack as hosted pilot |
-| **Copilot** | Prompts never leave network; CapEx asset |
+| **Copilot** | Prompts never leave network; CapEx asset; no per-token bill |
+| **AWS GPU hosting** | Customer owns $25k box vs $15k+/mo rent — break-even in ~2 months |
 
-**We lose:** Government IRAP deals; buyer wants managed cloud only.
+**Pitch:** Open-source models (Llama, Qwen) on their hardware. Same desktop app after hosted pilot — profile switch only.
 
 ---
 
@@ -58,12 +74,16 @@ MANAGED / CLOUD                     Copilot · Macquarie
 
 ---
 
-## TCO anchor (50 users)
+## TCO anchor (50 users, 3-year)
 
-| | 3-year total |
-|--|--------------|
-| Copilot | $81k |
-| Sovereign Warden (founding QuickStart + support) | **$48–51k** |
+| Option | 3-year total | Notes |
+|--------|--------------|-------|
+| Copilot | $81k | US cloud; per-seat |
+| SW hosted wedge + Managed Lite | ~$138k | Pilot entry; not destination |
+| **SW on-prem turnkey** | **~$119k** | Production + HW + support; **best sovereignty** |
+| AWS GPU hosted (you run OSS) | ~$660k+ | Do not sell |
+
+*Source: [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md)*
 
 ---
 
@@ -79,7 +99,7 @@ MANAGED / CLOUD                     Copilot · Macquarie
 
 ## Investor narrative
 
-> Competitors force a false choice: US cloud (Copilot), slow enterprise on-prem (Cetus), or enterprise managed cloud (Macquarie). We land hosted in weeks at published prices and upgrade to on-prem on one platform.
+> Competitors force a false choice: US cloud (Copilot), slow enterprise on-prem (Cetus), or expensive managed cloud (Macquarie). We land hosted in weeks, then convert to **customer-owned on-prem** with open-source LLMs — faster than Cetus, cheaper than cloud GPU rent, full sovereignty.
 
 ---
 

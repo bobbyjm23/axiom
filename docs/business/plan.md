@@ -27,11 +27,12 @@
 | | **Option B — Sovereign Hosted (AU)** | **Option A — Turnkey On-Prem** |
 |--|--------------------------------------|--------------------------------|
 | **What** | Private tenant on AU infrastructure we operate | Full stack on customer hardware |
-| **For** | Fast pilot; no CapEx (**wedge**) | Full sovereignty; air-gap (**upsell**) |
+| **For** | Fast pilot; no CapEx (**wedge only**) | Open-source LLMs; full sovereignty (**primary focus**) |
+| **Inference** | Cloud API (Gemini) during pilot | vLLM / Ollama on customer GPU |
 | **Competes with** | Copilot, Macquarie Launch AI | Cetus, Premya, Allayze |
-| **Revenue** | Pilot → Production → Managed ($3.5k/mo) + support | Production + hardware + support |
+| **Revenue** | QuickStart $12k → convert out | Production $55–90k + hardware + support |
 
-**Land hosted → prove ROI → expand on-prem** — same codebase, profile switch, no rebuild.
+**Land hosted → prove ROI → convert on-prem** — same codebase, profile switch, no rebuild. Do not scale on AWS GPU hosting; customer CapEx beats cloud GPU rent in ~2 months. See [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md).
 
 **Stack:** AnythingLLM · LiteLLM · Qdrant · Postgres · vLLM/Ollama · Electron desktop client.
 
@@ -44,7 +45,9 @@
 | QuickStart / Pilot | $12–15k founding | Hosted entry |
 | Team Production | $55–70k | Hosted or on-prem |
 | Annual support | $12k/yr | Recurring |
-| Managed Lite | $3.5k/mo | Hosted recurring |
+| Managed Lite | $3.5k/mo | Hosted recurring — **defer**; prefer on-prem conversion |
+
+**Revenue focus (Y2+):** 60%+ from on-prem production + support, not hosted GPU or Managed Lite.
 
 **Adneo (logo #1):** Free/discounted hosted pilot → paid production → case study + logo rights.
 
@@ -141,8 +144,8 @@
 | 0–1 | AU Pty Ltd; Adneo pilot live |
 | 1–2 | Angel bridge closed |
 | 2–3 | Adneo delivered; case study |
-| 6 | 2–3 logos; law pipeline active |
-| 12 | ~$200k Y1 booked; 5–6 logos |
+| 6 | 2–3 logos; **first on-prem conversion** in pipeline |
+| 12 | ~$200k Y1 booked; on-prem production mix growing |
 | 14–18 | Seed-ready: $350k+ ARR, 10+ logos (stretch) |
 
 ---
@@ -168,6 +171,7 @@
 | Competition | [strategy/competitive-positioning.md](strategy/competitive-positioning.md) |
 | Funding | [finance/funding.md](finance/funding.md) |
 | Unit economics | [finance/unit-economics.md](finance/unit-economics.md) |
+| **Hosted vs on-prem COGS** | [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md) |
 | Team and hiring | [operations/team-and-hiring.md](operations/team-and-hiring.md) |
 | Data room | [investor/data-room-index.md](investor/data-room-index.md) |
 | Full index | [README.md](README.md) |

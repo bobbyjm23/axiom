@@ -75,6 +75,8 @@
 |----------|--------|----------|
 | Financial model assumptions | ✅ | [financial-model-assumptions.md](../financial-model-assumptions.md) |
 | Unit economics / LTV:CAC | ✅ | [unit-economics.md](../finance/unit-economics.md) |
+| Hosted vs on-prem COGS | ✅ | [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md) |
+| Hardware sizing | ✅ | [hardware-sizing.md](../../hardware-sizing.md) |
 | 3-year P&L projection | 🟡 | Export from model |
 | Cap table | ⬜ | Post-incorporation |
 | Angel bridge use of funds | ✅ | [funding.md](../finance/funding.md) |
@@ -100,7 +102,9 @@
 | Pitch deck | 🟡 | [pitch-deck/index.html](../pitch-deck/index.html) |
 | Investor FAQ | ✅ | [investor-faq.md](investor-faq.md) |
 | Competitive positioning | ✅ | [competitive-positioning.md](../strategy/competitive-positioning.md) |
-| TCO one-pager (50 users) | ⬜ | unit-economics.md |
+| TCO one-pager (50 users) | ⬜ | [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md) |
+| Hardware bundle sheet | ⬜ | [hardware-sizing.md](../../hardware-sizing.md) |
+| On-prem migration one-pager | ⬜ | hosted-vs-onprem-cogs.md |
 | Case studies | ⬜ | Post first customer |
 
 ---

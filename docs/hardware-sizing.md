@@ -1,6 +1,8 @@
 # Hardware Sizing Guide
 
-GPU and server recommendations for on-prem Sovereign AI Platform deployments.
+GPU and server recommendations for on-prem Sovereign Warden Platform deployments.
+
+**Business context:** On-prem turnkey is the **primary product** after hosted wedge pilots. Customer-owned hardware beats AWS GPU rent in ~2 months. See [business/finance/hosted-vs-onprem-cogs.md](business/finance/hosted-vs-onprem-cogs.md).
 
 ## Workload Tiers
 

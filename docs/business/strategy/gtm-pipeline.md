@@ -1,7 +1,8 @@
 # GTM and Sales Pipeline
 
 **Motion:** Founder-led sales · Adneo-first · Law outbound from week 7  
-**90-day goal:** Adneo signed + delivered; 1+ law fit call or proposal in pipeline
+**90-day goal:** Adneo signed + delivered; 1+ law fit call or proposal in pipeline  
+**Post-wedge focus:** Convert pilots to **on-prem turnkey** (open-source LLMs on customer hardware) — not AWS GPU hosting
 
 ---
 
@@ -68,9 +69,11 @@
 
 1. **Demo environment** — Adneo + law demo corpus  
 2. **Adneo ROI deck** — board pitch  
-3. **Pilot SOW** — case study clause  
-4. **TCO one-pager** — Copilot vs Sovereign Warden (50 users)  
-5. **Security pack** — founder draft; lawyer fact-check  
+3. **Pilot SOW** — case study clause + **on-prem conversion path** in commercial terms  
+4. **TCO one-pager** — Copilot vs hosted wedge vs **on-prem turnkey** (3-year) — [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md)  
+5. **Hardware bundle sheet** — dept tier GPU specs + CapEx ([hardware-sizing.md](../../hardware-sizing.md))  
+6. **Migration one-pager** — hosted pilot → on-prem profile switch (no rebuild)  
+7. **Security pack** — founder draft; lawyer fact-check  
 
 ---
 
@@ -82,8 +85,8 @@
 | 2–5 | Desktop app | ChatGPT-class UX |
 | 5–8 | RAG + citations | Firm documents; sourced answers |
 | 8–11 | Admin / RBAC | Workspaces; audit logs |
-| 11–13 | Architecture | Hosted today → on-prem switch; no code change |
-| 13–15 | Offer | QuickStart $12k founding; path to production |
+| 11–13 | Architecture | Hosted wedge today → **on-prem OSS models** on their GPU; profile switch |
+| 13–15 | Offer | QuickStart $12k founding; production = turnkey on-prem |
 
 ---
 

@@ -19,6 +19,8 @@
 
 **Hardware:** Pass-through default; optional 10–15% margin on turnkey GPU bundles.
 
+**Inference economics:** Hosted wedge (Gemini) = low COGS, disclosure required. **On-prem open-source LLMs = primary focus after pilot** — customer CapEx, best margins for you and sovereignty for client. Do not build on AWS GPU rent. See [hosted-vs-onprem-cogs.md](hosted-vs-onprem-cogs.md).
+
 **Pricing publication:** Publish QuickStart/Team Pilot ranges on website — transparency is differentiator.
 
 ---
@@ -80,6 +82,18 @@ Base case: 8 pilots × $28k avg × 40% conversion → 3 production × $70k.
 | QuickStart → Production | $12k | $70k prod + $12k | $12k support | $106k |
 
 **CAC (founder-led):** ~$2–5k (time + collateral) → LTV:CAC &gt;10:1 on production path.
+
+---
+
+## Inference and hosting COGS (summary)
+
+| Profile | Your monthly COGS | Customer 3-yr TCO (50 users) | Role |
+|---------|-------------------|------------------------------|------|
+| Hosted wedge (Gemini) | ~$700–1,300 | ~$138k | QuickStart entry |
+| AWS GPU hosted (OSS) | ~$16–31k | ~$660k+ | **Avoid** |
+| On-prem turnkey | Delivery labour only | ~$119k | **Primary focus** |
+
+Full break-even and sales guidance: [hosted-vs-onprem-cogs.md](hosted-vs-onprem-cogs.md).
 
 ---
 

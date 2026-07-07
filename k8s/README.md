@@ -77,6 +77,12 @@ vLLM deployment uses `nodeSelector` and `nvidia.com/gpu` resource limits.
 3. Block egress from `sovereign-warden-app` and `sovereign-warden-gpu` namespaces via NetworkPolicy
 4. Load model weights via init container from internal MinIO mirror
 
+See [air-gap-topology.md](air-gap-topology.md) for on-prem VLAN layout.
+
+## AWS EKS (hosted pilots)
+
+For **Option B — Hosted AU** on Amazon EKS (Sydney), see [aws-eks-notes.md](aws-eks-notes.md). Use Profile A (Gemini, no GPU) for early pilots; on-prem/air-gap manifests are not a drop-in for EKS without adaptation.
+
 ## Monitoring
 
 LiteLLM exposes Prometheus metrics at `:4000/metrics`. Scrape via ServiceMonitor or PodMonitor if using Prometheus Operator.

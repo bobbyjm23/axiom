@@ -10,10 +10,12 @@
 
 **Sovereign Warden** is a productised sovereign AI platform for Australian mid-market firms (50–250 staff). Employees get ChatGPT-class AI over company documents. Firms choose:
 
-- **Hosted (AU)** — we run a private tenant (fast pilot, no CapEx)
-- **On-prem** — turnkey on their servers (full sovereignty)
+- **Hosted (AU)** — we run a private tenant (**wedge** — fast pilot, cloud API inference)
+- **On-prem** — turnkey on their servers with open-source LLMs (**primary focus** after pilot)
 
-Same product, same upgrade path — no rebuild when they scale.
+Same product, same upgrade path — no rebuild when they convert to owned hardware.
+
+**Economics:** Customer-owned GPU (~$25k CapEx) breaks even vs AWS GPU rent in ~2 months. See [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md).
 
 ---
 
@@ -55,7 +57,8 @@ Same product, same upgrade path — no rebuild when they scale.
 | 2 | [investor-faq.md](investor-faq.md) | 5 min | Hard questions answered |
 | 3 | [strategy/competitive-positioning.md](../strategy/competitive-positioning.md) | 5 min | vs Copilot, Cetus, Macquarie |
 | 4 | [finance/funding.md](../finance/funding.md) | 5 min | Raise timeline and use of funds |
-| 5 | [strategy/gtm-pipeline.md](../strategy/gtm-pipeline.md) | 10 min | 90-day execution plan |
+| 5 | [finance/hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md) | 10 min | **Why on-prem is the focus after wedge** |
+| 6 | [strategy/gtm-pipeline.md](../strategy/gtm-pipeline.md) | 10 min | 90-day execution plan |
 
 **Optional:** [operations/team-and-hiring.md](../operations/team-and-hiring.md) · [risk/risk-register.md](../risk/risk-register.md)
 
@@ -68,6 +71,7 @@ Same product, same upgrade path — no rebuild when they scale.
 3. **Sales advisor** — who in law/accounting would you intro?
 4. **AU Pty Ltd timing** — any issues with NZ trading co + Adneo employment?
 5. **Blind spots** — what would make you pass at this stage?
+6. **On-prem TCO story** — does the AWS GPU vs customer CapEx break-even (~2 months) land with law firm CFOs?
 
 ---
 

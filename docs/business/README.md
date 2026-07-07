@@ -28,6 +28,7 @@
 | Legal and entity | [operations/legal-and-compliance.md](operations/legal-and-compliance.md) |
 | Funding and raise | [finance/funding.md](finance/funding.md) |
 | Unit economics | [finance/unit-economics.md](finance/unit-economics.md) |
+| **Hosted vs on-prem COGS** | [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md) |
 | Risks | [risk/risk-register.md](risk/risk-register.md) |
 
 ---
@@ -71,6 +72,7 @@
 |----------|-------|
 | [finance/funding.md](finance/funding.md) | Angel bridge, SAFE, use of funds |
 | [finance/unit-economics.md](finance/unit-economics.md) | Pricing, margins, LTV:CAC |
+| [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md) | **AWS vs on-prem economics; post-wedge focus** |
 | [financial-model-assumptions.md](financial-model-assumptions.md) | 3-year model inputs |
 | [seed-funding-implications.md](seed-funding-implications.md) | Pre-seed and seed path |
 

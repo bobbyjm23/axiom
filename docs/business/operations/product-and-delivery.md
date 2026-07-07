@@ -19,7 +19,9 @@
 | **Option B — Hosted (AU)** | Cloud POC | Fast pilot, no CapEx | Copilot, Macquarie |
 | **Option A — On-prem** | K8s / air-gap | Full sovereignty | Cetus, Premya |
 
-Migration = config profile switch. No rebuild.
+Migration = config profile switch. No rebuild. **Commercial goal:** every hosted QuickStart should have a documented path to on-prem production within 45–90 days of pilot success.
+
+Economics: [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md) · Hardware: [hardware-sizing.md](../../../hardware-sizing.md)
 
 ---
 

@@ -14,13 +14,13 @@
 
 ## Q2: "Services businesses don't scale."
 
-**A:** Two-SKU productised platform — same bootstrap for hosted and on-prem. Target 40% pilot→production; Managed Lite + support ARR. Deploy time 10d → 5d → 2d proves repeatability. Year 1 founder path **$200k**; plan case $492k at scale.
+**A:** Two-SKU productised platform — hosted wedge to prove adoption, **on-prem turnkey as primary revenue** (open-source LLMs on customer GPU). Target 40% pilot→on-prem conversion. We do not scale on AWS GPU rent ($15–30k+/mo COGS). Customer CapEx (~$25k) breaks even vs cloud GPU in ~2 months. Year 1 founder path **$200k**; plan case $492k at scale. See [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md).
 
 ---
 
 ## Q3: "Cetus is already funded."
 
-**A:** Cetus = enterprise/gov, 8–14 week pilots, IRAP. We land **Option B hosted** in weeks at $12–35k for mid-market law/accounting, then upsell **Option A on-prem** without rebuild. Different ICP and velocity.
+**A:** Cetus = enterprise/gov, 8–14 week pilots, IRAP. We land **Option B hosted** in weeks at $12–35k, then convert to **Option A on-prem** (customer-owned GPU, Llama/Qwen) without rebuild. Faster and cheaper than Cetus for mid-market; better economics than us renting AWS GPUs.
 
 ---
 
@@ -32,7 +32,7 @@
 
 ## Q5: "What's the moat?"
 
-**A:** Hosted-to-on-prem on one platform; runbook speed; transparent mid-market pricing; desktop UX vs API-only sovereign vendors. First 10 professional-services logos create reference density.
+**A:** Hosted-to-on-prem on one platform; runbook speed; transparent mid-market pricing; desktop UX vs API-only sovereign vendors. **On-prem economics** (customer CapEx vs cloud GPU rent) is a core sales weapon. First 10 professional-services logos create reference density.
 
 ---
 
@@ -45,6 +45,12 @@
 ## Q7: "Why angel bridge not $650k pre-seed?"
 
 **A:** Self-fund until Adneo SOW. Bridge ($150–250k) funds engineer + GTM to 2–3 logos. Institutional pre-seed follows traction. SAFE at $2.5M cap ($2M with sector intros).
+
+---
+
+## Q8: "Why not just host everything on AWS?"
+
+**A:** Hosted with cloud API (Gemini) works as a **6-week wedge** (~$700–1,300/mo our COGS). Running open-source 70B models on AWS GPU costs **$15–30k+/mo** — destroys margin at our price points. Clients who want sovereignty and OSS models should **buy a $25k GPU box**; it pays for itself in ~2 months vs cloud GPU rent. That's Option A — our primary focus after pilot. [hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md)
 
 ---
 
