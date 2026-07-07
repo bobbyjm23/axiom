@@ -1,6 +1,8 @@
 # Sovereign Warden — Angel Investor Pitch Deck
 
-Browser-based HTML pitch deck for pre-seed / angel conversations.
+Browser-based HTML pitch deck for angel bridge / pre-seed conversations.
+
+**Design:** Mach42-inspired — Aeonik typography, navy (`#1D2B38`) + teal (`#12EACB`) palette, light mint backgrounds, pill navigation.
 
 ## Open the deck
 
@@ -22,47 +24,53 @@ cd docs/business/pitch-deck && python3 -m http.server 8080
 | Next slide | `→` · `Space` · `Page Down` · swipe left |
 | Previous slide | `←` · `Page Up` · swipe right |
 | First / last | `Home` / `End` |
-| Deep link | `#slide-7` (e.g. `index.html#slide-13` for The Ask) |
+| Deep link | `#slide-7` (e.g. `index.html#slide-15` for The Ask) |
 
 ## Export to PDF
 
 1. Open in Chrome or Edge
 2. `File → Print` (or `Cmd+P`)
 3. Destination: **Save as PDF**
-4. Layout: **Landscape** (optional — slides are responsive)
-5. Enable **Background graphics**
-6. Each slide prints as a separate page (print CSS included)
+4. Enable **Background graphics**
+5. Each slide prints as a separate page (print CSS included)
 
 ## Before sending to investors
 
-Replace placeholders on **Slide 14 (Team)** and **Slide 15 (Close)**:
+Replace placeholders on **Slide 16 (Team)** and **Slide 17 (Close)**:
 
 - `[Founder Name]`, `[email]`, `[phone]`
-- Founder and technical lead bios
-- Avatar photos (replace `.avatar` divs with `<img>` if desired)
+- Founder bio and photo (replace `.avatar` divs with `<img>` if desired)
 
-## Slide outline (15 slides)
+## Slide outline (17 slides)
 
 1. **Title** — Hook and positioning
-2. **Problem** — Shadow AI vs compliance
-3. **Solution** — Product summary
-4. **Why Now** — Regulation, economics, market proof
-5. **Product** — Architecture and data sovereignty
-6. **Market** — TAM/SAM and two-track GTM
-7. **Business Model** — Pricing ladder
-8. **Traction** — POC status and 12-month milestones
-9. **Go-to-Market** — Verticals and sales motion
-10. **Competition** — Positioning matrix
-11. **Unit Economics** — LTV, CAC, margins
-12. **Financials** — 3-year projections
-13. **The Ask** — $650k pre-seed, use of funds
-14. **Team** — Founders + hire plan
-15. **Vision** — Close and contact
+2. **Context: AI boom** — Hyperscaler CapEx, enterprise mandate, rent vs ownership
+3. **Context: Open source & economics** — 95% capability already available; cloud GPU vs on-prem (dark slide)
+4. **Problem** — Shadow AI vs compliance
+5. **Solution** — Two options, one platform (hosted wedge → on-prem focus)
+6. **Why Now** — Regulation, economics, market proof
+7. **Product** — Architecture and data sovereignty (dark slide)
+8. **Unit Economics** — Hosted wedge vs on-prem business model
+9. **Market** — TAM/SAM and two-track GTM
+10. **Business Model** — Pricing ladder
+11. **Traction** — POC status, Adneo logo #1, Y1 targets
+12. **Go-to-Market** — Verticals and 90-day plan
+13. **Competition** — Positioning matrix (dark slide)
+14. **Financials** — Founder path + 5-year forecast
+15. **The Ask** — $150–250k angel bridge SAFE
+16. **Team** — Founder + hire plan
+17. **Vision** — Close and contact
 
 ## Source data
 
 Figures sourced from:
 
-- [sovereign-warden-business-plan.md](../sovereign-warden-business-plan.md)
-- [mid-market-track-a-strategy.md](../mid-market-track-a-strategy.md)
-- [seed-funding-implications.md](../seed-funding-implications.md)
+- [plan.md](../plan.md)
+- [finance/funding.md](../finance/funding.md)
+- [finance/hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md)
+- [finance/revenue-forecast.md](../finance/revenue-forecast.md)
+- [investor/mentor-brief.md](../investor/mentor-brief.md)
+
+## Fonts
+
+Aeonik (Regular + Bold) is bundled in `assets/fonts/` for offline rendering. Licensed typeface — for investor distribution only, not for public web use.
