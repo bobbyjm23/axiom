@@ -154,7 +154,7 @@
 3. Solo founder delivery + sales capacity.
 4. No IRAP Year 1 (defer gov segment).
 
-*Full register: [archive/replan-july-2026/thread-10-risk-scenarios.md](archive/replan-july-2026/thread-10-risk-scenarios.md)*
+*Full register: [risk/risk-register.md](risk/risk-register.md)*
 
 ---
 
@@ -162,8 +162,12 @@
 
 | Need | Document |
 |------|----------|
-| Full investor narrative | [thread-11](archive/replan-july-2026/thread-11-investor-narrative.md) |
-| GTM detail | [thread-06](archive/replan-july-2026/thread-06-gtm-pipeline.md) |
-| Funding detail | [thread-08](archive/replan-july-2026/thread-08-funding.md) |
+| Mentor / advisor entry | [investor/mentor-brief.md](investor/mentor-brief.md) |
+| Investor FAQ | [investor/investor-faq.md](investor/investor-faq.md) |
+| GTM and 90-day plan | [strategy/gtm-pipeline.md](strategy/gtm-pipeline.md) |
+| Competition | [strategy/competitive-positioning.md](strategy/competitive-positioning.md) |
+| Funding | [finance/funding.md](finance/funding.md) |
+| Unit economics | [finance/unit-economics.md](finance/unit-economics.md) |
+| Team and hiring | [operations/team-and-hiring.md](operations/team-and-hiring.md) |
 | Data room | [investor/data-room-index.md](investor/data-room-index.md) |
-| Index | [README.md](README.md) |
+| Full index | [README.md](README.md) |

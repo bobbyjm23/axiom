@@ -5,7 +5,7 @@
 **Parent document:** [sovereign-warden-business-plan.md](sovereign-warden-business-plan.md)  
 **Track A strategy:** [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md)  
 **Seed funding:** [seed-funding-implications.md](seed-funding-implications.md)  
-**Plan inputs:** [archive/replan-july-2026/thread-04-pricing-unit-economics.md](archive/replan-july-2026/thread-04-pricing-unit-economics.md)  
+**Plan inputs:** [finance/unit-economics.md](finance/unit-economics.md)  
 **Executive plan:** [plan.md](plan.md)
 
 This document provides editable inputs for 3-year revenue and cost projections across three scenarios. Copy values into a spreadsheet or adjust directly for sensitivity analysis.

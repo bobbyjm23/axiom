@@ -2,7 +2,7 @@
 
 **Purpose:** Checklist of documents for angel bridge and pre-seed due diligence.  
 **Last updated:** July 2026  
-**Executive plan:** [../plan.md](../plan.md)
+**Start here:** [mentor-brief.md](mentor-brief.md) · [plan.md](../plan.md)
 
 ---
 
@@ -21,13 +21,13 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Pty Ltd registration (ASIC extract) | ⬜ | [Legal thread](../archive/replan-july-2026/thread-09-legal-compliance.md) |
-| Constitution / shareholders agreement | ⬜ | Legal thread |
-| IP assignment deed | ⬜ | Legal thread |
+| Pty Ltd registration (ASIC extract) | ⬜ | [legal-and-compliance.md](../operations/legal-and-compliance.md) |
+| Constitution / shareholders agreement | ⬜ | legal-and-compliance.md |
+| IP assignment deed | ⬜ | legal-and-compliance.md |
 | PI insurance certificate | ⬜ | Post-first payment |
 | Cyber insurance certificate | ⬜ | Post-first payment |
-| Pilot SOW template | ⬜ | Legal thread |
-| DPA template | ⬜ | Legal thread |
+| Pilot SOW template | ⬜ | legal-and-compliance.md |
+| DPA template | ⬜ | legal-and-compliance.md |
 
 ---
 
@@ -36,9 +36,10 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | **Executive plan** | ✅ | [plan.md](../plan.md) |
+| Mentor brief | ✅ | [mentor-brief.md](mentor-brief.md) |
 | Viability review | ✅ | [viability-review.md](../viability-review.md) |
 | Track A GTM strategy | ✅ | [mid-market-track-a-strategy.md](../mid-market-track-a-strategy.md) |
-| 90-day action plan | ✅ | [GTM thread](../archive/replan-july-2026/thread-06-gtm-pipeline.md) |
+| 90-day action plan | ✅ | [gtm-pipeline.md](../strategy/gtm-pipeline.md) |
 | Comprehensive business plan | 🟡 | [sovereign-warden-business-plan.md](../sovereign-warden-business-plan.md) (reference) |
 
 ---
@@ -47,10 +48,11 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| ICP definition | ✅ | [thread-01](../archive/replan-july-2026/thread-01-market-icp.md) |
-| Target accounts (20) + AI stage | 🟡 | [thread-01b](../archive/replan-july-2026/thread-01-target-accounts-detail.md) |
-| Pipeline tracker | 🟡 | GTM thread — 🔒 private copy |
-| TAM/SAM/SOM | 🟡 | thread-01 + business plan |
+| ICP definition | ✅ | [market-and-icp.md](../strategy/market-and-icp.md) |
+| Target accounts (Priority A) | ✅ | [target-accounts.md](../strategy/target-accounts.md) |
+| Target accounts (full detail) | 🟡 | [archive thread-01b](../archive/replan-july-2026/thread-01-target-accounts-detail.md) |
+| Pipeline tracker | 🟡 | gtm-pipeline.md — 🔒 private copy |
+| TAM/SAM/SOM | ✅ | market-and-icp.md |
 
 ---
 
@@ -59,10 +61,11 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | Architecture overview | ✅ | [architecture.md](../../architecture.md) |
-| Product maturity matrix | ✅ | [thread-03](../archive/replan-july-2026/thread-03-product-moat.md) |
+| Product maturity + runbook | ✅ | [product-and-delivery.md](../operations/product-and-delivery.md) |
 | Demo environment / video | 🟡 | Founder to record |
 | Security policy (demo) | ✅ | [security-policy.md](../../../demo/documents/security-policy.md) |
 | Competitor matrix | ✅ | [competitor-matrix.md](../competitor-matrix.md) |
+| Competitive positioning | ✅ | [competitive-positioning.md](../strategy/competitive-positioning.md) |
 
 ---
 
@@ -71,10 +74,10 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | Financial model assumptions | ✅ | [financial-model-assumptions.md](../financial-model-assumptions.md) |
-| Unit economics / LTV:CAC | ✅ | [thread-04](../archive/replan-july-2026/thread-04-pricing-unit-economics.md) |
+| Unit economics / LTV:CAC | ✅ | [unit-economics.md](../finance/unit-economics.md) |
 | 3-year P&L projection | 🟡 | Export from model |
 | Cap table | ⬜ | Post-incorporation |
-| Angel bridge use of funds | ✅ | [thread-08](../archive/replan-july-2026/thread-08-funding.md) |
+| Angel bridge use of funds | ✅ | [funding.md](../finance/funding.md) |
 | Seed funding implications | ✅ | [seed-funding-implications.md](../seed-funding-implications.md) |
 
 ---
@@ -84,8 +87,8 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | Founder bio / LinkedIn | ⬜ | Founder |
-| Team + hiring plan | ✅ | [thread-02](../archive/replan-july-2026/thread-02-founder-team.md) |
-| Advisor list | ⬜ | thread-02 |
+| Team + hiring plan | ✅ | [team-and-hiring.md](../operations/team-and-hiring.md) |
+| Advisor list | ⬜ | team-and-hiring.md |
 | Network inventory | ⬜ | 🔒 private |
 
 ---
@@ -95,9 +98,9 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | Pitch deck | 🟡 | [pitch-deck/index.html](../pitch-deck/index.html) |
-| Investor narrative + FAQ | ✅ | [thread-11](../archive/replan-july-2026/thread-11-investor-narrative.md) |
-| Competitive positioning | ✅ | [thread-05](../archive/replan-july-2026/thread-05-competitive-positioning.md) |
-| TCO one-pager (50 users) | ⬜ | GTM thread |
+| Investor FAQ | ✅ | [investor-faq.md](investor-faq.md) |
+| Competitive positioning | ✅ | [competitive-positioning.md](../strategy/competitive-positioning.md) |
+| TCO one-pager (50 users) | ⬜ | unit-economics.md |
 | Case studies | ⬜ | Post first customer |
 
 ---
@@ -106,8 +109,8 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| QuickStart runbook | 🟡 | [thread-07](../archive/replan-july-2026/thread-07-delivery-operations.md) |
-| Capacity model | ✅ | thread-07 |
+| QuickStart runbook | 🟡 | [product-and-delivery.md](../operations/product-and-delivery.md) |
+| Capacity model | ✅ | team-and-hiring.md |
 | Delivery time evidence | ⬜ | Timed dry-run |
 
 ---
@@ -116,9 +119,9 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Risk register | ✅ | [thread-10](../archive/replan-july-2026/thread-10-risk-scenarios.md) |
+| Risk register | ✅ | [risk-register.md](../risk/risk-register.md) |
 | Kill criteria | ✅ | [viability-review.md](../viability-review.md) |
-| Compliance checklist | 🟡 | [thread-09](../archive/replan-july-2026/thread-09-legal-compliance.md) |
+| Compliance checklist | 🟡 | [legal-and-compliance.md](../operations/legal-and-compliance.md) |
 
 ---
 
@@ -133,4 +136,4 @@
 
 ---
 
-*Detailed workshop outputs: [archive/replan-july-2026/](../archive/replan-july-2026/)*
+*Historical workshop outputs: [archive/replan-july-2026/](../archive/replan-july-2026/)*

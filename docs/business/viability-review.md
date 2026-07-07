@@ -102,13 +102,13 @@ These gaps directly affect the Team/Readiness score (currently 2.5). Provide ans
 
 | # | Gap | Impact on score | Question | Your answer |
 |---|-----|-----------------|----------|-------------|
-| G1 | Sales network | Critical (C1) | How many CIO/CISO-level contacts do you have in target verticals with ability to intro? | **3–5** — Adneo wedge + 2–4 board/external paths; investor intros as raise criterion ([thread-02](archive/replan-july-2026/thread-02-founder-team.md)) |
-| G2 | Vertical focus | High (GTM) | Which 1–2 verticals have your strongest network and domain credibility? | **GTM:** law #1, accounting #2 ([thread-01](archive/replan-july-2026/thread-01-market-icp.md)). **Founder credibility:** B2B SaaS / engineering (Adneo, ASX-listed HR tech) — not law-native; Adneo internal deploy = traction proof |
+| G1 | Sales network | Critical (C1) | How many CIO/CISO-level contacts do you have in target verticals with ability to intro? | **3–5** — Adneo wedge + 2–4 board/external paths; investor intros as raise criterion ([team-and-hiring](operations/team-and-hiring.md)) |
+| G2 | Vertical focus | High (GTM) | Which 1–2 verticals have your strongest network and domain credibility? | **GTM:** law #1, accounting #2 ([market-and-icp](strategy/market-and-icp.md)). **Founder credibility:** B2B SaaS / engineering (Adneo, ASX-listed HR tech) — not law-native; Adneo internal deploy = traction proof |
 | G3 | Solo vs team | High (delivery) | Are you solo founder or do you have a co-founder/technical partner? | **Solo technical founder** — seeking **technical co-founder** (delivery/engineering); no co-founder committed |
-| G4 | Delivery capacity | Medium (C2) | Can you deliver a 6-week pilot solo, or is engineer hire Day 1? | **Solo for Adneo + first external QuickStart** with colleague backup; QuickStart &lt;5 days after ~2 weeks runbook work; engineer at 2 signed SOWs — [thread-07](archive/replan-july-2026/thread-07-delivery-operations.md) |
-| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **In progress** — NZ trading co exists; **AU Pty Ltd before Adneo SOW**; IP deed within 2 wks — [thread-09](archive/replan-july-2026/thread-09-legal-compliance.md) |
-| G6 | Existing revenue | Medium (runway) | Any consulting revenue or pipeline from existing business? | **Pre-revenue** — Adneo internal QuickStart in pipeline (design partner; conflict cleared) |
-| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **Angel bridge $100–300k post-Adneo SOW**; self-fund until then; institutional pre-seed deferred to 2–3 logos — [thread-08](archive/replan-july-2026/thread-08-funding.md) |
+| G4 | Delivery capacity | Medium (C2) | Can you deliver a 6-week pilot solo, or is engineer hire Day 1? | **Solo for Adneo + first external QuickStart** with colleague backup; QuickStart &lt;5 days after ~2 weeks runbook work; engineer at first paid SOW — [product-and-delivery](operations/product-and-delivery.md) |
+| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **In progress** — NZ trading co exists; **AU Pty Ltd before Adneo SOW**; IP deed within 2 wks — [legal-and-compliance](operations/legal-and-compliance.md) |
+| G6 | Existing revenue | Medium (runway) | Any consulting revenue or pipeline from existing business? | **Pre-revenue** — Adneo internal QuickStart in pipeline (design partner; vendor clearance pending) |
+| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **Angel bridge $150–250k post-Adneo SOW**; self-fund until then; institutional pre-seed deferred to 2–3 logos — [funding](finance/funding.md) |
 
 ### Score Adjustment Guide
 
