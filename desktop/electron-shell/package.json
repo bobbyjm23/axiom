@@ -1,9 +1,9 @@
 {
-  "name": "sovereign-ai-desktop",
+  "name": "sovereign-warden-desktop",
   "version": "0.1.0",
-  "description": "Sovereign AI — AnythingLLM desktop client (remote backend)",
+  "description": "Sovereign Warden — AnythingLLM desktop client (remote backend)",
   "main": "main.js",
-  "author": "Sovereign AI Platform",
+  "author": "Sovereign Warden",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -17,8 +17,8 @@
     "dist:linux": "electron-builder --linux"
   },
   "build": {
-    "appId": "com.sovereign.ai.desktop",
-    "productName": "Sovereign AI",
+    "appId": "com.sovereignwarden.desktop",
+    "productName": "Sovereign Warden",
     "directories": {
       "output": "../dist",
       "buildResources": "../assets"

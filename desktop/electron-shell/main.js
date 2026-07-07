@@ -5,7 +5,7 @@ const fs = require("fs");
 const DEFAULT_CONFIG = {
   serverUrl: "http://localhost:3000",
   apiBase: "http://localhost:3000/api",
-  appName: "Sovereign AI",
+  appName: "Sovereign Warden",
   remoteOnly: true,
 };
 

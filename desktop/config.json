@@ -1,7 +1,7 @@
 {
   "serverUrl": "http://localhost:3000",
   "apiBase": "http://localhost:3000/api",
-  "appName": "Sovereign AI",
+  "appName": "Sovereign Warden",
   "remoteOnly": true,
   "skipLocalServer": true,
   "skipOllamaDownload": true,
@@ -9,6 +9,6 @@
     "enabled": false,
     "provider": "github",
     "owner": "your-org",
-    "repo": "sovereign-ai-platform"
+    "repo": "sovereign-warden-platform"
   }
 }

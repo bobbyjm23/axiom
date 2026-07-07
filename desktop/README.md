@@ -1,4 +1,4 @@
-# Sovereign AI Desktop Client (Option B)
+# Sovereign Warden Desktop Client (Option B)
 
 Electron desktop app delivering the **exact AnythingLLM React UI** against your central Docker backend.
 
@@ -7,7 +7,7 @@ Electron desktop app delivering the **exact AnythingLLM React UI** against your 
 Mintplex's official Desktop Electron wrapper is proprietary (not in the OSS repo). Our Option B implementation:
 
 1. **`anything-llm/`** — cloned upstream frontend source (pinned `v1.8.5`)
-2. **`electron-shell/`** — sovereign Electron app (menus, installer, native window)
+2. **`electron-shell/`** — Sovereign Warden Electron app (menus, installer, native window)
 3. **`frontend-dist/`** — built React UI with `VITE_API_BASE` → Docker backend
 
 No local server, Ollama, or LLM engine runs on the desktop — all inference and data live on the platform backend.
@@ -46,7 +46,7 @@ npm start
 {
   "serverUrl": "http://localhost:3000",
   "apiBase": "http://localhost:3000/api",
-  "appName": "Sovereign AI",
+  "appName": "Sovereign Warden",
   "remoteOnly": true
 }
 ```

@@ -18,7 +18,7 @@ This delivers the identical AnythingLLM UI in a native desktop package without t
 | Upstream repo | https://github.com/Mintplex-Labs/anything-llm |
 | Pinned tag | `v1.8.5` |
 | Fork type | Option B — remote backend client |
-| Electron shell | `desktop/electron-shell/` (sovereign-built) |
+| Electron shell | `desktop/electron-shell/` (Sovereign Warden-built) |
 | Frontend source | `desktop/anything-llm/frontend/` (upstream clone) |
 
 ## Modified Files
