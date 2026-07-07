@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: litellm
-  namespace: sovereign-app
+  namespace: sovereign-warden-app
 spec:
   replicas: 2
   selector:
@@ -21,7 +21,7 @@ spec:
             - containerPort: 4000
           env:
             - name: DATABASE_URL
-              value: postgresql://sovereign:$(POSTGRES_PASSWORD)@postgres.sovereign-app.svc.cluster.local:5432/sovereign_ai
+              value: postgresql://sovereign:$(POSTGRES_PASSWORD)@postgres.sovereign-warden-app.svc.cluster.local:5432/sovereign_warden
             - name: LITELLM_MASTER_KEY
               valueFrom:
                 secretKeyRef:
@@ -51,7 +51,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: litellm
-  namespace: sovereign-app
+  namespace: sovereign-warden-app
 spec:
   selector:
     app: litellm

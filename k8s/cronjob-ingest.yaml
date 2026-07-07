@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: ingest-sharepoint
-  namespace: sovereign-app
+  namespace: sovereign-warden-app
 spec:
   schedule: "0 2 * * *"
   jobTemplate:
@@ -30,7 +30,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: ingest-confluence
-  namespace: sovereign-app
+  namespace: sovereign-warden-app
 spec:
   schedule: "0 3 * * *"
   jobTemplate:

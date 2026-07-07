@@ -1,27 +1,27 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sovereign-edge
+  name: sovereign-warden-edge
   labels:
-    sovereign.ai/tier: edge
+    sovereign-warden.ai/tier: edge
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sovereign-app
+  name: sovereign-warden-app
   labels:
-    sovereign.ai/tier: application
+    sovereign-warden.ai/tier: application
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sovereign-gpu
+  name: sovereign-warden-gpu
   labels:
-    sovereign.ai/tier: gpu
+    sovereign-warden.ai/tier: gpu
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sovereign-data
+  name: sovereign-warden-data
   labels:
-    sovereign.ai/tier: data
+    sovereign-warden.ai/tier: data
