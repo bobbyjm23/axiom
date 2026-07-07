@@ -74,6 +74,7 @@
 | [finance/unit-economics.md](finance/unit-economics.md) | Pricing, margins, LTV:CAC |
 | [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md) | **AWS vs on-prem economics; post-wedge focus** |
 | [finance/revenue-forecast.md](finance/revenue-forecast.md) | **Option A+B revenue forecast and charts** |
+| [finance/valuation-and-exit.md](finance/valuation-and-exit.md) | **Y5 valuation and exit scenarios** |
 | [financial-model-assumptions.md](financial-model-assumptions.md) | 3-year model inputs |
 | [seed-funding-implications.md](seed-funding-implications.md) | Pre-seed and seed path |
 

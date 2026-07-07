@@ -58,7 +58,8 @@ Same product, same upgrade path — no rebuild when they convert to owned hardwa
 | 3 | [strategy/competitive-positioning.md](../strategy/competitive-positioning.md) | 5 min | vs Copilot, Cetus, Macquarie |
 | 4 | [finance/funding.md](../finance/funding.md) | 5 min | Raise timeline and use of funds |
 | 5 | [finance/hosted-vs-onprem-cogs.md](../finance/hosted-vs-onprem-cogs.md) | 10 min | **Why on-prem is the focus after wedge** |
-| 6 | [strategy/gtm-pipeline.md](../strategy/gtm-pipeline.md) | 10 min | 90-day execution plan |
+| 6 | [finance/valuation-and-exit.md](../finance/valuation-and-exit.md) | 5 min | Y5 valuation and exit scenarios |
+| 7 | [strategy/gtm-pipeline.md](../strategy/gtm-pipeline.md) | 10 min | 90-day execution plan |
 
 **Optional:** [operations/team-and-hiring.md](../operations/team-and-hiring.md) · [risk/risk-register.md](../risk/risk-register.md)
 

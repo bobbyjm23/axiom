@@ -182,6 +182,7 @@ Charts and quarterly detail: [finance/revenue-forecast.md](finance/revenue-forec
 | Funding | [finance/funding.md](finance/funding.md) |
 | Unit economics | [finance/unit-economics.md](finance/unit-economics.md) |
 | **Hosted vs on-prem COGS** | [finance/hosted-vs-onprem-cogs.md](finance/hosted-vs-onprem-cogs.md) |
+| **Y5 valuation / exit** | [finance/valuation-and-exit.md](finance/valuation-and-exit.md) |
 | Team and hiring | [operations/team-and-hiring.md](operations/team-and-hiring.md) |
 | Data room | [investor/data-room-index.md](investor/data-room-index.md) |
 | Full index | [README.md](README.md) |
