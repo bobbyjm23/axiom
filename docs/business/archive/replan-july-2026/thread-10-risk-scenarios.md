@@ -2,7 +2,7 @@
 
 **Purpose:** Intellectual honesty about failure modes for investors and founder discipline.
 
-**Status:** Complete (aligned with [viability-review.md](../viability-review.md)).
+**Status:** Complete (aligned with [viability-review.md](../../viability-review.md)).
 
 ---
 

@@ -46,7 +46,7 @@
 
 ## Day 1 QuickStart Deliverables (3.1)
 
-From [architecture.md](../../architecture.md) and [bootstrap-poc.sh](../../../scripts/bootstrap-poc.sh):
+From [architecture.md](../../../../architecture.md) and [bootstrap-poc.sh../../../../scripts/bootstrap-poc.sh):
 
 | Component | Customer gets |
 |-----------|---------------|
@@ -55,7 +55,7 @@ From [architecture.md](../../architecture.md) and [bootstrap-poc.sh](../../../sc
 | Vector store | Qdrant (cloud or self-hosted per profile) |
 | Desktop app | Forked AnythingLLM Electron — connects to backend |
 | Workspaces | General, Company Knowledge, Admin-only Agent (templates) |
-| Security narrative | Adapted from [security-policy.md](../../../demo/documents/security-policy.md) |
+| Security narrative | Adapted from [security-policy.md](../../../../../demo/documents/security-policy.md) |
 | Onboarding | User invites, 30-min admin training |
 
 **Not included Day 1:** SSO, SharePoint sync, air-gap, IRAP pack.

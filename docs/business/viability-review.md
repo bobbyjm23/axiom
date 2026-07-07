@@ -6,7 +6,8 @@
 **Parent document:** [sovereign-warden-business-plan.md](sovereign-warden-business-plan.md)  
 **GTM:** [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md)  
 **Funding:** [seed-funding-implications.md](seed-funding-implications.md)  
-**Replan:** [replan/README.md](replan/README.md)
+**Replan:** [archive/replan-july-2026/](archive/replan-july-2026/README.md) (archived workshop)  
+**Active plan:** [plan.md](plan.md) · [README.md](README.md)
 
 This document provides a standalone go/no-go assessment for the Sovereign Warden services business. For full context, see the comprehensive business plan.
 
@@ -101,13 +102,13 @@ These gaps directly affect the Team/Readiness score (currently 2.5). Provide ans
 
 | # | Gap | Impact on score | Question | Your answer |
 |---|-----|-----------------|----------|-------------|
-| G1 | Sales network | Critical (C1) | How many CIO/CISO-level contacts do you have in target verticals with ability to intro? | **3–5** — Adneo wedge + 2–4 board/external paths; investor intros as raise criterion ([thread-02](replan/thread-02-founder-team.md)) |
-| G2 | Vertical focus | High (GTM) | Which 1–2 verticals have your strongest network and domain credibility? | **GTM:** law #1, accounting #2 ([thread-01](replan/thread-01-market-icp.md)). **Founder credibility:** B2B SaaS / engineering (Adneo, ASX-listed HR tech) — not law-native; Adneo internal deploy = traction proof |
+| G1 | Sales network | Critical (C1) | How many CIO/CISO-level contacts do you have in target verticals with ability to intro? | **3–5** — Adneo wedge + 2–4 board/external paths; investor intros as raise criterion ([thread-02](archive/replan-july-2026/thread-02-founder-team.md)) |
+| G2 | Vertical focus | High (GTM) | Which 1–2 verticals have your strongest network and domain credibility? | **GTM:** law #1, accounting #2 ([thread-01](archive/replan-july-2026/thread-01-market-icp.md)). **Founder credibility:** B2B SaaS / engineering (Adneo, ASX-listed HR tech) — not law-native; Adneo internal deploy = traction proof |
 | G3 | Solo vs team | High (delivery) | Are you solo founder or do you have a co-founder/technical partner? | **Solo technical founder** — seeking **technical co-founder** (delivery/engineering); no co-founder committed |
-| G4 | Delivery capacity | Medium (C2) | Can you deliver a 6-week pilot solo, or is engineer hire Day 1? | **Solo for Adneo + first external QuickStart** with colleague backup; QuickStart &lt;5 days after ~2 weeks runbook work; engineer at 2 signed SOWs — [thread-07](replan/thread-07-delivery-operations.md) |
-| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **In progress** — NZ trading co exists; **AU Pty Ltd before Adneo SOW**; IP deed within 2 wks — [thread-09](replan/thread-09-legal-compliance.md) |
+| G4 | Delivery capacity | Medium (C2) | Can you deliver a 6-week pilot solo, or is engineer hire Day 1? | **Solo for Adneo + first external QuickStart** with colleague backup; QuickStart &lt;5 days after ~2 weeks runbook work; engineer at 2 signed SOWs — [thread-07](archive/replan-july-2026/thread-07-delivery-operations.md) |
+| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **In progress** — NZ trading co exists; **AU Pty Ltd before Adneo SOW**; IP deed within 2 wks — [thread-09](archive/replan-july-2026/thread-09-legal-compliance.md) |
 | G6 | Existing revenue | Medium (runway) | Any consulting revenue or pipeline from existing business? | **Pre-revenue** — Adneo internal QuickStart in pipeline (design partner; conflict cleared) |
-| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **Angel bridge $100–300k post-Adneo SOW**; self-fund until then; institutional pre-seed deferred to 2–3 logos — [thread-08](replan/thread-08-funding.md) |
+| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **Angel bridge $100–300k post-Adneo SOW**; self-fund until then; institutional pre-seed deferred to 2–3 logos — [thread-08](archive/replan-july-2026/thread-08-funding.md) |
 
 ### Score Adjustment Guide
 
@@ -134,7 +135,7 @@ These gaps directly affect the Team/Readiness score (currently 2.5). Provide ans
 
 ## Recommended Next Steps (Priority Order)
 
-1. **Answer gaps G1–G7** above (see [replan/](replan/README.md) threads) to refine Team score and GTM focus
+1. **Answer gaps G1–G7** above (see [plan.md](plan.md) and [archive/replan-july-2026/](archive/replan-july-2026/README.md)) to refine Team score and GTM focus
 2. **Execute 90-day action plan** (see [business plan Section 13](sovereign-warden-business-plan.md#13-90-day-action-plan))
 3. **Build TCO calculator** and rehearse 15-min demo
 4. **Identify 20 target accounts** in chosen vertical(s)

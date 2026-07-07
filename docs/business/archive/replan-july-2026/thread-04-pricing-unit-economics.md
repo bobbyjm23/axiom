@@ -43,7 +43,7 @@
 | Annual Support | — | $6,000–$18,000/yr | $2,000–$4,000 | 70–80% |
 | Managed Lite | — | $2,500–$5,000/mo | ~$1,500/mo | ~40% |
 
-*Source: [mid-market-track-a-strategy.md](../mid-market-track-a-strategy.md)*
+*Source: [mid-market-track-a-strategy.md](../../mid-market-track-a-strategy.md)*
 
 ---
 
@@ -97,7 +97,7 @@ Base case: 8 pilots × $28k avg × 40% conversion → 3 production × $70k.
 | Support (3 yr) | $36,000 | $9,000 | $27,000 |
 | **3-year LTV** | **$121,000** | **$52,000** | **$69,000** (57% GM) |
 
-*Source: [seed-funding-implications.md](../seed-funding-implications.md)*
+*Source: [seed-funding-implications.md](../../seed-funding-implications.md)*
 
 ---
 
@@ -115,7 +115,7 @@ Base case: 8 pilots × $28k avg × 40% conversion → 3 production × $70k.
 
 ## Updated Financial Model Inputs
 
-Copy these into [financial-model-assumptions.md](../financial-model-assumptions.md) when validated:
+Copy these into [financial-model-assumptions.md](../../financial-model-assumptions.md) when validated:
 
 | Variable | Recommended value | Notes |
 |----------|-------------------|-------|

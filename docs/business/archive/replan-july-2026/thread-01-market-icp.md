@@ -47,7 +47,7 @@
 
 | Layer | Definition | Estimate | Source / method |
 |-------|------------|----------|-----------------|
-| **TAM** | AU enterprise AI spend (productivity + compliance) | $2.0–4.0B by 2028 | GDP share method — [business plan §2](../sovereign-warden-business-plan.md) |
+| **TAM** | AU enterprise AI spend (productivity + compliance) | $2.0–4.0B by 2028 | GDP share method — [business plan §2](../../sovereign-warden-business-plan.md) |
 | **SAM (Track A)** | Regulated knowledge-work, 50–250 employees | **~10,000–17,000 orgs** | ABS 20–199 band × 15–25% regulated filter |
 | **SAM (law subset)** | Mid-tier law firms 50–250 staff | **~800–1,200** | Law Society counts × size band (validate with founder) |
 | **SOM (Year 3)** | Realistic capture | **15–25 customers; 40–60 cumulative logos** | Track A model |

@@ -25,7 +25,7 @@
 | Capability | Founder (you) | Gap severity | Mitigation |
 |------------|---------------|--------------|------------|
 | Platform engineering | Strong | — | Core asset; POC + bootstrap scripts exist |
-| Solution architecture | Strong | — | [architecture.md](../../architecture.md) documented |
+| Solution architecture | Strong | — | [architecture.md](../../../../architecture.md) documented |
 | Enterprise sales | Moderate (commitment) | **High** | 2.1 locked: founder-led sales 12 mo; fractional sales advisor M8–10; investor intros as raise criterion |
 | Delivery / client onboarding | Moderate | **High** | Runbook focus: QuickStart &lt;5 days within ~2 weeks; colleague backup; engineer at first paid SOW (M1–2) |
 | Finance / fundraising | Moderate | **High** | 0–3 mo runway; investor targets in mind but no pathway yet; intros post-close as raise criterion |
@@ -129,7 +129,7 @@ Keep named contacts in a **private copy** (not git). Reference counts only in in
 
 ## Viability Score Impact
 
-From [viability-review.md](../viability-review.md):
+From [viability-review.md](../../viability-review.md):
 
 | Founder answer | Team score | Total viability |
 |----------------|------------|-----------------|

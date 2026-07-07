@@ -2,7 +2,7 @@
 
 **Purpose:** Answer *"Why you vs Cetus / Copilot / a dev shop?"* in one slide.
 
-**Status:** Complete (from [competitor-matrix.md](../competitor-matrix.md) and Track A strategy).
+**Status:** Complete (from [competitor-matrix.md](../../competitor-matrix.md) and Track A strategy).
 
 ---
 

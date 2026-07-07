@@ -1,8 +1,6 @@
-# Investor Data Room Index
+# Investor Data Room Index (Archive)
 
-**Purpose:** Checklist of documents for pre-seed investor due diligence.  
-**Last updated:** July 2026  
-**Replan threads:** [README.md](README.md)
+> **Superseded by** [../../investor/data-room-index.md](../../investor/data-room-index.md)
 
 ---
 
@@ -36,10 +34,10 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Comprehensive business plan | ✅ | [sovereign-warden-business-plan.md](../sovereign-warden-business-plan.md) |
-| Viability review | ✅ | [viability-review.md](../viability-review.md) |
-| Track A GTM strategy | ✅ | [mid-market-track-a-strategy.md](../mid-market-track-a-strategy.md) |
-| Replan thread outputs | ✅ | [replan/](.) |
+| Comprehensive business plan | ✅ | [sovereign-warden-business-plan.md](../../sovereign-warden-business-plan.md) |
+| Viability review | ✅ | [viability-review.md](../../viability-review.md) |
+| Track A GTM strategy | ✅ | [mid-market-track-a-strategy.md](../../mid-market-track-a-strategy.md) |
+| Workshop thread outputs | ✅ | [archive/replan-july-2026/](../../archive/replan-july-2026/) |
 | 90-day action plan | ✅ | Thread 6 + business plan §13 |
 
 ---
@@ -61,11 +59,11 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Architecture overview | ✅ | [architecture.md](../../architecture.md) |
+| Architecture overview | ✅ | [architecture.md](../../../../architecture.md) |
 | Product maturity matrix | ✅ | [thread-03-product-moat.md](thread-03-product-moat.md) |
 | Demo environment / video | 🟡 | Founder to record |
-| Security policy (demo) | ✅ | [security-policy.md](../../../demo/documents/security-policy.md) |
-| Competitor matrix | ✅ | [competitor-matrix.md](../competitor-matrix.md) |
+| Security policy (demo) | ✅ | [security-policy.md](../../../../../demo/documents/security-policy.md) |
+| Competitor matrix | ✅ | [competitor-matrix.md](../../competitor-matrix.md) |
 | Open-source license summary | ✅ | Thread 9 |
 
 ---
@@ -74,12 +72,12 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Financial model assumptions | ✅ | [financial-model-assumptions.md](../financial-model-assumptions.md) |
+| Financial model assumptions | ✅ | [financial-model-assumptions.md](../../financial-model-assumptions.md) |
 | Unit economics / LTV:CAC | ✅ | [thread-04-pricing-unit-economics.md](thread-04-pricing-unit-economics.md) |
 | 3-year P&L projection | 🟡 | Export from model — founder |
 | Cap table | ⬜ | Post-incorporation |
 | Use of funds ($650k) | ✅ | [thread-08-funding.md](thread-08-funding.md) |
-| Seed funding implications | ✅ | [seed-funding-implications.md](../seed-funding-implications.md) |
+| Seed funding implications | ✅ | [seed-funding-implications.md](../../seed-funding-implications.md) |
 
 ---
 
@@ -99,12 +97,12 @@
 
 | Document | Status | Location |
 |----------|--------|----------|
-| Pitch deck | 🟡 | [pitch-deck/index.html](../pitch-deck/index.html) |
+| Pitch deck | 🟡 | [pitch-deck/index.html](../../pitch-deck/index.html) |
 | Investor memo | ✅ | Thread 8 |
 | Competitive positioning | ✅ | [thread-05-competitive-positioning.md](thread-05-competitive-positioning.md) |
 | TCO one-pager (50 users) | ⬜ | Thread 6 |
 | Case studies | ⬜ | Post first customer |
-| Website | 🟡 | [website/](../../../website/) |
+| Website | 🟡 | [website/../../../../website/) |
 
 ---
 
@@ -124,7 +122,7 @@
 | Document | Status | Location |
 |----------|--------|----------|
 | Risk register | ✅ | [thread-10-risk-scenarios.md](thread-10-risk-scenarios.md) |
-| Kill criteria | ✅ | [viability-review.md](../viability-review.md) |
+| Kill criteria | ✅ | [viability-review.md](../../viability-review.md) |
 | Compliance checklist | 🟡 | [thread-09-legal-compliance.md](thread-09-legal-compliance.md) |
 | IRAP roadmap | 🟡 | Deferred Month 12 — seed doc |
 

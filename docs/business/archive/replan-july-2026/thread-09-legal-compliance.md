@@ -76,9 +76,9 @@
 | MSA template | ⬜ **Deferred** — customer #2+ | — |
 | Adneo pilot SOW (free/discounted → production) | ⬜ Draft + lawyer fact-check | Founder + lawyer |
 | Short DPA (Privacy Act aligned) | ⬜ Draft + lawyer fact-check | Founder + lawyer |
-| Security / compliance pack | ⬜ **Founder draft** | Founder — adapt [security-policy.md](../../../demo/documents/security-policy.md) |
+| Security / compliance pack | ⬜ **Founder draft** | Founder — adapt [security-policy.md](../../../../../demo/documents/security-policy.md) |
 | Lawyer fact-check (pack + contracts) | ⬜ Before Adneo / angels | Lawyer |
-| Data flow diagram | ✅ | [architecture.md](../../architecture.md) |
+| Data flow diagram | ✅ | [architecture.md](../../../../architecture.md) |
 | Incident response outline | ⬜ | Draft from security-policy |
 
 ### Track B — Bridge + seed (ISO / IRAP)
@@ -149,8 +149,8 @@ Founder drafts from prior experience; lawyer fact-checks before Adneo approach o
 
 | Document | Source / action |
 |----------|-----------------|
-| Security policy | Adapt [security-policy.md](../../../demo/documents/security-policy.md) |
-| Data flow + subprocessors | [architecture.md](../../architecture.md) + Gemini/Qdrant disclosure |
+| Security policy | Adapt [security-policy.md](../../../../../demo/documents/security-policy.md) |
+| Data flow + subprocessors | [architecture.md](../../../../architecture.md) + Gemini/Qdrant disclosure |
 | Access control / RBAC | Document role matrix from platform |
 | Incident response | Draft from security-policy |
 | Breach notification | Clause in DPA |

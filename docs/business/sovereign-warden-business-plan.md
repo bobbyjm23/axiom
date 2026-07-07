@@ -3,7 +3,7 @@
 **Version:** 1.1  
 **Date:** July 2026  
 **Confidentiality:** Internal / Investor Use  
-**Related documents:** [replan/README.md](replan/README.md) (granular replan threads), [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md) (primary GTM), [seed-funding-implications.md](seed-funding-implications.md), [pitch-deck/index.html](pitch-deck/index.html) (angel deck), [competitor-matrix.md](competitor-matrix.md), [financial-model-assumptions.md](financial-model-assumptions.md)
+**Related documents:** [plan.md](plan.md) (executive plan), [README.md](README.md) (index), [archive/replan-july-2026/](archive/replan-july-2026/README.md) (July 2026 workshop), [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md) (primary GTM), [seed-funding-implications.md](seed-funding-implications.md), [pitch-deck/index.html](pitch-deck/index.html) (angel deck), [competitor-matrix.md](competitor-matrix.md), [financial-model-assumptions.md](financial-model-assumptions.md)
 
 > **GTM update (v1.1):** Year 1 primary focus is **Track A mid-market** (50–250 employees). Enterprise (Track B, 500+) is the Year 2+ expansion lane. See [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md).
 

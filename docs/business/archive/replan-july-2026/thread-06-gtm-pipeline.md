@@ -11,7 +11,7 @@
 | Decision | Recommendation | Rationale |
 |----------|----------------|-----------|
 | Sales motion | Founder-only through Month 12 | Capital efficient; Track A cycles are 4–10 weeks |
-| Founding customer offer | First 3 QuickStarts at **$12k** + case study + logo rights | Per [mid-market-track-a-strategy.md](../mid-market-track-a-strategy.md) |
+| Founding customer offer | First 3 QuickStarts at **$12k** + case study + logo rights | Per [mid-market-track-a-strategy.md](../../mid-market-track-a-strategy.md) |
 | 90-day revenue target | **1 × Adneo QuickStart signed + delivered** (adjusted) | Adneo-first GTM; law outbound wk 7+; default 2 QuickStarts deferred to Month 4–5 |
 | Free pilots | **Founder deviation** — not strict no-free for all deals | Adneo may use discounted/free discovery; law ICP still targets $12k QuickStart |
 | "Signed logo" definition | **Paid SOW signed** (deposit received) | LOIs do not count for investor traction |
@@ -138,10 +138,10 @@
 | **Adneo ROI deck** | **To build — wk 1–2** | **P2** | Efficiency metrics; board pitch (internal) |
 | **QuickStart SOW** | Outline only — **wk 2** | **P3** | Founding $12k + case study; flexible Adneo commercial terms |
 | TCO one-pager (50 users) | To build — wk 3–4 | P4 (law prep) | Copilot $27k/yr vs QuickStart $12k |
-| Pitch deck | Exists | — | [pitch-deck/index.html](../pitch-deck/index.html) — update post Thread 11 |
-| Architecture diagram | Exists | — | [architecture.md](../../architecture.md) |
+| Pitch deck | Exists | — | [pitch-deck/index.html](../../pitch-deck/index.html) — update post Thread 11 |
+| Architecture diagram | Exists | — | [architecture.md](../../../../architecture.md) |
 | Team Pilot SOW | Outline only | — | Adapt from enterprise template |
-| Security one-pager | Partial | — | [security-policy.md](../../../demo/documents/security-policy.md) |
+| Security one-pager | Partial | — | [security-policy.md](../../../../../demo/documents/security-policy.md) |
 | Case study template | To build | — | After Adneo delivery |
 | CRM / pipeline | **Notion** | wk 2 | Adneo + Priority A tracker |
 
@@ -156,7 +156,7 @@
 | Fit calls completed | 1+ (Adneo) | 3+ incl. 1 law | 5+ |
 | Pipeline value (weighted) | $12k+ signed | $24k+ (Adneo + 1 law lead) | $36k+ |
 
-**Note:** Founder GTM is Adneo-only wks 1–6; law outbound wk 7+. Revisit viability C1 in [viability-review.md](../viability-review.md) if investor materials require 2 logos by Day 90.
+**Note:** Founder GTM is Adneo-only wks 1–6; law outbound wk 7+. Revisit viability C1 in [viability-review.md](../../viability-review.md) if investor materials require 2 logos by Day 90.
 
 **Failure action:** Adneo unsigned by wk 8 → escalate to board/exec or reassess employment/consulting bridge. Law vertical reassess if zero fit calls by wk 10.
 

@@ -108,7 +108,7 @@
 | 9 | $210k | $315k | ~$545k |
 | 12 | $492k | $421k | ~$792k |
 
-*Source: [seed-funding-implications.md](../seed-funding-implications.md)*
+*Source: [seed-funding-implications.md](../../seed-funding-implications.md)*
 
 ---
 

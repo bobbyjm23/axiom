@@ -82,7 +82,7 @@ Option B (hosted pilot)  →  prove ROI  →  Option A (on-prem) OR Managed recu
 
 ### Track A plan case (full pre-seed GTM)
 
-Assumes $650k pre-seed, 8 pilot closes Y1, law outbound from month 1. Source: [financial-model-assumptions.md §9](../financial-model-assumptions.md).
+Assumes $650k pre-seed, 8 pilot closes Y1, law outbound from month 1. Source: [financial-model-assumptions.md §9](../../financial-model-assumptions.md).
 
 | Stream | Year 1 | Year 2 | Year 3 |
 |--------|--------|--------|--------|
@@ -235,7 +235,7 @@ Adneo production revenue; law Priority A outbound; logos #2–3; ISO/IRAP scopin
 
 ---
 
-## Pitch Deck Outline (Update [pitch-deck/index.html](../pitch-deck/index.html))
+## Pitch Deck Outline (Update [pitch-deck/index.html](../../pitch-deck/index.html))
 
 | Slide | Content | Source |
 |-------|---------|--------|
