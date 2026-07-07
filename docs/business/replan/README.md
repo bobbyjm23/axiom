@@ -20,10 +20,10 @@
 | 5 | [Competitive Positioning](thread-05-competitive-positioning.md) | Positioning one-pager, objection handlers | Complete |
 | 6 | [GTM and Sales Pipeline](thread-06-gtm-pipeline.md) | 90-day plan, pipeline template, collateral checklist | Complete — July 2026 (Adneo-first) |
 | 7 | [Delivery and Operations](thread-07-delivery-operations.md) | Delivery playbook, capacity model | Draft — timing validation TBD |
-| 8 | [Funding and Capital Plan](thread-08-funding.md) | Investor memo, use of funds, milestone Gantt | Complete (recommended path) |
-| 9 | [Legal, Compliance, and Risk](thread-09-legal-compliance.md) | Compliance checklist, entity action items | Draft — entity status TBD |
+| 8 | [Funding and Capital Plan](thread-08-funding.md) | Investor memo, use of funds, milestone Gantt | Complete — July 2026 (angel bridge) |
+| 9 | [Legal, Compliance, and Risk](thread-09-legal-compliance.md) | Compliance checklist, entity action items | Complete — July 2026 founder input |
 | 10 | [Risk, Scenarios, and Kill Criteria](thread-10-risk-scenarios.md) | Risk register, scenario decision tree | Complete |
-| 11 | [Investor Narrative and Materials](thread-11-investor-narrative.md) | Pitch framing, FAQ, data room index | Draft — synthesis |
+| 11 | [Investor Narrative and Materials](thread-11-investor-narrative.md) | Pitch framing, FAQ, data room index | Draft — product/revenue/competitive locked |
 
 **Consolidation:** [data-room-index.md](data-room-index.md)
 

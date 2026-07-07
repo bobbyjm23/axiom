@@ -2,22 +2,23 @@
 
 **Purpose:** Raise story with milestones, use of funds, and bootstrap alternative.
 
-**Status:** In progress — 8.1b and 8.4 locked; raise size (8.1a), valuation, investors, entity TBD.
+**Status:** Complete — July 2026 founder input (angel bridge path).
 
 ---
 
 ## Executive Recommendation
 
-| Parameter | Recommendation |
-|-----------|----------------|
-| **Pre-seed raise** | **$650,000 AUD** (standard option) |
-| **Pre-money valuation** | **$2.5–3.5M AUD** |
-| **Runway** | 18–22 months |
-| **Seed timing** | Month 14–18 |
-| **Seed raise** | **$1.5M AUD** at $7–8M pre-money |
-| **Entity** | Pty Ltd + IP assignment before first investor meeting (**FOUNDER INPUT** on status) |
+| Parameter | Founder path (locked) | Full pre-seed (deferred) |
+|-----------|----------------------|--------------------------|
+| **Near-term raise** | **$100–300k angel bridge** | $650k institutional pre-seed |
+| **Timing** | Post-Adneo SOW signed | After 2–3 logos + case study |
+| **Runway** | 6–9 months | 18–22 months |
+| **Pre-money valuation** | **$2.5M SAFE cap** ($2M with intros) | $2.5–3.5M AUD |
+| **Seed timing** | Month 12–15 (revisit) | Month 14–18 |
+| **Seed raise** | $1.5M AUD at $7–8M pre-money | Same |
+| **Entity** | **AU Pty Ltd** before Adneo SOW; NZ trading co exists; IP deed within 2 wks of registration |
 
-**Why $650k not $550k:** Solo technical founder needs earlier delivery hire (Month 4–5) to avoid key-person delivery risk while selling.
+**Why angel bridge first:** Self-fund until Adneo SOW; bridge extends runway to 2–3 logos; institutional pre-seed follows traction proof.
 
 ---
 
@@ -25,19 +26,35 @@
 
 | # | Question | Answer | Notes |
 |---|----------|--------|-------|
-| 8.1 | How much raising and what milestones? | **FOUNDER INPUT (8.1a)** | Default $650k — may shift post-Adneo SOW |
+| 8.1 | How much raising and what milestones? | **$100–300k angel bridge** | Post-Adneo SOW; 6–9 mo runway; institutional pre-seed after 2–3 logos |
 | 8.1b | When is cash needed in bank? | **After Adneo SOW signed** | Self-fund until Adneo closes; raise process can run in parallel |
 | 8.2 | Traction before vs with raise? | **Adjusted (Thread 6)** | **Before:** demo + Adneo Lead + Priority A list. **With:** Adneo signed + case study; law outbound wk 7+ |
-| 8.3 | Min dilution / valuation floor? | **FOUNDER INPUT** | Illustrative: 18–22% at $650k on $2.8M pre |
+| 8.3 | Min dilution / valuation floor? | **Flexible cap** | Default **$2.5M SAFE cap**; **$2M cap** if angel brings law/accounting buyer intros |
 | 8.4 | If $0 raised? | **Pivot only if Adneo SOW fails AND no angel interest** | Not a fixed month deadline — contingent on Adneo + angel pathway |
 | 8.5 | Use of funds split? | 60% team, 20% GTM, 5% platform, 4% compliance, 5% cloud, 6% reserve — see below |
 | 8.6 | Hardest seed trigger? | **10 logos + $400k ARR** — logo velocity harder than conversion if network weak |
-| 8.7 | 5 target investors? | **FOUNDER INPUT** — template below |
-| 8.8 | Pty Ltd + IP assigned? | **FOUNDER INPUT REQUIRED** |
+| 8.7 | 5 target investors? | **3 prospects, none contacted** | Priority: **1) sector intros 2) technical credibility 3) ASX/corporate network** |
+| 8.8 | Pty Ltd + IP assigned? | **In progress** | NZ trading company exists today; **register AU Pty Ltd before Adneo SOW**; IP assignment deed within 2 weeks of registration — [Thread 9](thread-09-legal-compliance.md) |
 
 ---
 
-## Use of Funds ($650k Standard)
+## Use of Funds — Angel Bridge ($100–300k)
+
+| Category | $150k (mid) | $200k | Purpose |
+|----------|-------------|-------|---------|
+| **Founder salary** | $60k (6 mo) | $80k | Part-time → full-time post-Adneo |
+| **Delivery engineer** | $50k (6 mo contract) | $60k | First paid SOW trigger (Thread 2) |
+| **GTM** | $20k | $30k | Events research, travel, LinkedIn, founding subsidies |
+| **Platform + cloud** | $10k | $15k | QuickStart runbook, demo env |
+| **Legal + compliance** | $8k | $12k | Pty Ltd, IP deed, lawyer fact-check; **ISO/IRAP scoping start** (Thread 9) |
+| **Reserve** | $5k | $5k | Contingency |
+| **Total** | **$150k** | **$200k** | |
+
+**Bridge milestones (6–9 months):** Adneo delivered + case study; 2–3 logos total; law outbound active; seed-ready narrative for $650k+ institutional or $1.5M seed.
+
+---
+
+## Use of Funds ($650k Standard — deferred)
 
 | Category | Amount | % | Purpose |
 |----------|--------|---|---------|
@@ -51,7 +68,22 @@
 
 ---
 
-## Milestone Gantt
+## Milestone Gantt — Angel Bridge Path (locked)
+
+| Month | Milestone | Evidence |
+|-------|-----------|----------|
+| 0 | **AU Pty Ltd registered** + IP deed | ASIC registration; assignment signed |
+| 0–1 | Adneo SOW signed | Deposit received |
+| 0–1 | Angel bridge raise opens | 3 prospects; SAFE at $2.5M cap ($2M with intros) |
+| 1–2 | Angel bridge closed | $100–300k wired |
+| 2–3 | Adneo QuickStart delivered | Success report + case study draft |
+| 3–6 | Logo #2–3 + law outbound | Priority A pipeline; 2–3 fit calls |
+| 6–9 | Bridge runway review | Institutional pre-seed ($650k) or seed path |
+| 12–15 | Seed / pre-seed (if metrics hit) | 2–3 logos, case study, $60k+ ARR target |
+
+---
+
+## Milestone Gantt — Full Pre-Seed Path (deferred)
 
 | Month | Milestone | Evidence | Capital consumed (cum.) |
 |-------|-----------|----------|-------------------------|
@@ -104,6 +136,20 @@ If pre-seed does not close **and** Adneo SOW fails **and** no angel interest:
 | Self-fund window | Founder self-funds until Adneo SOW signed (8.1b) |
 
 **Minimum revenue to survive without institutional pre-seed:** Adneo QuickStart ($12k+) OR ~$8k/month consulting.
+
+---
+
+## Investor Selection Criteria (locked)
+
+| Rank | Criterion | Implication |
+|------|-----------|-------------|
+| 1 | **Sector intros** — law/accounting CIO/CISO/MP | $2M cap discount applies; intros weighted in investor scorecard |
+| 2 | **Technical credibility** — understands infra/on-prem AI | De-risks delivery; values architecture over services-shop pitch |
+| 3 | **ASX / corporate network** — peer intros to listed mid-market | Adneo-adjacent; HR tech / SaaS operator angels |
+| — | Cheque size | Secondary — bridge is $100–300k across 2–3 angels |
+| — | Speed | Secondary — raise starts post-Adneo SOW |
+
+**Prospects:** 3 angels identified; **none contacted yet**.
 
 ---
 
@@ -167,19 +213,23 @@ Paid pilot → production → annual support. 3-year LTV ~$121k; founder-led CAC
 
 ### Traction
 
-POC operational. Pre-revenue. **FOUNDER INPUT:** fit calls, pipeline value.
+POC operational. Adneo at Lead (logo #1). Pre-revenue. Angel bridge post-Adneo SOW.
 
 ### Team
 
-Solo technical founder. Hire #1 delivery engineer at 2 QuickStarts. Sales advisor TBD.
+Solo technical founder (Head of Engineering, Adneo). Delivery engineer at first paid SOW. Sales advisor searching.
+
+### Entity
+
+NZ trading company exists. **Registering AU Pty Ltd before Adneo SOW.** IP assignment deed within 2 weeks of registration.
 
 ### Ask
 
-**$650k pre-seed** at $2.5–3.5M pre-money. 18–22 month runway to 8 logos and seed metrics.
+**$150–250k angel bridge** (SAFE or note) post-Adneo SOW. 6–9 month runway to 2–3 logos; institutional pre-seed or seed follows.
 
 ### Use of funds
 
-60% team, 20% GTM, 20% platform/compliance/cloud/reserve.
+Bridge: founder salary + part-time/contract engineer + GTM. See [Angel Bridge table](#use-of-funds--angel-bridge-100300k).
 
 ### Milestones (18 months)
 
@@ -193,6 +243,21 @@ Solo technical founder. Hire #1 delivery engineer at 2 QuickStarts. Sales adviso
 - [x] Use of funds table
 - [x] Milestone Gantt
 - [x] Bootstrap fallback
-- [ ] Investor target list (founder)
-- [ ] Entity + IP status confirmed (founder)
-- [ ] Valuation floor / dilution cap (founder)
+- [x] Investor target list (founder) — 3 prospects, none contacted; names private
+- [x] Entity + IP status confirmed (founder) — AU Pty Ltd planned pre-Adneo SOW
+- [x] Valuation floor / dilution cap (founder) — $2.5M cap; $2M with intros
+
+---
+
+## Funding Summary (Investor One-Pager)
+
+| Element | Locked answer |
+|---------|---------------|
+| **Near-term ask** | $150–250k angel bridge (SAFE) post-Adneo SOW |
+| **Cap** | $2.5M default; **$2M** if law/accounting intros |
+| **Cash timing** | Self-fund until Adneo SOW; bridge runs in parallel |
+| **Pivot trigger** | Adneo SOW fails AND no angel interest |
+| **Investor priority** | Sector intros → technical credibility → ASX network |
+| **Prospects** | 3 angels; none contacted |
+| **Entity** | AU Pty Ltd before Adneo SOW; NZ co exists; IP deed wk 2 |
+| **Next institutional** | $650k pre-seed after 2–3 logos + case study |

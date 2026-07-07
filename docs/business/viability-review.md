@@ -105,9 +105,9 @@ These gaps directly affect the Team/Readiness score (currently 2.5). Provide ans
 | G2 | Vertical focus | High (GTM) | Which 1–2 verticals have your strongest network and domain credibility? | **GTM:** law #1, accounting #2 ([thread-01](replan/thread-01-market-icp.md)). **Founder credibility:** B2B SaaS / engineering (Adneo, ASX-listed HR tech) — not law-native; Adneo internal deploy = traction proof |
 | G3 | Solo vs team | High (delivery) | Are you solo founder or do you have a co-founder/technical partner? | **Solo technical founder** — seeking **technical co-founder** (delivery/engineering); no co-founder committed |
 | G4 | Delivery capacity | Medium (C2) | Can you deliver a 6-week pilot solo, or is engineer hire Day 1? | **Solo for Adneo + first external QuickStart** with colleague backup; QuickStart &lt;5 days after ~2 weeks runbook work; engineer at 2 signed SOWs — [thread-07](replan/thread-07-delivery-operations.md) |
-| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **TBD** — action plan in [thread-09-legal-compliance.md](replan/thread-09-legal-compliance.md) |
+| G5 | Legal entity | Medium (funding) | Is a Pty Ltd formed with IP assigned to the company? | **In progress** — NZ trading co exists; **AU Pty Ltd before Adneo SOW**; IP deed within 2 wks — [thread-09](replan/thread-09-legal-compliance.md) |
 | G6 | Existing revenue | Medium (runway) | Any consulting revenue or pipeline from existing business? | **Pre-revenue** — Adneo internal QuickStart in pipeline (design partner; conflict cleared) |
-| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **0–3 months personal runway** — pre-seed close urgent; target $650k — [thread-08](replan/thread-08-funding.md). Adneo consulting transition TBD |
+| G7 | Funding timeline | Medium (runway) | When do you expect to close pre-seed? Bootstrapping until then? | **Angel bridge $100–300k post-Adneo SOW**; self-fund until then; institutional pre-seed deferred to 2–3 logos — [thread-08](replan/thread-08-funding.md) |
 
 ### Score Adjustment Guide
 
