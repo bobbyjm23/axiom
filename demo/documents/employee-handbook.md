@@ -1,4 +1,4 @@
-# Sovereign AI — Employee Handbook (Demo Document)
+# Sovereign Warden — Employee Handbook (Demo Document)
 
 ## Remote Work Policy
 
@@ -26,6 +26,6 @@ Company data must not be stored on personal devices or uploaded to unauthorized 
 
 ## AI Tool Usage
 
-Employees may use the **Sovereign AI Platform** for work-related tasks. Do not paste customer PII, unreleased financial data, or credentials into AI chat interfaces.
+Employees may use the **Sovereign Warden Platform** for work-related tasks. Do not paste customer PII, unreleased financial data, or credentials into AI chat interfaces.
 
 All AI interactions are logged for compliance. Contact IT for access requests.

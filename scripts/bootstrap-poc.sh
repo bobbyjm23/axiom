@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-echo "==> Sovereign AI Platform — POC Bootstrap"
+echo "==> Sovereign Warden Platform — POC Bootstrap"
 
 if [[ ! -f .env ]]; then
   if [[ -f .env.poc.example ]]; then

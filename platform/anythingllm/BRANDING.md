@@ -3,10 +3,10 @@
 Configure via Admin UI after first boot:
 
 1. **Admin → Appearance → Branding**
-   - App name: `Sovereign AI`
+   - App name: `Sovereign Warden`
    - Upload logo: use `demo/assets/logo-placeholder.svg` or your company logo
    - Primary color: match corporate brand
-   - Footer text: `Powered by Sovereign AI Platform — data stays in-house`
+   - Footer text: `Powered by Sovereign Warden Platform — data stays in-house`
 
 2. **Admin → System Settings → Multi-User**
    - Enable multi-user mode
@@ -22,7 +22,7 @@ Separate from in-app branding — configured in `desktop/config.json`:
 
 ```json
 {
-  "appName": "Sovereign AI"
+  "appName": "Sovereign Warden"
 }
 ```
 

@@ -17,7 +17,7 @@ load_env_file .env
 BASE_URL="${ANYTHINGLLM_URL:-http://localhost:3000}"
 API_BASE="${BASE_URL}/api/v1"
 
-echo "==> Sovereign AI — Demo Workspace Setup"
+echo "==> Sovereign Warden — Demo Workspace Setup"
 echo "Base URL: $BASE_URL"
 echo ""
 echo "Manual steps required (AnythingLLM admin UI):"
@@ -46,7 +46,7 @@ echo "5. Configure Agent Workspace:"
 echo "   Enable agent mode + web browsing or SQL skill in workspace settings"
 echo ""
 echo "6. Branding (Admin → Appearance):"
-echo "   - App name: Sovereign AI"
+echo "   - App name: Sovereign Warden"
 echo "   - Upload company logo from demo/assets/"
 echo ""
 

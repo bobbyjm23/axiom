@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sovereign AI Platform delivers a ChatGPT/Claude-class experience for employees while keeping company data under organizational control. The system uses a **split client/server architecture**:
+Sovereign Warden Platform delivers a ChatGPT/Claude-class experience for employees while keeping company data under organizational control. The system uses a **split client/server architecture**:
 
 - **Client:** Forked AnythingLLM Desktop (Electron) — exact upstream UI, connects to central backend
 - **Platform:** Dockerized services — AnythingLLM, LiteLLM, PostgreSQL, Redis, Nginx

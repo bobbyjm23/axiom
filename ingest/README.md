@@ -63,6 +63,6 @@ OCR runs before document upload when PDF text extraction yields empty content.
 Run connectors via cron or Kubernetes CronJob (see `k8s/cronjob-ingest.yaml`):
 
 ```cron
-0 2 * * * cd /opt/sovereign-ai/ingest && python -m sharepoint.sync
-0 3 * * * cd /opt/sovereign-ai/ingest && python -m confluence.sync
+0 2 * * * cd /opt/sovereign-warden/ingest && python -m sharepoint.sync
+0 3 * * * cd /opt/sovereign-warden/ingest && python -m confluence.sync
 ```

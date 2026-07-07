@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-echo "==> Sovereign AI Platform — On-Prem Migration Helper"
+echo "==> Sovereign Warden Platform — On-Prem Migration Helper"
 
 ENV_FILE="${1:-.env.onprem}"
 if [[ ! -f "$ENV_FILE" ]]; then

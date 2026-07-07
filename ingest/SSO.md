@@ -59,4 +59,4 @@ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin
   quay.io/keycloak/keycloak:latest start-dev
 ```
 
-Set `OAUTH2_PROXY_ISSUER_URL=http://localhost:8080/realms/sovereign-ai`
+Set `OAUTH2_PROXY_ISSUER_URL=http://localhost:8080/realms/sovereign-warden`

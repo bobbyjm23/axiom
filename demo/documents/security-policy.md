@@ -5,13 +5,13 @@
 | Level | Description | Examples | AI Usage |
 |-------|-------------|----------|----------|
 | Public | Approved for external release | Marketing materials, press releases | Allowed |
-| Internal | Company-wide, not public | Handbooks, org charts | Allowed on Sovereign AI |
+| Internal | Company-wide, not public | Handbooks, org charts | Allowed on Sovereign Warden |
 | Confidential | Restricted access | Financial reports, contracts | Restricted — manager approval |
 | Restricted | Highly sensitive | Credentials, PII, health data | **Prohibited** in AI tools |
 
-## Sovereign AI Platform
+## Sovereign Warden Platform
 
-The Sovereign AI Platform is the **approved** enterprise AI assistant. It runs on company-controlled infrastructure.
+The Sovereign Warden Platform is the **approved** enterprise AI assistant. It runs on company-controlled infrastructure.
 
 ### What stays in-house (POC and on-prem)
 - Uploaded documents and their embeddings

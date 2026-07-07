@@ -1,4 +1,4 @@
-# Sovereign AI Platform — POC Docker Compose stack
+# Sovereign Warden Platform — POC Docker Compose stack
 # Usage: docker compose --env-file .env up -d
 
 services:

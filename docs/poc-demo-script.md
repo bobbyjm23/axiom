@@ -12,7 +12,7 @@
 
 ## Narrative Arc
 
-> "We've built a sovereign AI platform that gives employees a ChatGPT-quality experience while keeping company data in our control. Today I'll show the POC running on cloud inference for speed — the same architecture swaps to on-prem GPUs with zero code changes."
+> "We've built the Sovereign Warden platform — it gives employees a ChatGPT-quality experience while keeping company data in our control. Today I'll show the POC running on cloud inference for speed — the same architecture swaps to on-prem GPUs with zero code changes."
 
 ---
 
@@ -20,7 +20,7 @@
 
 **Login as `employee-demo`**
 
-1. Open the Sovereign AI desktop app (or browser).
+1. Open the Sovereign Warden desktop app (or browser).
 2. Show the **exact AnythingLLM interface** — not a custom rebuild.
 3. Open **General Assistant** workspace.
 4. Ask: *"Summarize the key benefits of retrieval-augmented generation in enterprise AI."*
