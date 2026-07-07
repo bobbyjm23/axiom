@@ -96,6 +96,16 @@
 
 *Source: [financial-model-assumptions.md](financial-model-assumptions.md)*
 
+### Combo path (Option A + B — active forecast)
+
+| | Y1 | Y2 | Y3 | Y4 | Y5 |
+|--|----|----|-----|-----|-----|
+| **Total booked** | **~$200k** | **~$550k** | **~$880k** | **~$1.3M** | **~$1.8M** |
+| Option A (on-prem) share | 46% | 63% | 70% | 75% | 80% |
+| ARR exit | ~$24k | ~$96k | ~$230k | ~$420k | ~$580k |
+
+Charts and quarterly detail: [finance/revenue-forecast.md](finance/revenue-forecast.md)
+
 ---
 
 ## Funding
