@@ -71,6 +71,11 @@ Figures sourced from:
 - [finance/revenue-forecast.md](../finance/revenue-forecast.md)
 - [investor/mentor-brief.md](../investor/mentor-brief.md)
 
-## Fonts
+## Assets
 
-Aeonik (Regular + Bold) is bundled in `assets/fonts/` for offline rendering. Licensed typeface — for investor distribution only, not for public web use.
+| File | Purpose |
+|------|---------|
+| `assets/logo.png` | Sovereign Warden logo (corner mark on every slide; hero on title slide) |
+| `assets/fonts/Aeonik-*.woff2` | Bundled Aeonik Regular + Bold for offline rendering |
+
+Aeonik is a licensed typeface — for investor distribution only, not for public web use.

@@ -526,11 +526,21 @@
       position: fixed;
       top: 1.5rem;
       right: var(--slide-padding);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--navy);
       z-index: 100;
+      height: clamp(4.125rem, 6.6vw, 5.25rem);
+      width: auto;
+      display: block;
+    }
+
+    .hide-logo-mark .logo-mark {
+      display: none;
+    }
+
+    .logo-hero {
+      display: block;
+      width: clamp(13rem, 33.8vw, 19.5rem);
+      height: auto;
+      margin-bottom: 1.75rem;
     }
 
     .nav-buttons {
@@ -622,9 +632,10 @@
   <!-- 1 · Title -->
   <section class="slide slide-title slide--mint active" data-slide="1">
     <div class="slide-inner">
+      <img class="logo-hero" src="assets/logo.png" alt="Sovereign Warden">
       <p class="eyebrow">Angel Bridge · July 2026</p>
-      <h1>Private AI for organisations that <span class="accent">can't</span> use ChatGPT</h1>
-      <p class="lead">Sovereign Warden gives regulated Australian mid-market firms ChatGPT-class AI on infrastructure they control — deploy in weeks at fixed pricing, with a clear path from AU-hosted pilot to full on-prem sovereignty.</p>
+      <h1>Private AI for organisations that <span class="accent">can't</span> use Claude</h1>
+      <p class="lead">Sovereign Warden gives regulated Australian mid-market firms Claude-class AI on infrastructure they control — deploy in weeks at fixed pricing, with a clear path from AU-hosted pilot to full on-prem sovereignty.</p>
       <p class="confidential">Confidential — for accredited investor discussion only</p>
     </div>
   </section>
@@ -650,7 +661,7 @@
         </div>
       </div>
       <ul class="feature-list" style="margin-top:1.25rem">
-        <li><strong>Employees already use AI</strong> — ChatGPT, Claude, Copilot; often with client data and no governance</li>
+        <li><strong>Employees already use AI</strong> — Claude, Copilot; often with client data and no governance</li>
         <li><strong>Vendors sell rent, not ownership</strong> — per-seat SaaS, opaque enterprise quotes, US-hosted inference</li>
         <li><strong>The boom is real</strong> — but most firms are being sold access to someone else's data centre, not infrastructure they control</li>
       </ul>
@@ -668,7 +679,7 @@
           <ul class="clean" style="margin-top:0.75rem">
             <li><strong>Llama 3.3, Qwen, Mistral</strong> — production-quality chat and reasoning</li>
             <li><strong>RAG, agents, embeddings</strong> — AnythingLLM, LiteLLM, Qdrant, vLLM, Ollama</li>
-            <li><strong>Desktop UX</strong> — ChatGPT-class interfaces, forked and self-hosted today</li>
+            <li><strong>Desktop UX</strong> — Claude-class interfaces, forked and self-hosted today</li>
           </ul>
           <p style="font-size:0.88rem;margin-top:1rem">Hyperscalers are building the world's most expensive data centres to sell you API access to capabilities you can already run on a server in your office.</p>
         </div>
@@ -685,7 +696,7 @@
             </tbody>
           </table>
           <p style="font-size:0.82rem;margin-top:0.75rem">After break-even, the customer <strong>owns the asset</strong>. No per-seat rent. Prompts never leave the building.</p>
-          <p style="font-size:0.88rem;margin-top:1rem;color:rgba(255,255,255,0.85)"><strong>The gap isn't intelligence — it's sovereign deployment</strong> for organisations that can't paste client data into ChatGPT.</p>
+          <p style="font-size:0.88rem;margin-top:1rem;color:rgba(255,255,255,0.85)"><strong>The gap isn't intelligence — it's sovereign deployment</strong> for organisations that can't paste client data into Claude.</p>
         </div>
       </div>
     </div>
@@ -699,7 +710,7 @@
       <div class="grid-2">
         <div>
           <ul class="feature-list">
-            <li><strong>Shadow AI is everywhere</strong> — staff paste client data into ChatGPT daily</li>
+            <li><strong>Shadow AI is everywhere</strong> — staff paste client data into Claude daily</li>
             <li><strong>Public SaaS fails compliance</strong> — prompts leave Australia; Privacy Act risk</li>
             <li><strong>Copilot isn't sovereign</strong> — ~$27k/yr for 50 users, US infrastructure, M365 lock-in</li>
             <li><strong>Custom builds take 6–12 months</strong> — $120k–600k before anyone logs in</li>
@@ -773,7 +784,7 @@
   <section class="slide slide--dark" data-slide="5">
     <div class="slide-inner">
       <p class="eyebrow">Product</p>
-      <h2>ChatGPT-class UX.<br><span class="accent">Your</span> infrastructure.</h2>
+      <h2>Claude-class UX.<br><span class="accent">Your</span> infrastructure.</h2>
       <div class="grid-2">
         <div class="arch-flow">
           <div class="arch-box"><strong>Employees</strong> — Sovereign Warden Desktop (Electron)</div>
@@ -935,7 +946,7 @@
           <h3>What's done</h3>
           <ul class="clean">
             <li><strong>Working POC stack</strong> — AnythingLLM + LiteLLM + Qdrant + profile switch</li>
-            <li><strong>Desktop client</strong> — Sovereign Warden Electron app (ChatGPT-class UX)</li>
+            <li><strong>Desktop client</strong> — Sovereign Warden Electron app (Claude-class UX)</li>
             <li><strong>Delivery runbooks</strong> — bootstrap scripts, demo workspaces, security templates</li>
             <li><strong>Business plan</strong> — pricing, COGS model, 5-year forecast, exit scenarios</li>
             <li><strong>Software</strong> — ~3–4 weeks from production-ready</li>
@@ -1173,7 +1184,7 @@
 
 </div>
 
-<div class="logo-mark">Sovereign Warden</div>
+<img class="logo-mark" src="assets/logo.png" alt="Sovereign Warden">
 <div class="progress" id="progress" style="width: 5.88%"></div>
 <div class="slide-counter" id="counter">1 / 17</div>
 <p class="nav-hint">← → arrow keys · space · swipe</p>
@@ -1198,6 +1209,7 @@
       slides[current].classList.remove("active");
       current = index;
       slides[current].classList.add("active");
+      document.body.classList.toggle("hide-logo-mark", current === 0);
       progress.style.width = ((current + 1) / total * 100) + "%";
       counter.textContent = (current + 1) + " / " + total;
       history.replaceState(null, "", "#slide-" + (current + 1));
@@ -1225,6 +1237,7 @@
 
     const hash = location.hash.match(/^#slide-(\d+)$/);
     if (hash) goTo(Math.min(parseInt(hash[1], 10) - 1, total - 1));
+    else document.body.classList.add("hide-logo-mark");
 
     let touchStartX = 0;
     document.addEventListener("touchstart", function (e) {
