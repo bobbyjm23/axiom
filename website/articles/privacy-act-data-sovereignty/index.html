@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Sovereignty and the Privacy Act — Sovereign Warden</title>
+  <meta name="description" content="What Australian mid-market leaders need to know about APPs, cross-border disclosure, and proving where AI data lives.">
+  <link rel="canonical" href="https://sovereignwarden.com.au/articles/privacy-act-data-sovereignty/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Data Sovereignty and the Privacy Act">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../css/articles.css">
+  <script src="../../js/site-config.js"></script>
+  <script src="../../js/analytics.js"></script>
+</head>
+<body class="page-article">
+
+  <header class="l-header is-scrolled">
+    <div class="container">
+      <div class="l-header__inner">
+        <div class="l-header__logo"><a href="../../"><img class="logo-light" src="../../assets/images/logo.svg" alt="Sovereign Warden" width="180" height="40"></a></div>
+        <button class="c-burger" type="button" aria-label="Open menu"><span></span><span></span><span></span></button>
+        <nav class="l-header__nav">
+          <ul class="l-header__menu"><li><a href="../../#platform">Platform</a></li><li><a href="../">Insights</a></li></ul>
+          <a href="../../#contact" class="btn--pill">Book a discovery call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <nav class="l-nav" aria-hidden="true"><div class="l-nav__inner"><ul class="l-nav__menu"><li><a href="../../#contact">Contact</a></li></ul></div></nav>
+
+  <main>
+    <header class="article-hero">
+      <div class="article-hero__media"><img src="header.svg" alt=""><div class="article-hero__overlay"></div></div>
+      <div class="article-hero__content">
+        <div class="container">
+          <nav class="breadcrumb"><a href="../../">Home</a><span>/</span><a href="../">Insights</a><span>/</span>Compliance</nav>
+          <p class="article-hero__meta">Compliance · July 2026</p>
+          <h1 class="article-hero__title">Data sovereignty and the Privacy Act</h1>
+          <p class="article-hero__deck">What mid-market leaders need to know about APPs, cross-border disclosure, and proving where AI prompts and documents actually live.</p>
+        </div>
+      </div>
+    </header>
+
+    <article class="article-body">
+      <div class="container">
+        <div data-share-bar></div>
+
+        <p>Australia's Privacy Act reforms have raised the stakes for organisations that can't explain where personal information goes when employees use AI. For mid-market firms in law, finance, health, and advisory, the question isn't whether to adopt AI — it's whether you can <strong>demonstrate control</strong> over prompts, documents, embeddings, and model inference.</p>
+
+        <h2>Why "Australian hosted" isn't always enough</h2>
+        <p>Cloud providers offer AU regions, and competitors like Macquarie Launch AI emphasise local data residency. But residency alone doesn't answer:</p>
+        <ul>
+          <li>Who can access your data under foreign subpoena or CLOUD Act exposure?</li>
+          <li>Are prompts used to train vendor models?</li>
+          <li>Can you air-gap for Restricted/Confidential tiers?</li>
+          <li>Do you have request-level audit logs for regulatory inquiry?</li>
+        </ul>
+
+        <blockquote class="blockquote">
+          <p>"Australia's tightening privacy regime rewards organisations that can prove where their data lives. On-prem makes that answer simple."</p>
+          <cite>— Premya.ai (competitor benchmark on compliance)</cite>
+        </blockquote>
+
+        <h2>The data-flow model regulators expect</h2>
+        <p>Sovereign Warden's architecture maps cleanly to Australian Privacy Principles. At production (on-prem profile), every layer stays inside your perimeter:</p>
+
+        <figure class="figure">
+          <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data sovereignty progression diagram">
+            <rect width="720" height="380" fill="#f2f7f6" rx="4"/>
+            <text x="40" y="36" fill="#1d2b38" font-family="system-ui" font-size="15" font-weight="700">Sovereignty progression — data location by stage</text>
+            <rect x="40" y="60" width="200" height="280" fill="#fff" stroke="#e8eceb" rx="4"/>
+            <text x="140" y="88" fill="#525e6b" font-family="system-ui" font-size="12" text-anchor="middle">POC</text>
+            <text x="60" y="120" fill="#1d2b38" font-family="system-ui" font-size="11">Docs: client storage</text>
+            <text x="60" y="145" fill="#1d2b38" font-family="system-ui" font-size="11">Embeddings: cloud tenant</text>
+            <text x="60" y="170" fill="#c44" font-family="system-ui" font-size="11">LLM: Gemini API ⚠</text>
+            <text x="60" y="210" fill="#525e6b" font-family="system-ui" font-size="10">Partial sovereignty</text>
+            <rect x="260" y="60" width="200" height="280" fill="#fff" stroke="#12eacb" stroke-width="2" rx="4"/>
+            <text x="360" y="88" fill="#12eacb" font-family="system-ui" font-size="12" text-anchor="middle" font-weight="700">On-prem</text>
+            <text x="280" y="120" fill="#1d2b38" font-family="system-ui" font-size="11">Docs: local MinIO</text>
+            <text x="280" y="145" fill="#1d2b38" font-family="system-ui" font-size="11">Embeddings: local Qdrant</text>
+            <text x="280" y="170" fill="#1d2b38" font-family="system-ui" font-size="11">LLM: local vLLM ✓</text>
+            <text x="280" y="210" fill="#12eacb" font-family="system-ui" font-size="10">Full sovereignty</text>
+            <rect x="480" y="60" width="200" height="280" fill="#1d2b38" rx="4"/>
+            <text x="580" y="88" fill="#12eacb" font-family="system-ui" font-size="12" text-anchor="middle">Air-gap</text>
+            <text x="500" y="120" fill="rgba(255,255,255,0.8)" font-family="system-ui" font-size="11">Zero egress</text>
+            <text x="500" y="145" fill="rgba(255,255,255,0.8)" font-family="system-ui" font-size="11">Sneakernet updates</text>
+            <text x="500" y="170" fill="rgba(255,255,255,0.8)" font-family="system-ui" font-size="11">Isolated inference</text>
+            <text x="500" y="210" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="10">Defence / critical</text>
+            <path d="M240 200 L260 200" stroke="#12eacb" stroke-width="2" marker-end="url(#a)"/>
+            <path d="M460 200 L480 200" stroke="#12eacb" stroke-width="2"/>
+            <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#12eacb"/></marker></defs>
+            <text x="40" y="360" fill="#525e6b" font-family="system-ui" font-size="11">Migration = profile switch. No application rebuild.</text>
+          </svg>
+          <figcaption>Start where risk tolerance allows; migrate without replatforming as requirements tighten.</figcaption>
+        </figure>
+
+        <h2>APP 8 and cross-border disclosure</h2>
+        <p>APP 8 restricts disclosure of personal information to overseas recipients unless specific conditions are met. When an employee pastes client data into ChatGPT, you've potentially made a disclosure to a US entity — without the accountability framework your privacy policy promises.</p>
+        <p>On-premises inference eliminates that disclosure path for the LLM layer. Your general counsel can answer "where does the prompt go?" with <strong>a server name in your rack</strong>, not a vendor DPA footnote.</p>
+
+        <h3>Sector overlays</h3>
+        <ul>
+          <li><strong>APRA-regulated entities</strong> — CPS 234 operational risk; demonstrable control over information assets</li>
+          <li><strong>Legal practitioners</strong> — confidentiality and privilege obligations beyond the Privacy Act</li>
+          <li><strong>Health</strong> — My Health Records Act and state health privacy regimes</li>
+        </ul>
+
+        <figure class="figure">
+          <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Compliance readiness comparison">
+            <rect width="720" height="240" fill="#fff" stroke="#e8eceb" rx="4"/>
+            <text x="40" y="32" fill="#1d2b38" font-family="system-ui" font-size="14" font-weight="700">Ability to demonstrate data location (audit)</text>
+            <text x="200" y="70" fill="#525e6b" font-family="system-ui" font-size="11" text-anchor="middle">Public ChatGPT</text>
+            <rect x="160" y="85" width="80" height="20" fill="rgba(255,80,80,0.6)" rx="2"/>
+            <text x="360" y="70" fill="#525e6b" font-family="system-ui" font-size="11" text-anchor="middle">US cloud SaaS</text>
+            <rect x="320" y="85" width="80" height="20" fill="rgba(255,180,80,0.6)" rx="2"/>
+            <text x="520" y="70" fill="#525e6b" font-family="system-ui" font-size="11" text-anchor="middle">On-prem SW</text>
+            <rect x="480" y="85" width="80" height="20" fill="#12eacb" rx="2"/>
+            <text x="200" y="140" fill="#525e6b" font-family="system-ui" font-size="11" text-anchor="middle">Audit logging</text>
+            <rect x="160" y="155" width="20" height="20" fill="rgba(255,80,80,0.6)" rx="2"/>
+            <rect x="360" y="155" width="50" height="20" fill="rgba(255,180,80,0.6)" rx="2"/>
+            <rect x="520" y="155" width="80" height="20" fill="#12eacb" rx="2"/>
+            <text x="200" y="200" fill="#525e6b" font-family="system-ui" font-size="11" text-anchor="middle">Air-gap option</text>
+            <rect x="160" y="215" width="10" height="20" fill="rgba(255,80,80,0.6)" rx="2"/>
+            <rect x="360" y="215" width="25" height="20" fill="rgba(255,180,80,0.6)" rx="2"/>
+            <rect x="520" y="215" width="80" height="20" fill="#12eacb" rx="2"/>
+          </svg>
+          <figcaption>On-prem deployment simplifies the story you tell OAIC, APRA, and your board.</figcaption>
+        </figure>
+
+        <div class="callout">
+          <p><strong>We are not IRAP-certified.</strong> Unlike Cetus, we don't claim government-grade accreditation in Year 1. We provide architecture documentation, data-flow diagrams, and policy templates — and we're honest about the gap. Government IRAP-mandatory deals are not our Year 1 target.</p>
+        </div>
+
+        <h2>Practical next steps for GMs and COOs</h2>
+        <ol>
+          <li>Inventory current AI usage — sanctioned and shadow</li>
+          <li>Classify data types that appear in AI workflows</li>
+          <li>Run a TCO and compliance comparison (Discovery workshop, $18–25k)</li>
+          <li>Pilot with production architecture — not a disposable demo environment</li>
+        </ol>
+
+        <p>Privacy compliance and AI productivity are not opposites. They converge when you own the stack. <a href="../../#contact">Talk to us about your data classification and deployment path</a>.</p>
+
+        <div data-share-bar></div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="l-footer">
+    <div class="container">
+      <div class="l-footer__bottom" style="border-top:none;padding-top:0">
+        <div class="l-footer__copyright">&copy; Sovereign Warden 2026</div>
+        <a href="../" style="color:var(--teal)">← All articles</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/share.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

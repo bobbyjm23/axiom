@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect width="1200" height="500" fill="#1D2B38"/>
+  <circle cx="600" cy="250" r="150" fill="none" stroke="#12EACB" stroke-width="2"/>
+  <circle cx="600" cy="250" r="100" fill="rgba(18,234,203,0.08)" stroke="rgba(18,234,203,0.3)"/>
+  <text x="600" y="240" fill="#fff" font-family="system-ui" font-size="20" text-anchor="middle">AU Data</text>
+  <text x="600" y="270" fill="#12EACB" font-family="system-ui" font-size="28" text-anchor="middle" font-weight="700">Perimeter</text>
+  <text x="120" y="120" fill="rgba(255,255,255,0.5)" font-family="system-ui" font-size="14">Privacy Act</text>
+  <text x="980" y="380" fill="rgba(255,255,255,0.5)" font-family="system-ui" font-size="14">APRA CPS 234</text>
+  <text x="200" y="400" fill="rgba(255,255,255,0.5)" font-family="system-ui" font-size="14">APPs</text>
+</svg>
