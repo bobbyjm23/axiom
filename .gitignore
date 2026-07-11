@@ -9,6 +9,13 @@ desktop/anything-llm/
 desktop/frontend-dist/
 desktop/dist/
 desktop/electron-shell/node_modules/
+desktop/investor-pack/node_modules/
+desktop/investor-pack/app-bundle/
+desktop/investor-pack/dist/
+desktop/investor-pack/public/assets/
+desktop/investor-pack/public/pitch-deck/
+desktop/investor-pack/config/whitelist.mentor.json
+desktop/investor-pack/config/whitelist.investor.json
 
 # TLS certs (generate locally)
 platform/nginx/certs/

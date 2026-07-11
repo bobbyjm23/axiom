@@ -1,0 +1,29 @@
+{
+  "appId": "com.sovereignwarden.mentorpack",
+  "productName": "Sovereign Warden — Mentor Pack",
+  "directories": {
+    "output": "dist/mentor",
+    "buildResources": "../assets"
+  },
+  "files": [
+    "main-process/**/*",
+    "dist/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "app-bundle",
+      "to": "app-bundle"
+    }
+  ],
+  "mac": {
+    "category": "public.app-category.business",
+    "target": ["dmg", "zip"],
+    "icon": "../assets/icon.icns"
+  },
+  "win": {
+    "target": ["nsis"],
+    "icon": "../assets/icon.ico"
+  },
+  "publish": null
+}

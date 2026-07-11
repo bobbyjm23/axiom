@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "email": "mentor@example.com",
+      "password": "change-me-mentor",
+      "fullName": "Jane Smith"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "sovereign-warden-investor-pack",
+  "version": "1.0.0",
+  "description": "Sovereign Warden — offline investor and mentor pack",
+  "main": "main-process/main.js",
+  "author": "Sovereign Warden",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run prepare:mentor && concurrently -k \"vite\" \"wait-on http://localhost:5173 && env -u ELECTRON_RUN_AS_NODE cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "build": "vite build",
+    "prepare:mentor": "node scripts/prepare-bundle.mjs --profile mentor",
+    "prepare:investor": "node scripts/prepare-bundle.mjs --profile investor",
+    "dist:mentor:mac": "npm run build && npm run prepare:mentor && cross-env PACK_PROFILE=mentor electron-builder --mac --config electron-builder.mentor.json",
+    "dist:investor:mac": "npm run build && npm run prepare:investor && cross-env PACK_PROFILE=investor electron-builder --mac --config electron-builder.investor.json",
+    "dist:mentor:win": "npm run build && npm run prepare:mentor && cross-env PACK_PROFILE=mentor electron-builder --win --config electron-builder.mentor.json",
+    "dist:investor:win": "npm run build && npm run prepare:investor && cross-env PACK_PROFILE=investor electron-builder --win --config electron-builder.investor.json"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.28.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  }
+}

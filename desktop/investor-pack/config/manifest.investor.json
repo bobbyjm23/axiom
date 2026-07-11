@@ -1,0 +1,66 @@
+{
+  "defaultDoc": "plan.md",
+  "tree": [
+    {
+      "id": "start",
+      "label": "Getting Started",
+      "children": [
+        { "id": "plan", "label": "Executive Plan", "path": "plan.md" },
+        { "id": "mentor-brief", "label": "Mentor Brief", "path": "investor/mentor-brief.md" },
+        { "id": "faq", "label": "Investor FAQ", "path": "investor/investor-faq.md" },
+        { "id": "data-room", "label": "Data Room Index", "path": "investor/data-room-index.md" },
+        { "id": "viability", "label": "Viability Review", "path": "viability-review.md" }
+      ]
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "children": [
+        { "id": "market", "label": "Market and ICP", "path": "strategy/market-and-icp.md" },
+        { "id": "gtm", "label": "GTM Pipeline", "path": "strategy/gtm-pipeline.md" },
+        { "id": "positioning", "label": "Competitive Positioning", "path": "strategy/competitive-positioning.md" },
+        { "id": "accounts", "label": "Target Accounts", "path": "strategy/target-accounts.md" },
+        { "id": "track-a", "label": "Track A Strategy", "path": "mid-market-track-a-strategy.md" },
+        { "id": "competitors", "label": "Competitor Matrix", "path": "competitor-matrix.md" }
+      ]
+    },
+    {
+      "id": "operations",
+      "label": "Operations",
+      "children": [
+        { "id": "team", "label": "Team and Hiring", "path": "operations/team-and-hiring.md" },
+        { "id": "product", "label": "Product and Delivery", "path": "operations/product-and-delivery.md" },
+        { "id": "legal", "label": "Legal and Compliance", "path": "operations/legal-and-compliance.md" }
+      ]
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "children": [
+        { "id": "funding", "label": "Funding", "path": "finance/funding.md" },
+        { "id": "unit-econ", "label": "Unit Economics", "path": "finance/unit-economics.md" },
+        { "id": "cogs", "label": "Hosted vs On-Prem COGS", "path": "finance/hosted-vs-onprem-cogs.md" },
+        { "id": "revenue", "label": "Revenue Forecast", "path": "finance/revenue-forecast.md" },
+        { "id": "valuation", "label": "Valuation and Exit", "path": "finance/valuation-and-exit.md" },
+        { "id": "assumptions", "label": "Financial Model Assumptions", "path": "financial-model-assumptions.md" },
+        { "id": "seed", "label": "Seed Funding Implications", "path": "seed-funding-implications.md" }
+      ]
+    },
+    {
+      "id": "risk",
+      "label": "Risk",
+      "children": [
+        { "id": "risk-register", "label": "Risk Register", "path": "risk/risk-register.md" }
+      ]
+    },
+    {
+      "id": "technical",
+      "label": "Technical",
+      "children": [
+        { "id": "architecture", "label": "Architecture", "path": "technical/architecture.md", "source": "docs/architecture.md" },
+        { "id": "hardware", "label": "Hardware Sizing", "path": "technical/hardware-sizing.md", "source": "docs/hardware-sizing.md" },
+        { "id": "security", "label": "Security Policy (Demo)", "path": "technical/security-policy.md", "source": "demo/documents/security-policy.md" }
+      ]
+    }
+  ]
+}

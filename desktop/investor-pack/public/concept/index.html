@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sovereign Warden — Concept deck">
+  <title>Sovereign Warden — Concept</title>
+  <style>
+    @font-face {
+      font-family: "Aeonik";
+      src: url("assets/fonts/Aeonik-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Aeonik";
+      src: url("assets/fonts/Aeonik-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --navy: #1D2B38;
+      --teal: #12EACB;
+      --mint: #F2F7F6;
+      --white: #ffffff;
+      --text-muted: #525e6b;
+      --border: rgba(29, 43, 56, 0.12);
+      --font: "Aeonik", system-ui, sans-serif;
+      --slide-padding: clamp(2.5rem, 6vw, 5rem);
+      --container-max: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--mint);
+      color: var(--navy);
+      font-family: var(--font);
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.4375;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .deck { height: 100vh; width: 100vw; position: relative; }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--slide-padding);
+      padding-bottom: calc(var(--slide-padding) + 3.5rem);
+      background: var(--white);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    .slide--mint { background: var(--mint); }
+    .slide--dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .slide--dark p,
+    .slide--dark .lead,
+    .slide--dark ul.clean li,
+    .slide--dark .stat-label { color: rgba(255, 255, 255, 0.72); }
+    .slide--dark strong { color: var(--white); }
+    .slide--dark .card {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+    .slide--dark th { color: rgba(255, 255, 255, 0.55); }
+    .slide--dark td { color: var(--white); }
+    .slide--dark th, .slide--dark td { border-color: rgba(255, 255, 255, 0.12); }
+    .slide--dark .eyebrow { color: var(--teal); }
+
+    .slide-inner {
+      max-width: var(--container-max);
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.125rem, 4.5vw, 3.375rem);
+      font-weight: 400;
+      line-height: 1.15;
+      max-width: 18ch;
+    }
+
+    h1 .accent, h2 .accent { color: var(--teal); }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.6875rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      max-width: 24ch;
+    }
+
+    h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .lead {
+      font-size: clamp(1rem, 1.8vw, 1.125rem);
+      color: var(--text-muted);
+      max-width: 44rem;
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+
+    p { color: var(--text-muted); max-width: 42rem; }
+    strong { color: var(--navy); font-weight: 700; }
+    .slide--dark strong { color: var(--white); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--mint);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.35rem 1.5rem;
+    }
+
+    .slide--dark .card { background: rgba(255, 255, 255, 0.05); }
+
+    .card-accent {
+      border-color: rgba(18, 234, 203, 0.35);
+      background: linear-gradient(135deg, var(--mint) 0%, rgba(18, 234, 203, 0.08) 100%);
+    }
+
+    .slide--dark .card-accent {
+      background: linear-gradient(135deg, rgba(18, 234, 203, 0.12) 0%, rgba(18, 234, 203, 0.04) 100%);
+      border-color: rgba(18, 234, 203, 0.4);
+    }
+
+    .card-muted {
+      opacity: 0.85;
+      background: rgba(29, 43, 56, 0.04);
+    }
+
+    .slide--dark .card-muted {
+      background: rgba(255, 255, 255, 0.03);
+      opacity: 1;
+    }
+
+    .stat {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--teal);
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    ul.clean {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    table {
+      width: 100%;
+      max-width: 56rem;
+      border-collapse: collapse;
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    td { color: var(--navy); }
+    tr:last-child td { border-bottom: none; }
+
+    .highlight-row td {
+      background: rgba(18, 234, 203, 0.12);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .slide--dark .highlight-row td {
+      background: rgba(18, 234, 203, 0.15);
+      color: var(--teal);
+    }
+
+    .arch-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      max-width: 28rem;
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      font-family: ui-monospace, monospace;
+    }
+
+    .arch-box {
+      background: var(--mint);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .slide--dark .arch-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .arch-box strong { color: var(--navy); font-family: var(--font); }
+    .slide--dark .arch-box strong { color: var(--white); }
+    .arch-arrow { text-align: center; color: var(--teal); font-size: 0.75rem; }
+
+    blockquote {
+      border-left: 3px solid var(--teal);
+      padding-left: 1.25rem;
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--navy);
+      max-width: 40rem;
+      line-height: 1.35;
+      font-style: italic;
+    }
+
+    .slide--dark blockquote { color: var(--white); }
+
+    .bar-chart { margin-top: 1.25rem; max-width: 40rem; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 10rem 1fr 5rem;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .bar-track {
+      height: 8px;
+      background: var(--mint);
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    .slide--dark .bar-track { background: rgba(255, 255, 255, 0.1); }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--teal);
+      border-radius: 50px;
+    }
+
+    .bar-fill.muted { background: rgba(29, 43, 56, 0.2); }
+    .slide--dark .bar-fill.muted { background: rgba(255, 255, 255, 0.25); }
+
+    .timeline {
+      display: flex;
+      gap: 0;
+      margin-top: 1.5rem;
+      max-width: 56rem;
+    }
+
+    .timeline-item {
+      flex: 1;
+      padding: 1rem 1rem 0 0;
+      border-top: 2px solid var(--border);
+    }
+
+    .timeline-item.active { border-color: var(--teal); }
+    .timeline-item .phase {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item h3 { font-size: 0.9rem; }
+    .timeline-item p { font-size: 0.78rem; margin-top: 0.35rem; }
+
+    .icon-card {
+      text-align: center;
+      padding: 1.25rem 1rem;
+    }
+
+    .icon-card .icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .icon-card img.icon {
+      width: 4.675rem;
+      height: auto;
+      display: block;
+      margin: 0 auto 0.5rem;
+    }
+
+    .slide--dark .icon-card img.icon {
+      filter: brightness(0) invert(1);
+    }
+
+    .icon-card h3 { font-size: 0.95rem; }
+    .icon-card p { font-size: 0.78rem; margin: 0.35rem auto 0; max-width: 14rem; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 50px;
+      background: var(--mint);
+      color: var(--navy);
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .tag.teal { background: var(--teal); color: var(--navy); }
+    .tag.warn {
+      background: rgba(29, 43, 56, 0.08);
+      color: var(--text-muted);
+    }
+
+    .slide--dark .tag.warn {
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .act-pills {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .act-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .act-pill::after {
+      content: "→";
+      color: var(--teal);
+      margin-left: 0.15rem;
+    }
+
+    .act-pill:last-child::after { content: none; }
+
+    .quadrant-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 52rem;
+    }
+
+    .quadrant {
+      position: relative;
+      min-height: 14rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      background: var(--mint);
+    }
+
+    .quadrant-label {
+      position: absolute;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    .quadrant-label--top { top: 0.5rem; left: 50%; transform: translateX(-50%); }
+    .quadrant-label--bottom { bottom: 0.5rem; left: 50%; transform: translateX(-50%); }
+    .quadrant-label--left { left: 0.5rem; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+    .quadrant-label--right { right: 0.5rem; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+    .quadrant-cell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 5.5rem;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+    }
+
+    .quadrant-cell h3 { font-size: 0.85rem; margin-bottom: 0.25rem; }
+    .quadrant-cell p { font-size: 0.72rem; max-width: 12rem; }
+
+    .whitespace-box {
+      border: 2px dashed rgba(18, 234, 203, 0.55);
+      background: rgba(18, 234, 203, 0.06);
+      grid-column: 1 / -1;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .whitespace-box h3 { color: var(--teal); font-size: 0.95rem; }
+    .whitespace-box p { font-size: 0.82rem; margin: 0.35rem auto 0; max-width: 28rem; }
+
+    .insight-callout {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border: 1px solid rgba(18, 234, 203, 0.35);
+      background: rgba(18, 234, 203, 0.08);
+      font-size: 0.9rem;
+      color: var(--navy);
+      max-width: 44rem;
+    }
+
+    .slide--dark .insight-callout {
+      background: rgba(18, 234, 203, 0.1);
+      color: var(--white);
+      border-color: rgba(18, 234, 203, 0.4);
+    }
+
+    .buyer-chip {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50px;
+      background: rgba(18, 234, 203, 0.15);
+      color: var(--navy);
+      margin-top: 0.75rem;
+    }
+
+    .slide--dark .buyer-chip {
+      background: rgba(18, 234, 203, 0.2);
+      color: var(--teal);
+    }
+
+    .connector-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+      max-width: 52rem;
+    }
+
+    .connector-node {
+      padding: 0.55rem 1rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .connector-node--warn {
+      border-color: rgba(220, 80, 60, 0.35);
+      background: rgba(220, 80, 60, 0.06);
+      color: #a04030;
+    }
+
+    .connector-node--teal {
+      border-color: rgba(18, 234, 203, 0.45);
+      background: rgba(18, 234, 203, 0.12);
+      color: var(--navy);
+    }
+
+    .connector-arrow { color: var(--teal); font-weight: 700; }
+
+    .footnote-stat {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .footnote-stat .stat { font-size: 1.25rem; }
+
+    .check-yes { color: var(--teal); font-weight: 700; }
+    .check-no { color: var(--text-muted); }
+
+    .two-path {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: stretch;
+      margin-top: 1.25rem;
+      max-width: 56rem;
+    }
+
+    .two-path .divider {
+      display: flex;
+      align-items: center;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .two-path { grid-template-columns: 1fr; }
+      .two-path .divider { justify-content: center; padding: 0.5rem 0; }
+      .quadrant-wrap { grid-template-columns: 1fr; }
+    }
+
+    .bridge-cta {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px;
+      border: 2px solid rgba(18, 234, 203, 0.45);
+      background: rgba(18, 234, 203, 0.08);
+      max-width: 36rem;
+    }
+
+    .bridge-cta p {
+      color: var(--white);
+      font-size: 1rem;
+      margin: 0;
+      max-width: none;
+    }
+
+    .progress {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--teal);
+      transition: width 0.35s ease;
+      z-index: 100;
+    }
+
+    .slide-counter {
+      position: fixed;
+      bottom: 1.25rem;
+      right: var(--slide-padding);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      z-index: 100;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .logo-mark {
+      position: fixed;
+      top: 1.5rem;
+      right: var(--slide-padding);
+      z-index: 100;
+      height: clamp(4.125rem, 6.6vw, 5.25rem);
+      width: auto;
+      display: block;
+    }
+
+    .hide-logo-mark .logo-mark { display: none; }
+
+    body.dark-slide-active .logo-mark {
+      filter: brightness(0) invert(1);
+    }
+
+    .logo-hero {
+      display: block;
+      width: clamp(13rem, 33.8vw, 19.5rem);
+      height: auto;
+      margin-bottom: 1.75rem;
+    }
+
+    .nav-buttons {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: var(--white);
+      border: 2px solid var(--teal);
+      color: var(--navy);
+      width: 44px;
+      height: 44px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .nav-btn:hover {
+      background: var(--teal);
+      color: var(--navy);
+    }
+
+    .slide-title {
+      justify-content: flex-end;
+      padding-bottom: calc(var(--slide-padding) + 2rem);
+      background: var(--mint);
+    }
+
+    .slide--dark.slide-title { background: var(--navy); }
+    .slide-title h1 { max-width: 20ch; }
+
+    .deck > .slide:first-child .slide-inner { margin-bottom: 10vh; }
+
+    .confidential {
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .muted-note {
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      color: var(--text-muted);
+      max-width: 44rem;
+    }
+
+    .slide--dark .muted-note { color: rgba(255, 255, 255, 0.55); }
+
+    /* ── Line chart (capability gap) ── */
+    .gap-chart-wrap {
+      margin-top: 1rem;
+    }
+
+    .gap-chart {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .chart-legend {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 0.65rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .chart-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .legend-line {
+      width: 1.25rem;
+      height: 3px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .legend-line--frontier { background: rgba(29, 43, 56, 0.35); }
+    .legend-line--oss { background: var(--teal); }
+
+    .cap-table {
+      font-size: 0.72rem;
+      margin-top: 0;
+    }
+
+    .cap-table th,
+    .cap-table td {
+      padding: 0.45rem 0.55rem;
+      vertical-align: top;
+    }
+
+    .cap-table th:first-child,
+    .cap-table td:first-child {
+      width: 28%;
+    }
+
+    .cap-table .pct {
+      color: var(--teal);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .economics-callout {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      font-size: 0.78rem;
+      max-width: none;
+    }
+
+    .economics-callout strong { display: block; margin-bottom: 0.35rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ── First mover vs next gen ── */
+    .gen-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .gen-card {
+      border-radius: 10px;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .gen-card--new {
+      border-color: rgba(18, 234, 203, 0.45);
+      background: rgba(18, 234, 203, 0.08);
+    }
+
+    .gen-card h3 {
+      font-size: 0.85rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .gen-stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gen-stat-row:last-child { border-bottom: none; }
+
+    .gen-stat-row span:last-child {
+      color: var(--teal);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .burn-bar-wrap { margin-top: 0.85rem; }
+
+    .burn-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.35rem;
+    }
+
+    .burn-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    .burn-fill {
+      height: 100%;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 50px;
+    }
+
+    .burn-fill--teal { background: var(--teal); }
+
+    .pill-row-center {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .gen-compare { grid-template-columns: 1fr; }
+      .gap-slide-grid { grid-template-columns: 1fr !important; }
+    }
+
+    @media print {
+      html, body { overflow: visible; height: auto; background: white; }
+      .deck { height: auto; }
+      .slide {
+        position: relative;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+      .nav-buttons, .progress, .slide-counter, .logo-mark { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- 1 · Title -->
+  <section class="slide slide-title slide--mint active" data-slide="1">
+    <div class="slide-inner">
+      <img class="logo-hero" src="assets/logo.png" alt="Sovereign Warden">
+      <p class="eyebrow">Concept · July 2026</p>
+      <h1>The idea behind <span class="accent">Sovereign Warden</span></h1>
+      <p class="lead">Before the numbers — why private AI for regulated Australian firms is inevitable, and where we sit in the landscape.</p>
+      <div class="act-pills">
+        <span class="act-pill">Market</span>
+        <span class="act-pill">Landscape</span>
+        <span class="act-pill">Position</span>
+      </div>
+      <p class="confidential">Confidential — for accredited investor discussion only</p>
+    </div>
+  </section>
+
+  <!-- 2 · Where AI is today -->
+  <section class="slide slide--mint" data-slide="2">
+    <div class="slide-inner">
+      <p class="eyebrow">Market · Today</p>
+      <h2>AI is everywhere.<br>Approval <span class="accent">isn't.</span></h2>
+      <p class="lead">Every firm's staff already use Claude and ChatGPT — compliance and procurement are still catching up.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <p class="phase">2023–24</p>
+          <h3>Consumer boom</h3>
+          <p>ChatGPT goes mainstream — staff adopt before IT does</p>
+        </div>
+        <div class="timeline-item">
+          <p class="phase">2025</p>
+          <h3>Board mandate</h3>
+          <p>Every leadership team told to "do something with AI"</p>
+        </div>
+        <div class="timeline-item active">
+          <p class="phase">2026</p>
+          <h3>Compliance reckoning</h3>
+          <p>Privacy Act scrutiny — shadow AI becomes a liability</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/shadow-ai.png" alt="">
+          <h3>Shadow AI</h3>
+          <p>Client data in public tools, daily</p>
+        </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/saas-default.png" alt="">
+          <h3>SaaS default</h3>
+          <p>Copilot, Claude — offshore inference</p>
+        </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/build-paralysis.png" alt="">
+          <h3>Build paralysis</h3>
+          <p>Custom projects stall 6–12 months</p>
+        </div>
+      </div>
+      <div class="footnote-stat">
+        <span class="stat">46%</span>
+        <span class="stat-label">of Australian businesses report AI innovation activity (ABS 2024–25)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Open source catching frontier -->
+  <section class="slide slide--mint" data-slide="3">
+    <div class="slide-inner">
+      <p class="eyebrow">Market · Capability</p>
+      <h2>The gap is shrinking <span class="accent">faster</span> than many expected.</h2>
+      <p class="lead">Open source is close enough that many organisations accept a small quality trade-off for privacy, predictable costs, and control.</p>
+      <div class="grid-2 gap-slide-grid">
+        <div class="card gap-chart-wrap">
+          <h3 style="font-size:0.85rem;margin-bottom:0.5rem">Open-source vs frontier capability</h3>
+          <svg class="gap-chart" viewBox="0 0 420 220" role="img" aria-label="Line chart showing open-source model capability rising from roughly 40% three years ago to 90-95% today, approaching frontier models at 100%">
+            <defs>
+              <linearGradient id="ossFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#12EACB" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#12EACB" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <!-- grid -->
+            <line x1="52" y1="24" x2="52" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
+            <line x1="52" y1="168" x2="400" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
+            <line x1="52" y1="132" x2="400" y2="132" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="52" y1="96" x2="400" y2="96" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="52" y1="60" x2="400" y2="60" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <!-- Y labels -->
+            <text x="44" y="172" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">0%</text>
+            <text x="44" y="136" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">50%</text>
+            <text x="44" y="100" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">75%</text>
+            <text x="44" y="64" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">100%</text>
+            <!-- X labels -->
+            <text x="90" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">3 yrs ago</text>
+            <text x="170" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">2 yrs ago</text>
+            <text x="250" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">1 yr ago</text>
+            <text x="340" y="186" text-anchor="middle" fill="#1D2B38" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">Today</text>
+            <!-- area under OSS line -->
+            <path d="M 90,120 L 170,102 L 250,72 L 340,52 L 340,168 L 90,168 Z" fill="url(#ossFill)"/>
+            <!-- frontier line (100%) -->
+            <polyline points="90,48 170,48 250,48 340,48" fill="none" stroke="rgba(29,43,56,0.35)" stroke-width="2" stroke-dasharray="6 4"/>
+            <!-- open source line: ~40%, 55%, 75%, 93% mapped to y (168=0%, 48=100%) -->
+            <polyline points="90,120 170,102 250,72 340,52" fill="none" stroke="#12EACB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <!-- data points -->
+            <circle cx="90" cy="120" r="4" fill="#12EACB"/>
+            <circle cx="170" cy="102" r="4" fill="#12EACB"/>
+            <circle cx="250" cy="72" r="4" fill="#12EACB"/>
+            <circle cx="340" cy="52" r="5" fill="#12EACB" stroke="#1D2B38" stroke-width="1.5"/>
+            <!-- point labels -->
+            <text x="90" y="112" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">~40%</text>
+            <text x="170" y="94" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">50–60%</text>
+            <text x="250" y="64" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">70–80%</text>
+            <text x="340" y="44" text-anchor="middle" fill="#12EACB" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">90–95%</text>
+          </svg>
+          <div class="chart-legend">
+            <span><i class="legend-line legend-line--frontier"></i> Frontier (Claude, GPT, Gemini)</span>
+            <span><i class="legend-line legend-line--oss"></i> Best open-source (Llama, Mistral, Qwen)</span>
+          </div>
+          <p style="font-size:0.72rem;margin-top:0.65rem;max-width:none">The remaining gap is mostly at the cutting edge — not in everyday business use.</p>
+        </div>
+        <div>
+          <table class="cap-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Frontier</th>
+                <th>Open source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>General reasoning</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
+              <tr><td>Coding</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
+              <tr><td>Writing</td><td class="pct">100%</td><td class="pct">~90%</td></tr>
+              <tr><td>Math</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
+              <tr><td>Tool use / agents</td><td class="pct">100%</td><td class="pct">~85–90%</td></tr>
+              <tr><td>Long-context</td><td class="pct">100%</td><td class="pct">~80–90%</td></tr>
+              <tr><td>Speed</td><td>Very good</td><td>Often better on dedicated hardware</td></tr>
+              <tr><td>Privacy</td><td>Cloud</td><td><strong>Complete control</strong></td></tr>
+              <tr><td>Cost</td><td>Ongoing API fees</td><td><strong>Hardware + electricity</strong></td></tr>
+            </tbody>
+          </table>
+          <div class="economics-callout">
+            <strong>The economics are changing</strong>
+            Five years ago, frontier models were clearly superior. Today, organisations trade a small quality gap for complete privacy, predictable costs, deployment control, and customisation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Where it's heading -->
+  <section class="slide slide--dark" data-slide="4">
+    <div class="slide-inner">
+      <p class="eyebrow">Market · Tomorrow</p>
+      <h2>The shift from renting intelligence to <span class="accent">owning</span> it.</h2>
+      <p class="lead">Open-source models closed the capability gap — the next battle is where inference runs and who controls the stack.</p>
+      <div class="grid-2">
+        <div class="card card-muted">
+          <h3>Rent</h3>
+          <ul class="clean">
+            <li>Per-seat SaaS forever</li>
+            <li>US-hosted API calls</li>
+            <li>Vendor owns the economics</li>
+          </ul>
+          <div class="bar-chart" style="margin-top:1rem">
+            <div class="bar-row">
+              <span>Rent</span>
+              <div class="bar-track"><div class="bar-fill muted" style="width:85%"></div></div>
+              <span>Forever</span>
+            </div>
+          </div>
+        </div>
+        <div class="card card-accent">
+          <h3>Own</h3>
+          <ul class="clean">
+            <li>Open-weight models on your hardware</li>
+            <li>Prompts stay in Australia / on-prem</li>
+            <li>CapEx asset, not recurring rent</li>
+          </ul>
+          <div class="bar-chart" style="margin-top:1rem">
+            <div class="bar-row">
+              <span>Own</span>
+              <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
+              <span>Once</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <blockquote>"The gap isn't intelligence anymore — it's sovereign deployment for firms that can't paste client data into Claude."</blockquote>
+      <ul class="clean" style="margin-top:1rem">
+        <li>Models are commoditising (Llama, Mistral, Qwen)</li>
+        <li>Privacy Act pressure is structural, not cyclical</li>
+        <li>Mid-market will adopt productised paths — not 12-month SI projects</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 · First movers vs next generation -->
+  <section class="slide slide--dark" data-slide="5">
+    <div class="slide-inner">
+      <p class="eyebrow">Landscape · Industry structure</p>
+      <h2>They priced like a <span class="accent">$50M</span> company. The stack costs weeks.</h2>
+      <p class="lead">First movers burned years of CapEx and investor capital building governance platforms — then had to recover it at $120k/year per logo. That price isn't the product. It's the cap table.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Cetus AI — read between the lines</h3>
+          <p style="font-size:0.78rem;margin-top:0.35rem;max-width:none">Brookwater, QLD · Azure Marketplace June 2026 · board-led by 30-year enterprise execs</p>
+          <div class="gen-stat-row" style="margin-top:0.85rem">
+            <span>Public price (Observe only)</span>
+            <span>$120k/yr — before Copilot</span>
+          </div>
+          <div class="gen-stat-row">
+            <span>Implied team</span>
+            <span>~20–40 FTE to sell &amp; ship this</span>
+          </div>
+          <div class="gen-stat-row">
+            <span>Implied burn</span>
+            <span>$3–5M/yr before profit</span>
+          </div>
+          <div class="gen-stat-row">
+            <span>Break-even math</span>
+            <span>~30–40 logos @ $120k just for payroll</span>
+          </div>
+          <div class="gen-stat-row">
+            <span>Years of CapEx in the product</span>
+            <span>2–3 yrs · compliance · Azure co-sell</span>
+          </div>
+          <div class="burn-bar-wrap">
+            <div class="burn-label"><span>Price vs reproducible build cost</span><span>$120k/yr vs ~$50k one-time today</span></div>
+            <div class="burn-track"><div class="burn-fill" style="width:92%"></div></div>
+          </div>
+          <p style="font-size:0.72rem;margin-top:0.75rem;max-width:none;color:rgba(255,255,255,0.55)">They can't drop to $12k QuickStart — their investors won't allow it.</p>
+        </div>
+        <div>
+          <div class="gen-compare" style="margin-top:0">
+            <div class="gen-card">
+              <h3>First generation</h3>
+              <div class="gen-stat-row"><span>Time to ship</span><span>Years of CapEx</span></div>
+              <div class="gen-stat-row"><span>Price anchor</span><span>Investor ROI</span></div>
+              <div class="gen-stat-row"><span>Entry point</span><span>$120k+ governance</span></div>
+              <div class="gen-stat-row"><span>Mid-market?</span><span>Structurally excluded</span></div>
+            </div>
+            <div class="gen-card gen-card--new">
+              <h3>Next generation · ~6 months old</h3>
+              <div class="gen-stat-row"><span>Time to ship</span><span>Weeks · OSS stack</span></div>
+              <div class="gen-stat-row"><span>Price anchor</span><span>Delivery cost</span></div>
+              <div class="gen-stat-row"><span>Entry point</span><span>$12k QuickStart</span></div>
+              <div class="gen-stat-row"><span>Mid-market?</span><span>Core ICP</span></div>
+            </div>
+          </div>
+          <div class="insight-callout" style="margin-top:1rem">
+            First movers can't compete on price — they can only compete on IRAP decks and board relationships. That window is closing.
+          </div>
+          <span class="buyer-chip">This is how industries get cannibalised — same outcome, 10× lower entry, zero legacy burn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · The gap nobody owns -->
+  <section class="slide slide--mint" data-slide="6">
+    <div class="slide-inner">
+      <p class="eyebrow">Position</p>
+      <h2>Mid-market firms need adoption first — not a module <span class="accent">ladder.</span></h2>
+      <p class="lead">50–250 staff firms can't wait 12 months or spend $120k before anyone logs in.</p>
+      <div class="grid-2">
+        <div class="card">
+          <p class="eyebrow" style="margin-bottom:0.5rem">Enterprise buyer</p>
+          <h3>CISO / CTO</h3>
+          <ul class="clean" style="margin-top:0.75rem">
+            <li>"What is our AI spend?"</li>
+            <li>Shadow AI inventory</li>
+            <li>Board compliance pack</li>
+            <li>$120k+ platform budget</li>
+          </ul>
+        </div>
+        <div class="card card-accent">
+          <p class="eyebrow" style="margin-bottom:0.5rem">Mid-market buyer</p>
+          <h3>Managing partner / COO</h3>
+          <ul class="clean" style="margin-top:0.75rem">
+            <li>"Can associates use AI on client files?"</li>
+            <li>Approved desktop + citations</li>
+            <li>Fixed-price pilot in weeks</li>
+            <li>$12–35k partner authority</li>
+          </ul>
+        </div>
+      </div>
+      <div class="connector-flow">
+        <span class="connector-node connector-node--warn">Shadow ChatGPT</span>
+        <span class="connector-arrow">→</span>
+        <span class="connector-node connector-node--teal">Approved tool</span>
+        <span class="connector-arrow">→</span>
+        <span class="connector-node">On-prem path (optional)</span>
+      </div>
+      <div class="footnote-stat">
+        <span class="stat">&lt;5%</span>
+        <span class="stat-label">sovereign AI adoption in mid-tier law today — mostly shadow tools + Copilot trials</span>
+      </div>
+      <div style="margin-top:0.75rem">
+        <span class="tag teal">Law</span>
+        <span class="tag teal">Accounting</span>
+        <span class="tag teal">Wealth</span>
+        <span class="tag warn">50–250 staff</span>
+        <span class="tag warn">Australia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · What Sovereign Warden proposes -->
+  <section class="slide slide--dark" data-slide="7">
+    <div class="slide-inner">
+      <p class="eyebrow">Position · Product</p>
+      <h2>Two options.<br>One <span class="accent">platform.</span></h2>
+      <p class="lead">Land with employee adoption — convert to owned infrastructure when they're ready. Same codebase, profile switch.</p>
+      <div class="two-path">
+        <div class="card">
+          <span class="tag teal">Wedge</span>
+          <h3 style="margin-top:0.75rem">Sovereign Hosted (AU)</h3>
+          <p style="font-size:0.85rem;margin-top:0.5rem">Live in days · no CapEx</p>
+          <p style="font-size:0.78rem;margin-top:0.75rem"><strong>Competes with:</strong> Copilot, Macquarie</p>
+        </div>
+        <div class="divider">→</div>
+        <div class="card card-accent">
+          <span class="tag">Primary focus</span>
+          <h3 style="margin-top:0.75rem">Turnkey On-Prem</h3>
+          <p style="font-size:0.85rem;margin-top:0.5rem">Prompts never leave the rack</p>
+          <p style="font-size:0.78rem;margin-top:0.75rem"><strong>Competes with:</strong> Cetus Orchestrate, Premya</p>
+        </div>
+      </div>
+      <div class="pill-row-center">
+        <span class="tag teal">Claude-class desktop UX</span>
+        <span class="tag teal">Profile switch — zero rebuild</span>
+        <span class="tag teal">Published mid-market pricing</span>
+      </div>
+      <p class="muted-note" style="text-align:center;margin-left:auto;margin-right:auto">Not an AI governance FinOps platform in Year 1 — we win on employee adoption and sovereignty path.</p>
+    </div>
+  </section>
+
+  <!-- 8 · Close -->
+  <section class="slide slide--dark slide-title" data-slide="8">
+    <div class="slide-inner">
+      <p class="eyebrow">Close</p>
+      <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>
+      <p class="lead">Market proof exists (Cetus, Premya, Macquarie). The gap is speed, UX, and accessible pricing for firms too small for enterprise governance-first journeys.</p>
+      <div class="grid-3">
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/regulation.png" alt="">
+          <h3>Regulation</h3>
+          <p>Privacy Act scrutiny</p>
+        </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/economics.png" alt="">
+          <h3>Economics</h3>
+          <p>Copilot seat shock at scale</p>
+        </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/proof.png" alt="">
+          <h3>Proof</h3>
+          <p>Sovereign AI vendors validate demand</p>
+        </div>
+      </div>
+      <div class="bridge-cta">
+        <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
+      </div>
+      <p style="margin-top:1.5rem;color:var(--teal);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
+    </div>
+  </section>
+
+</div>
+
+<img class="logo-mark" src="assets/logo.png" alt="Sovereign Warden">
+<div class="progress" id="progress" style="width: 12.5%"></div>
+<div class="slide-counter" id="counter">1 / 8</div>
+<div class="nav-buttons">
+  <button class="nav-btn" id="prev" aria-label="Previous slide">←</button>
+  <button class="nav-btn" id="next" aria-label="Next slide">→</button>
+</div>
+
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const total = slides.length;
+    let current = 0;
+
+    const progress = document.getElementById("progress");
+    const counter = document.getElementById("counter");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    function goTo(index) {
+      if (index < 0 || index >= total) return;
+      slides[current].classList.remove("active");
+      current = index;
+      slides[current].classList.add("active");
+      document.body.classList.toggle("hide-logo-mark", current === 0);
+      document.body.classList.toggle("dark-slide-active", slides[current].classList.contains("slide--dark"));
+      progress.style.width = ((current + 1) / total * 100) + "%";
+      counter.textContent = (current + 1) + " / " + total;
+      history.replaceState(null, "", "#slide-" + (current + 1));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    prevBtn.addEventListener("click", prev);
+    nextBtn.addEventListener("click", next);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+        e.preventDefault();
+        next();
+      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+        e.preventDefault();
+        prev();
+      } else if (e.key === "Home") {
+        goTo(0);
+      } else if (e.key === "End") {
+        goTo(total - 1);
+      }
+    });
+
+    const hash = location.hash.match(/^#slide-(\d+)$/);
+    if (hash) goTo(Math.min(parseInt(hash[1], 10) - 1, total - 1));
+    else document.body.classList.add("hide-logo-mark");
+
+    let touchStartX = 0;
+    document.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.addEventListener("touchend", function (e) {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? prev() : next();
+      }
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>

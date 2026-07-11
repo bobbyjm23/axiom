@@ -2,6 +2,21 @@
 
 Electron desktop app delivering the **exact AnythingLLM React UI** against your central Docker backend.
 
+## Investor & Mentor Pack
+
+A separate offline Electron app for distributing the pitch deck and business plan:
+
+```bash
+cd desktop/investor-pack
+npm install
+cp config/whitelist.mentor.json.example config/whitelist.mentor.json
+npm run dev
+```
+
+See [investor-pack/README.md](investor-pack/README.md) for build and whitelist instructions.
+
+---
+
 ## How It Works
 
 Mintplex's official Desktop Electron wrapper is proprietary (not in the OSS repo). Our Option B implementation:
