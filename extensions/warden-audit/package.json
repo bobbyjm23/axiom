@@ -1,0 +1,15 @@
+{
+  "name": "@sovereign-warden/audit-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Readiness Audit extension for AnythingLLM",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "node --test server/__tests__/*.test.js",
+    "migrate": "node server/migrate.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1",
+    "uuid": "^11.0.3"
+  }
+}

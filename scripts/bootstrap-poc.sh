@@ -38,6 +38,12 @@ until docker compose --env-file .env exec -T postgres pg_isready -U "${POSTGRES_
   sleep 2
 done
 
+echo "==> Enabling PostgreSQL extensions (pgvector)..."
+./scripts/init-postgres-extensions.sh || true
+
+echo "==> Building AnythingLLM with Warden Audit extension (first run may take several minutes)..."
+docker compose --env-file .env build anythingllm
+
 echo "==> Starting LiteLLM, AnythingLLM, Nginx..."
 docker compose --env-file .env up -d litellm anythingllm nginx
 
@@ -74,6 +80,10 @@ echo "  2. Admin → System Settings → Enable Multi-User mode"
 echo "  3. Admin → Appearance → Configure branding (logo, app name)"
 echo "  4. Create workspaces per docs/poc-demo-script.md"
 echo "  5. Run ./desktop/setup-fork.sh to build the Electron client"
+echo "  6. Settings → AI Readiness Audit — start a baseline audit (admin/manager)"
+echo ""
+echo "Verify audit extension:"
+echo "  ./scripts/verify-audit-extension.sh"
 echo ""
 echo "Optional observability:"
 echo "  docker compose --env-file .env --profile observability up -d langfuse"

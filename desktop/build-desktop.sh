@@ -14,10 +14,14 @@ if [[ ! -d "${ANYTHING_LLM}/frontend" ]]; then
   exit 1
 fi
 
+echo "==> Applying Warden Audit extension patches..."
+bash "${DESKTOP_DIR}/../platform/anythingllm/patches/apply-warden-patches.sh" "${ANYTHING_LLM}"
+
 echo "==> Configuring frontend for remote API: ${API_BASE}"
 cat > "${ANYTHING_LLM}/frontend/.env.production" <<EOF
 GENERATE_SOURCEMAP=false
 VITE_API_BASE="${API_BASE}"
+VITE_WARDEN_AUDIT_ENABLED=true
 EOF
 
 echo "==> Installing frontend dependencies..."

@@ -1,0 +1,139 @@
+{
+  "ai_maturity": {
+    "label": "AI Maturity",
+    "editable_roles": ["admin"],
+    "order": 1,
+    "areas": [
+      { "id": "leadership", "label": "Leadership", "scale": { "min": 0, "max": 5 } },
+      { "id": "staff_adoption", "label": "Staff adoption", "scale": { "min": 0, "max": 5 } },
+      { "id": "governance", "label": "Governance", "scale": { "min": 0, "max": 5 } },
+      { "id": "security", "label": "Security", "scale": { "min": 0, "max": 5 } },
+      { "id": "automation", "label": "Automation", "scale": { "min": 0, "max": 5 } },
+      { "id": "training", "label": "Training", "scale": { "min": 0, "max": 5 } }
+    ],
+    "questions": [
+      {
+        "id": "tools_in_use",
+        "label": "Do employees use ChatGPT, Claude, Copilot or Gemini?",
+        "type": "multi_select",
+        "options": ["ChatGPT", "Claude", "Copilot", "Gemini", "None"]
+      },
+      { "id": "ai_approved", "label": "Is AI officially approved?", "type": "boolean" },
+      { "id": "has_policy", "label": "Is there an AI policy?", "type": "boolean" },
+      { "id": "dept_tool_sprawl", "label": "Are departments using different tools?", "type": "boolean" },
+      { "id": "has_strategy", "label": "Has management defined an AI strategy?", "type": "boolean" },
+      { "id": "measuring_roi", "label": "Is anyone measuring ROI?", "type": "boolean" }
+    ]
+  },
+  "data_sovereignty": {
+    "label": "Data Sovereignty & Risk",
+    "editable_roles": ["admin"],
+    "order": 2,
+    "data_types": [
+      "HR",
+      "Contracts",
+      "CRM",
+      "Marketing",
+      "Financial reports",
+      "Source code",
+      "Health information",
+      "Government information",
+      "Public website"
+    ],
+    "risk_levels": ["Low", "Medium", "High", "Critical"],
+    "jurisdictions": ["AU", "NZ", "sovereign_hosting_required"]
+  },
+  "business_processes": {
+    "label": "Business Process Mapping",
+    "editable_roles": ["admin", "manager"],
+    "order": 3,
+    "departments": [
+      {
+        "id": "sales",
+        "label": "Sales",
+        "processes": ["Proposal writing", "CRM", "Meeting notes", "Lead qualification"]
+      },
+      {
+        "id": "hr",
+        "label": "HR",
+        "processes": ["Recruitment", "Onboarding", "Policies", "Performance reviews"]
+      },
+      {
+        "id": "finance",
+        "label": "Finance",
+        "processes": ["Invoice processing", "Reconciliation", "Forecasting"]
+      },
+      {
+        "id": "marketing",
+        "label": "Marketing",
+        "processes": ["Content", "SEO", "Campaigns"]
+      },
+      {
+        "id": "operations",
+        "label": "Operations",
+        "processes": ["SOPs", "Reporting", "Scheduling"]
+      },
+      {
+        "id": "customer_support",
+        "label": "Customer Support",
+        "processes": ["Email", "Ticket routing", "FAQs"]
+      },
+      {
+        "id": "engineering",
+        "label": "Engineering",
+        "processes": ["Documentation", "Code review", "Testing", "Deployment"]
+      }
+    ],
+    "estimate_fields": ["hours_per_month", "automation_potential", "risk", "difficulty", "roi"]
+  },
+  "opportunities": {
+    "label": "AI Opportunity Assessment",
+    "editable_roles": ["admin"],
+    "order": 4,
+    "complexity_options": ["Low", "Medium", "High"],
+    "roi_options": ["Medium", "High", "Very High"]
+  },
+  "infrastructure": {
+    "label": "Infrastructure Review",
+    "editable_roles": ["admin", "manager"],
+    "order": 5,
+    "storage_options": [
+      "Microsoft 365",
+      "Google Workspace",
+      "SharePoint",
+      "Dropbox",
+      "NAS",
+      "Azure",
+      "AWS",
+      "On-premises"
+    ],
+    "checklist": [
+      "Identity provider",
+      "Single Sign-On",
+      "VPN",
+      "Firewall",
+      "Backups",
+      "Existing GPUs",
+      "Virtualisation",
+      "Bandwidth"
+    ]
+  },
+  "governance": {
+    "label": "AI Governance",
+    "editable_roles": ["admin", "manager"],
+    "order": 6,
+    "items": [
+      "AI Acceptable Use Policy",
+      "Employee guidance",
+      "Prompt handling rules",
+      "Human review requirements",
+      "Risk classification",
+      "Audit logging",
+      "Approval processes",
+      "Vendor review",
+      "Procurement process",
+      "Data retention policies"
+    ],
+    "status_options": ["absent", "partial", "present"]
+  }
+}

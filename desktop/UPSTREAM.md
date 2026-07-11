@@ -61,6 +61,10 @@ cd desktop/electron-shell && npm install && npm start
    - [ ] Document upload + RAG citations work
    - [ ] Agent invocation works (WebSocket)
    - [ ] `.dmg` / `.exe` packages build successfully
+   - [ ] Re-apply Warden Audit patches: `platform/anythingllm/patches/apply-warden-patches.sh desktop/anything-llm`
+   - [ ] Settings sidebar shows **AI Readiness Audit** (admin/manager)
+   - [ ] `/api/warden-audit/health` returns `ok: true`
+   - [ ] `WARDEN_AUDIT_ENABLED=false` hides extension without breaking chat
 8. Update pinned tag in this file.
 
 ## Test Checklist

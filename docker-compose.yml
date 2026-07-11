@@ -3,7 +3,7 @@
 
 services:
   postgres:
-    image: postgres:16-alpine
+    image: pgvector/pgvector:pg16
     container_name: sovereign-postgres
     restart: unless-stopped
     environment:
@@ -67,7 +67,12 @@ services:
       - sovereign-net
 
   anythingllm:
-    image: ${ANYTHINGLLM_IMAGE:-mintplexlabs/anythingllm:latest}
+    build:
+      context: .
+      dockerfile: platform/anythingllm/Dockerfile
+      args:
+        ANYTHINGLLM_PG_VERSION: "1.9.0"
+    image: sovereign-warden/anythingllm:1.9.0-pg-audit
     container_name: sovereign-anythingllm
     restart: unless-stopped
     cap_add:
@@ -75,6 +80,7 @@ services:
     environment:
       SERVER_PORT: "3001"
       STORAGE_DIR: /app/server/storage
+      DATABASE_URL: ${DATABASE_URL}
       DISABLE_TELEMETRY: ${DISABLE_TELEMETRY:-true}
       JWT_SECRET: ${JWT_SECRET}
       SIG_KEY: ${SIG_KEY}
@@ -93,6 +99,11 @@ services:
       VECTOR_DB: qdrant
       QDRANT_ENDPOINT: ${QDRANT_ENDPOINT}
       QDRANT_API_KEY: ${QDRANT_API_KEY}
+      WARDEN_AUDIT_ENABLED: ${WARDEN_AUDIT_ENABLED:-true}
+      WARDEN_AUDIT_PATH: /app/extensions/warden-audit/server
+      LITELLM_BASE_URL: http://litellm:4000
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY}
+      ANYTHINGLLM_SERVER_ROOT: /app/server
       PASSWORDMINCHAR: "8"
     volumes:
       - anythingllm_storage:/app/server/storage

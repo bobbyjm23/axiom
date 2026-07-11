@@ -1,0 +1,13 @@
+{
+  "id": "warden-audit",
+  "name": "AI Readiness Audit",
+  "version": "1.0.0",
+  "serverEntry": "server/index.js",
+  "frontendEntry": "frontend/index.jsx",
+  "nav": {
+    "label": "AI Readiness Audit",
+    "icon": "ShieldCheck",
+    "path": "/settings/audit",
+    "roles": ["admin", "manager"]
+  }
+}
