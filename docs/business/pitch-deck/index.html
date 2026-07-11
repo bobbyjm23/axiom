@@ -492,15 +492,8 @@
     .flow-arrow { color: var(--teal); font-size: 1.1rem; }
 
     /* ── Navigation chrome ── */
-    .nav-hint {
-      position: fixed;
-      bottom: 1.25rem;
-      left: var(--slide-padding);
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      z-index: 100;
-      opacity: 0.65;
-    }
+    /* Hidden in app — back control lives in Electron shell */
+    .nav-hint { display: none; }
 
     .progress {
       position: fixed;
@@ -534,6 +527,10 @@
 
     .hide-logo-mark .logo-mark {
       display: none;
+    }
+
+    body.dark-slide-active .logo-mark {
+      filter: brightness(0) invert(1);
     }
 
     .logo-hero {
@@ -579,7 +576,16 @@
       background: var(--mint);
     }
 
+    .slide--dark.slide-title {
+      background: var(--navy);
+    }
+
     .slide-title h1 { max-width: 20ch; }
+
+    /* Title slide — lift content ~10% above bottom-aligned default */
+    .deck > .slide:first-child .slide-inner {
+      margin-bottom: 10vh;
+    }
 
     .confidential {
       margin-top: 2rem;
@@ -1187,7 +1193,6 @@
 <img class="logo-mark" src="assets/logo.png" alt="Sovereign Warden">
 <div class="progress" id="progress" style="width: 5.88%"></div>
 <div class="slide-counter" id="counter">1 / 17</div>
-<p class="nav-hint">← → arrow keys · space · swipe</p>
 <div class="nav-buttons">
   <button class="nav-btn" id="prev" aria-label="Previous slide">←</button>
   <button class="nav-btn" id="next" aria-label="Next slide">→</button>
@@ -1210,6 +1215,7 @@
       current = index;
       slides[current].classList.add("active");
       document.body.classList.toggle("hide-logo-mark", current === 0);
+      document.body.classList.toggle("dark-slide-active", slides[current].classList.contains("slide--dark"));
       progress.style.width = ((current + 1) / total * 100) + "%";
       counter.textContent = (current + 1) + " / " + total;
       history.replaceState(null, "", "#slide-" + (current + 1));

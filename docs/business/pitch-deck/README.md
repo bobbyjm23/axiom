@@ -75,7 +75,8 @@ Figures sourced from:
 
 | File | Purpose |
 |------|---------|
-| `assets/logo.png` | Sovereign Warden logo (corner mark on every slide; hero on title slide) |
+| `assets/logo.png` | Sovereign Warden logo — corner mark on every slide; hero on title slide |
+| `assets/logo.svg` | Vector version (unused for now — address later) |
 | `assets/fonts/Aeonik-*.woff2` | Bundled Aeonik Regular + Bold for offline rendering |
 
 Aeonik is a licensed typeface — for investor distribution only, not for public web use.
