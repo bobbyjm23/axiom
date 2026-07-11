@@ -22,7 +22,7 @@
 |--------------------|------|
 | Market and customers | [strategy/market-and-icp.md](strategy/market-and-icp.md) |
 | Sales and 90-day plan | [strategy/gtm-pipeline.md](strategy/gtm-pipeline.md) |
-| Competition | [strategy/competitive-positioning.md](strategy/competitive-positioning.md) |
+| Competition | [strategy/competitive-positioning.md](strategy/competitive-positioning.md) · [Cetus/Songlines deep-dive](strategy/cetus-songlines-competitor-analysis.md) |
 | Team and hiring | [operations/team-and-hiring.md](operations/team-and-hiring.md) |
 | Product and delivery | [operations/product-and-delivery.md](operations/product-and-delivery.md) |
 | Legal and entity | [operations/legal-and-compliance.md](operations/legal-and-compliance.md) |
@@ -54,6 +54,7 @@
 | [strategy/market-and-icp.md](strategy/market-and-icp.md) | ICP, TAM/SAM/SOM, buyer personas |
 | [strategy/gtm-pipeline.md](strategy/gtm-pipeline.md) | 90-day plan, demo script, collateral |
 | [strategy/competitive-positioning.md](strategy/competitive-positioning.md) | vs Copilot, Cetus, Macquarie |
+| [strategy/cetus-songlines-competitor-analysis.md](strategy/cetus-songlines-competitor-analysis.md) | **Cetus / Songlines deep-dive** — features, pricing, GTM, competitive response roadmap |
 | [strategy/target-accounts.md](strategy/target-accounts.md) | Priority A accounts and pipeline |
 | [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md) | Track A GTM (long-form) |
 | [competitor-matrix.md](competitor-matrix.md) | Full feature matrix |

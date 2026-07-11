@@ -57,7 +57,7 @@ This matrix compares Sovereign Warden Platform against direct and indirect compe
 | **ChatGPT Enterprise** | Per-seat/month SaaS (custom) | No (negotiated) | ~$720k–900k/year (est. US$60/user) | 150-seat minimum; annual contract |
 | **Google Gemini (Workspace)** | Bundled / add-on | Partial | ~$168k–252k/year (est. US$14–21/user) | Bundled into Workspace tiers |
 | **Macquarie Launch AI** | Managed service / API | No (custom quote) | Unknown (likely $200k–500k/year) | Managed sovereign cloud; no per-seat public pricing |
-| **Cetus AI (Songlines)** | Phased platform license + services | No (custom quote) | Unknown (likely $300k–800k Year 1) | Control → Gateway → Platform journey |
+| **Cetus AI (Songlines)** | Phased platform license + services | **Yes — $9,995/mo Control** (+$10k/mo Gateway; Platform contact sales) | ~$120k–240k/yr SaaS (+ Orchestrate services) | Control → Gateway → Platform journey. See [cetus-songlines-competitor-analysis.md](strategy/cetus-songlines-competitor-analysis.md) |
 | **Premya** | Appliance + managed service | No (custom quote) | Unknown (likely $150k–400k Year 1) | No per-seat metering; appliance model |
 | **Allayze** | Project-based deployment | No (custom quote) | Unknown (likely $200k–600k) | Defence/gov focus; high-assurance premium |
 | **TechAhead / DEV.co** | Project-based (global SI) | Partial: pilots $60k–120k | $120k–600k+ depending on scope | No productised platform; custom build |

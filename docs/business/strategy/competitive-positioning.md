@@ -103,4 +103,5 @@ MANAGED / CLOUD                     Copilot · Macquarie
 
 ---
 
-*Full feature matrix: [competitor-matrix.md](../competitor-matrix.md)*
+*Full feature matrix: [competitor-matrix.md](../competitor-matrix.md)*  
+*Cetus / Songlines deep-dive (July 2026 intelligence): [cetus-songlines-competitor-analysis.md](cetus-songlines-competitor-analysis.md)*
