@@ -14,10 +14,18 @@ model_list:
     model_info:
       mode: chat
 
-  # Embeddings for RAG (Gemini — no separate OpenAI key needed for POC)
+  # Embeddings for RAG (Gemini — text-embedding-004 was retired Jan 2026)
+  - model_name: gemini-embedding-001
+    litellm_params:
+      model: gemini/gemini-embedding-001
+      api_key: os.environ/GEMINI_API_KEY
+    model_info:
+      mode: embedding
+
+  # Backward-compatible alias for existing EMBEDDING_MODEL_PREF values
   - model_name: text-embedding-004
     litellm_params:
-      model: gemini/text-embedding-004
+      model: gemini/gemini-embedding-001
       api_key: os.environ/GEMINI_API_KEY
     model_info:
       mode: embedding

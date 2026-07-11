@@ -42,4 +42,18 @@ else
 fi
 
 echo ""
+echo "--- Embedding (gemini-embedding-001) ---"
+if [[ -n "${GEMINI_API_KEY:-}" && "${GEMINI_API_KEY}" != "your-gemini-api-key" ]]; then
+  curl -sf "${LITELLM_URL}/v1/embeddings" \
+    -H "Authorization: Bearer ${MASTER_KEY}" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "model": "gemini-embedding-001",
+      "input": "embedding gateway smoke test"
+    }' | python3 -m json.tool 2>/dev/null || echo "Embedding test sent (check response above)"
+else
+  echo "SKIP: Set a real GEMINI_API_KEY in .env to test embeddings"
+fi
+
+echo ""
 echo "LiteLLM gateway verification complete."
