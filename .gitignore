@@ -12,6 +12,7 @@ desktop/electron-shell/node_modules/
 
 # TLS certs (generate locally)
 platform/nginx/certs/
+platform/anythingllm/.env
 *.pem
 *.key
 

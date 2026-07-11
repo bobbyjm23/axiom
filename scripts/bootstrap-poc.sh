@@ -25,6 +25,11 @@ load_env_file .env
 command -v docker >/dev/null 2>&1 || { echo "ERROR: docker is required"; exit 1; }
 docker compose version >/dev/null 2>&1 || { echo "ERROR: docker compose is required"; exit 1; }
 
+if [[ ! -f platform/anythingllm/.env ]]; then
+  echo "Creating writable platform/anythingllm/.env from .env.example"
+  cp platform/anythingllm/.env.example platform/anythingllm/.env
+fi
+
 echo "==> Starting platform stack..."
 docker compose --env-file .env up -d postgres redis
 

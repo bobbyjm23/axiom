@@ -96,7 +96,7 @@ services:
       PASSWORDMINCHAR: "8"
     volumes:
       - anythingllm_storage:/app/server/storage
-      - ./platform/anythingllm/.env.example:/app/server/.env:ro
+      - ./platform/anythingllm/.env:/app/server/.env
     ports:
       - "3002:3001"
     depends_on:
