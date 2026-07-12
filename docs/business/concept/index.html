@@ -762,7 +762,7 @@
     }
 
     .cap-table .pct {
-      color: var(--teal);
+      color: var(--navy);
       font-weight: 700;
       white-space: nowrap;
     }
@@ -857,6 +857,353 @@
     @media (max-width: 900px) {
       .gen-compare { grid-template-columns: 1fr; }
       .gap-slide-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* ── Product slides (9–11) ── */
+    .product-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .product-hero { grid-template-columns: 1fr; }
+    }
+
+    .device-hero {
+      position: relative;
+      min-height: 18rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1rem 0 0;
+    }
+
+    .device-desktop {
+      position: relative;
+      width: min(100%, 22rem);
+      z-index: 1;
+    }
+
+    .device-desktop__bezel {
+      background: var(--navy);
+      border-radius: 12px 12px 0 0;
+      padding: 0.65rem 0.65rem 0;
+      box-shadow: 0 12px 40px rgba(29, 43, 56, 0.18);
+    }
+
+    .device-desktop__screen {
+      background: var(--white);
+      border-radius: 6px 6px 0 0;
+      min-height: 11rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-desktop__screen::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1.25rem;
+      background: var(--mint);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .device-desktop__screen img {
+      width: clamp(5rem, 40%, 7rem);
+      height: auto;
+      margin-top: 0.5rem;
+    }
+
+    .device-desktop__stand {
+      height: 0.75rem;
+      background: linear-gradient(180deg, #2a3d4d 0%, var(--navy) 100%);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .device-desktop__base {
+      width: 40%;
+      height: 0.35rem;
+      background: var(--navy);
+      border-radius: 0 0 6px 6px;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+
+    .device-mobile {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 5.5rem;
+      z-index: 2;
+      filter: drop-shadow(0 8px 24px rgba(29, 43, 56, 0.22));
+    }
+
+    .device-mobile__frame {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 0.35rem;
+    }
+
+    .device-mobile__screen {
+      background: var(--white);
+      border-radius: 10px;
+      min-height: 8.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 0.5rem;
+    }
+
+    .device-mobile__screen img {
+      width: 2.75rem;
+      height: auto;
+    }
+
+    .product-copy__section {
+      margin-bottom: 1.75rem;
+    }
+
+    .product-copy__section:last-child {
+      margin-bottom: 0;
+    }
+
+    .product-copy__subtitle {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .os-logos {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .os-logos img {
+      width: 2rem;
+      height: 2rem;
+      object-fit: contain;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.65rem;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 700px) {
+      .integration-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .integration-tile {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.65rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      min-height: 4.25rem;
+    }
+
+    .integration-tile img {
+      width: 1.75rem;
+      height: 1.75rem;
+      object-fit: contain;
+    }
+
+    .integration-tile span {
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.2;
+      max-width: 100%;
+    }
+
+    .roadmap-track {
+      margin-top: 2rem;
+      max-width: 56rem;
+      position: relative;
+      padding-top: 1.5rem;
+    }
+
+    .roadmap-track__line {
+      position: absolute;
+      top: 2.1rem;
+      left: 5%;
+      right: 5%;
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .roadmap-track__line-active {
+      position: absolute;
+      top: 2.1rem;
+      left: 5%;
+      width: 28%;
+      height: 3px;
+      background: var(--teal);
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .roadmap-nodes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-nodes { grid-template-columns: 1fr; }
+      .roadmap-track__line,
+      .roadmap-track__line-active { display: none; }
+    }
+
+    .roadmap-node {
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+
+    .roadmap-node__dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--border);
+      margin: 0 auto 1rem;
+    }
+
+    .roadmap-node--active .roadmap-node__dot {
+      border-color: var(--teal);
+      background: var(--teal);
+      box-shadow: 0 0 0 4px rgba(18, 234, 203, 0.25);
+    }
+
+    .roadmap-node--current .roadmap-node__label {
+      color: var(--teal);
+    }
+
+    .roadmap-node__label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .roadmap-node--active .roadmap-node__label {
+      color: var(--teal);
+    }
+
+    .roadmap-node h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .roadmap-node p {
+      font-size: 0.78rem;
+      margin: 0 auto;
+      max-width: 16rem;
+    }
+
+    .roadmap-node--muted {
+      opacity: 0.75;
+    }
+
+    .you-are-here {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-top: 0.5rem;
+    }
+
+    .funnel-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 1.5rem;
+      max-width: 44rem;
+    }
+
+    .funnel-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      position: relative;
+      padding-bottom: 1.5rem;
+    }
+
+    .funnel-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 1.15rem;
+      top: 2.5rem;
+      bottom: 0;
+      width: 2px;
+      background: rgba(18, 234, 203, 0.35);
+    }
+
+    .funnel-step__num {
+      width: 2.35rem;
+      height: 2.35rem;
+      border-radius: 50%;
+      background: rgba(18, 234, 203, 0.15);
+      border: 2px solid rgba(18, 234, 203, 0.45);
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .funnel-step__body h3 {
+      color: var(--white);
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .funnel-step__body p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 36rem;
+    }
+
+    .funnel-step__tag {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 50px;
+      background: rgba(18, 234, 203, 0.12);
+      color: var(--teal);
     }
 
     @media print {
@@ -957,16 +1304,16 @@
                 <stop offset="100%" stop-color="#12EACB" stop-opacity="0.02"/>
               </linearGradient>
             </defs>
-            <!-- grid -->
+            <!-- grid: y=168 (0%), y=114 (50%), y=87 (75%), y=60 (100%) -->
             <line x1="52" y1="24" x2="52" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
             <line x1="52" y1="168" x2="400" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
-            <line x1="52" y1="132" x2="400" y2="132" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-            <line x1="52" y1="96" x2="400" y2="96" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="52" y1="114" x2="400" y2="114" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="52" y1="87" x2="400" y2="87" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
             <line x1="52" y1="60" x2="400" y2="60" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
             <!-- Y labels -->
             <text x="44" y="172" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">0%</text>
-            <text x="44" y="136" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">50%</text>
-            <text x="44" y="100" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">75%</text>
+            <text x="44" y="118" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">50%</text>
+            <text x="44" y="91" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">75%</text>
             <text x="44" y="64" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">100%</text>
             <!-- X labels -->
             <text x="90" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">3 yrs ago</text>
@@ -974,21 +1321,21 @@
             <text x="250" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">1 yr ago</text>
             <text x="340" y="186" text-anchor="middle" fill="#1D2B38" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">Today</text>
             <!-- area under OSS line -->
-            <path d="M 90,120 L 170,102 L 250,72 L 340,52 L 340,168 L 90,168 Z" fill="url(#ossFill)"/>
+            <path d="M 90,125 L 170,109 L 250,87 L 340,71 L 340,168 L 90,168 Z" fill="url(#ossFill)"/>
             <!-- frontier line (100%) -->
-            <polyline points="90,48 170,48 250,48 340,48" fill="none" stroke="rgba(29,43,56,0.35)" stroke-width="2" stroke-dasharray="6 4"/>
-            <!-- open source line: ~40%, 55%, 75%, 93% mapped to y (168=0%, 48=100%) -->
-            <polyline points="90,120 170,102 250,72 340,52" fill="none" stroke="#12EACB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline points="90,60 170,60 250,60 340,60" fill="none" stroke="rgba(29,43,56,0.35)" stroke-width="2" stroke-dasharray="6 4"/>
+            <!-- open source line: ~40%, 55%, 75%, 93% — y=168 (0%) to y=60 (100%); today ~10% below 100% -->
+            <polyline points="90,125 170,109 250,87 340,71" fill="none" stroke="#12EACB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
             <!-- data points -->
-            <circle cx="90" cy="120" r="4" fill="#12EACB"/>
-            <circle cx="170" cy="102" r="4" fill="#12EACB"/>
-            <circle cx="250" cy="72" r="4" fill="#12EACB"/>
-            <circle cx="340" cy="52" r="5" fill="#12EACB" stroke="#1D2B38" stroke-width="1.5"/>
+            <circle cx="90" cy="125" r="4" fill="#12EACB"/>
+            <circle cx="170" cy="109" r="4" fill="#12EACB"/>
+            <circle cx="250" cy="87" r="4" fill="#12EACB"/>
+            <circle cx="340" cy="71" r="5" fill="#12EACB" stroke="#1D2B38" stroke-width="1.5"/>
             <!-- point labels -->
-            <text x="90" y="112" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">~40%</text>
-            <text x="170" y="94" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">50–60%</text>
-            <text x="250" y="64" text-anchor="middle" fill="#525e6b" font-size="8" font-family="Aeonik, system-ui, sans-serif">70–80%</text>
-            <text x="340" y="44" text-anchor="middle" fill="#12EACB" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">90–95%</text>
+            <text x="90" y="117" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">~40%</text>
+            <text x="170" y="101" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">50–60%</text>
+            <text x="250" y="79" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">70–80%</text>
+            <text x="340" y="63" text-anchor="middle" fill="#1D2B38" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">90–95%</text>
           </svg>
           <div class="chart-legend">
             <span><i class="legend-line legend-line--frontier"></i> Frontier (Claude, GPT, Gemini)</span>
@@ -1238,9 +1585,164 @@
         </div>
       </div>
       <div class="bridge-cta">
-        <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
+        <p><strong>Next:</strong> Open the Product deck for platform details, roadmap, and how buyers enter.</p>
       </div>
       <p style="margin-top:1.5rem;color:var(--teal);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
+    </div>
+  </section>
+
+  <!-- 9 · Platform & integrations -->
+  <section class="slide slide--mint" data-slide="9">
+    <div class="slide-inner">
+      <p class="eyebrow">Product · Today</p>
+      <h2>Sovereign AI that works <span class="accent">where you work.</span></h2>
+      <div class="product-hero">
+        <div class="device-hero">
+          <div class="device-desktop">
+            <div class="device-desktop__bezel">
+              <div class="device-desktop__screen">
+                <img src="assets/logo.png" alt="Sovereign Warden">
+              </div>
+            </div>
+            <div class="device-desktop__stand"></div>
+            <div class="device-desktop__base"></div>
+          </div>
+          <div class="device-mobile">
+            <div class="device-mobile__frame">
+              <div class="device-mobile__screen">
+                <img src="assets/logo.png" alt="Sovereign Warden mobile">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-copy">
+          <div class="product-copy__section">
+            <p class="product-copy__subtitle">Available on all major operating systems</p>
+            <div class="os-logos">
+              <img src="assets/logos/windows.svg" alt="Windows">
+              <img src="assets/logos/apple.svg" alt="macOS">
+              <img src="assets/logos/linux.svg" alt="Linux">
+            </div>
+          </div>
+          <div class="product-copy__section">
+            <p class="product-copy__subtitle">We work where you work</p>
+            <div class="integration-grid">
+              <div class="integration-tile">
+                <img src="assets/logos/microsoft365.svg" alt="Microsoft 365">
+                <span>Microsoft 365</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/atlassian.svg" alt="Atlassian">
+                <span>Atlassian</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/google-workspace.svg" alt="Google Workspace">
+                <span>Google Workspace</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/xero.svg" alt="Xero">
+                <span>Xero</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/myob.svg" alt="MYOB">
+                <span>MYOB</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/leap.svg" alt="LEAP">
+                <span>LEAP</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/clio.svg" alt="Clio">
+                <span>Clio</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/xplan.svg" alt="Iress Xplan">
+                <span>Iress Xplan</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/midwinter.svg" alt="Midwinter">
+                <span>Midwinter</span>
+              </div>
+              <div class="integration-tile">
+                <img src="assets/logos/sharepoint.svg" alt="SharePoint">
+                <span>SharePoint</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · Feature roadmap -->
+  <section class="slide" data-slide="10">
+    <div class="slide-inner">
+      <p class="eyebrow">Product · Roadmap</p>
+      <h2>Feature development — <span class="accent">where we are</span></h2>
+      <p class="lead">Product milestones only — not business or GTM targets. Content is placeholder for further refinement.</p>
+      <div class="roadmap-track">
+        <div class="roadmap-track__line"></div>
+        <div class="roadmap-track__line-active"></div>
+        <div class="roadmap-nodes">
+          <div class="roadmap-node roadmap-node--active roadmap-node--current">
+            <div class="roadmap-node__dot"></div>
+            <p class="roadmap-node__label">Now</p>
+            <h3>Core platform</h3>
+            <p>Desktop Electron app · RAG with citations · Hosted AU deployment · Profile-switch POC</p>
+            <span class="you-are-here">You are here</span>
+          </div>
+          <div class="roadmap-node">
+            <div class="roadmap-node__dot"></div>
+            <p class="roadmap-node__label">Next</p>
+            <h3>Enterprise connect</h3>
+            <p>Entra ID SSO · SharePoint / Confluence document ingest</p>
+          </div>
+          <div class="roadmap-node roadmap-node--muted">
+            <div class="roadmap-node__dot"></div>
+            <p class="roadmap-node__label">H2 2026+</p>
+            <h3>Full sovereignty</h3>
+            <p>Air-gap K8s profile · IRAP evidence package</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · Sales funnel -->
+  <section class="slide slide--dark" data-slide="11">
+    <div class="slide-inner">
+      <p class="eyebrow">Go-to-market · Funnel</p>
+      <h2>From relationship to <span class="accent">installation</span></h2>
+      <p class="lead">A complementary narrative to the live demo — how firms enter and progress with Sovereign Warden.</p>
+      <div class="funnel-steps">
+        <div class="funnel-step">
+          <div class="funnel-step__num">1</div>
+          <div class="funnel-step__body">
+            <h3>AI Readiness Audit</h3>
+            <p>Standalone consultancy to assess compliance posture and AI usage across the firm. Relationship-building entry point — no product commitment required.</p>
+            <span class="funnel-step__tag">One-off engagement</span>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-step__num">2</div>
+          <div class="funnel-step__body">
+            <h3>Hosted LLM Quick Start</h3>
+            <p>With the audit in place, begin using the product with sovereignty as the focus. Frontier models for inference; vector database and storage hosted within Australia.</p>
+            <span class="funnel-step__tag">Sovereignty-first hosted pilot</span>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-step__num">3</div>
+          <div class="funnel-step__body">
+            <h3>On-prem installation + SLA</h3>
+            <p>Full stack on customer infrastructure. Ongoing support agreement for production operations — prompts never leave the building.</p>
+            <span class="funnel-step__tag">Production + support contract</span>
+          </div>
+        </div>
+      </div>
+      <div class="bridge-cta">
+        <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
+      </div>
     </div>
   </section>
 

@@ -6,6 +6,8 @@ Visual narrative primer for the investor/mentor pack — the reasoning and oppor
 
 **Audience flow:** Start here → Pitch Deck → Business Plan Explorer.
 
+The concept deck includes product slides (9–11) at the end: platform integrations, feature roadmap, and sales funnel.
+
 ## Open the deck
 
 ```bash

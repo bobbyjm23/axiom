@@ -93,7 +93,7 @@ Aeonik fonts are bundled for investor/advisor distribution only — not for publ
 ## Architecture
 
 - **Renderer:** Vite + React (login, home cards, doc explorer)
-- **Concept deck:** 8-slide narrative primer (market outlook, Cetus landscape, positioning)
+- **Concept deck:** 11-slide narrative primer (market outlook, positioning, product, funnel)
 - **Pitch deck:** Bundled `index.html` loaded in iframe (unchanged slide deck)
 - **Auth:** Main-process bcrypt validation; session tokens in memory + sessionStorage
 - **Content:** `app-bundle/` copied into installer via electron-builder `extraResources`

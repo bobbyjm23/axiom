@@ -149,6 +149,11 @@ async function main() {
     copyDir(conceptIconsSrc, path.join(BUNDLE_ROOT, "concept", "assets", "icons"));
     copyDir(conceptIconsSrc, path.join(ROOT, "public", "concept", "assets", "icons"));
   }
+  const conceptLogosSrc = path.join(CONCEPT_SRC, "assets", "logos");
+  if (fs.existsSync(conceptLogosSrc)) {
+    copyDir(conceptLogosSrc, path.join(BUNDLE_ROOT, "concept", "assets", "logos"));
+    copyDir(conceptLogosSrc, path.join(ROOT, "public", "concept", "assets", "logos"));
+  }
 
   const logoSrc = path.join(PITCH_DECK_SRC, "assets", "logo.png");
   const fontsSrc = path.join(PITCH_DECK_SRC, "assets", "fonts");
