@@ -6,7 +6,7 @@ Visual narrative primer for the investor/mentor pack — the reasoning and oppor
 
 **Audience flow:** Start here → Pitch Deck → Business Plan Explorer.
 
-The concept deck includes product slides (9–11) at the end: platform integrations, feature roadmap, and sales funnel.
+The concept deck includes product slides (9–11) at the end: platform integrations, feature comparison, and sales funnel.
 
 ## Open the deck
 
@@ -44,7 +44,7 @@ cp -R ../pitch-deck/assets .
 4. Enable **Background graphics**
 5. Each slide prints as a separate page (print CSS included)
 
-## Slide outline (8 slides)
+## Slide outline (11 slides)
 
 ### Act 1 — Market Outlook
 
@@ -61,7 +61,13 @@ cp -R ../pitch-deck/assets .
 
 6. **The gap nobody owns** — CISO vs mid-market buyer; adoption-first
 7. **What Sovereign Warden proposes** — Two-SKU platform + architecture (dark slide)
-8. **Why this matters now** — Close + bridge to Pitch Deck (dark slide)
+8. **Why this matters now** — Close + bridge to product slides (dark slide)
+
+### Act 4 — Product
+
+9. **Platform & integrations** — Device hero, OS logos, integration grid
+10. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
+11. **Sales funnel** — Audit → Quick Start → On-prem + SLA; bridge to Pitch Deck (dark slide)
 
 ## What stays out (by design)
 
