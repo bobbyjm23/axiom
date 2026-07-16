@@ -22,6 +22,14 @@ website/
     └── <slug>/index.html   # Individual articles
 ```
 
+## Homepage sections
+
+`index.html` follows the Concept deck arc, one section per slide, ending in Insights + Contact bookends:
+
+`#top` (hero) → `#market-today` → `#capability` → `#owning` → `#sovereignty` → `#platform` → `#compare` → `#tco` → `#now` → `#insights` → `#contact`
+
+Business Plan pricing (Track A / Track B packages, hosted-wedge journeys) lives in the investor pack and Business Plan docs only — it is intentionally not on the public homepage.
+
 ## Local preview
 
 ```bash
