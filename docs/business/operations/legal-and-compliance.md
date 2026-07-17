@@ -2,18 +2,22 @@
 
 **Entity:** NZ trading company exists (no SW IP assigned)  
 **Action:** Register **AU Pty Ltd** before Adneo SOW  
-**IP deed:** Within 2 weeks of AU entity registration
+**IP deed:** Within 2 weeks of AU entity registration  
+**Founder:** NZ resident — AU resident director required for ASIC registration
+
+**Legal hub:** [legal/README.md](legal/README.md) · **Master checklist:** [legal/legal-checklist.md](legal/legal-checklist.md)
 
 ---
 
 ## Entity structure
 
-| Item | Status |
-|------|--------|
-| NZ trading co | Exists; no Sovereign Warden IP |
-| AU Pty Ltd | **Register before first SOW** |
-| IP assignment | Founder → AU Pty Ltd via deed |
-| Accountant / lawyer | Will engage for entity + SOW review |
+| Item | Status | Document |
+|------|--------|----------|
+| NZ trading co | Exists; no Sovereign Warden IP | [entity-structure-decision.md](legal/entity-structure-decision.md) |
+| AU Pty Ltd | **Register before first SOW** | [asic-registration.md](legal/checklists/asic-registration.md) |
+| AU resident director | **Required — not yet appointed** | [resident-director.md](legal/checklists/resident-director.md) |
+| IP assignment | Founder → AU Pty Ltd via deed | [ip-assignment-deed.md](legal/templates/ip-assignment-deed.md) |
+| Accountant / lawyer | Will engage for entity + SOW review | [legal-checklist.md](legal/legal-checklist.md) |
 
 ---
 
@@ -34,18 +38,33 @@
 | Vendor clearance | **Not yet obtained — required before SOW** |
 | Commercial model | Free/discounted pilot → paid production |
 
+**Tracker:** [adneo-vendor-clearance.md](legal/checklists/adneo-vendor-clearance.md)
+
 **Risk:** SOW blocked until vendor clearance. Founder to obtain before week 4 target close.
 
 ---
 
 ## Customer contracts
 
-| Document | Status |
-|----------|--------|
-| QuickStart SOW template | Draft needed |
-| Case study + logo rights clause | In founding QuickStart terms |
-| Privacy policy / DPA | Template needed for hosted AU |
-| Security pack | Founder draft; lawyer fact-check |
+| Document | Status | Template |
+|----------|--------|----------|
+| Pilot SOW template | 🟡 Draft ready — lawyer review needed | [pilot-sow-template.md](legal/templates/pilot-sow-template.md) |
+| QuickStart SOW template | 🟡 Draft ready — lawyer review needed | [quickstart-sow-template.md](legal/templates/quickstart-sow-template.md) |
+| Case study + logo rights clause | In founding QuickStart / pilot terms | pilot-sow-template.md §9 |
+| Privacy policy / DPA | 🟡 Draft ready — lawyer review needed | [dpa-template.md](legal/templates/dpa-template.md) · [privacy-policy.md](legal/templates/privacy-policy.md) |
+| Terms of service | 🟡 Draft ready — lawyer review needed | [terms-of-service.md](legal/templates/terms-of-service.md) |
+| MSA | ⏸ Deferred — customer #2+ | [msa-template.md](legal/templates/msa-template.md) |
+| Security pack | 🟡 Draft ready — lawyer fact-check | [security-pack/](legal/security-pack/) |
+
+---
+
+## Investor readiness
+
+| Document | Status | Template |
+|----------|--------|----------|
+| SAFE term sheet | 🟡 Draft ready — lawyer review needed | [safe-term-sheet.md](legal/templates/safe-term-sheet.md) |
+| Cap table | 🟡 Template ready | [cap-table-template.md](legal/cap-table-template.md) |
+| Constitution notes | 🟡 Guidance ready | [constitution-notes.md](legal/templates/constitution-notes.md) |
 
 ---
 
