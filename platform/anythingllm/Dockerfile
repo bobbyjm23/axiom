@@ -9,6 +9,7 @@ USER root
 # Install extension server dependencies
 COPY extensions/warden-audit/package.json /app/extensions/warden-audit/package.json
 COPY extensions/warden-audit/server /app/extensions/warden-audit/server
+COPY extensions/warden-audit/scripts /app/extensions/warden-audit/scripts
 COPY extensions/warden-audit/templates /app/extensions/warden-audit/templates
 COPY extensions/warden-audit/extension.json /app/extensions/warden-audit/extension.json
 
@@ -28,6 +29,14 @@ COPY platform/anythingllm/patches /tmp/patches
 RUN chmod +x /tmp/patches/apply.sh /tmp/patches/apply-warden-patches.sh && \
     /tmp/patches/apply.sh
 
+# Sovereign Warden durable branding assets (Admin Appearance seed + fallback public logos)
+COPY platform/anythingllm/branding /app/server/public/warden-branding
+RUN cp /app/server/public/warden-branding/login-logo-light.svg /app/server/public/login-logo-light.svg && \
+    cp /app/server/public/warden-branding/login-logo.svg /app/server/public/login-logo.svg && \
+    chmod -R a+r /app/server/public/warden-branding /app/server/public/login-logo-light.svg /app/server/public/login-logo.svg
+
 ENV WARDEN_AUDIT_ENABLED=true
 ENV WARDEN_AUDIT_PATH=/app/extensions/warden-audit/server
 ENV ANYTHINGLLM_SERVER_ROOT=/app/server
+ENV WARDEN_BRANDING_DIR=/app/server/public/warden-branding
+ENV WARDEN_BRANDING_FORCE=true

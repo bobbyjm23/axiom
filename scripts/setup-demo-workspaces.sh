@@ -45,9 +45,10 @@ echo ""
 echo "5. Configure Agent Workspace:"
 echo "   Enable agent mode + web browsing or SQL skill in workspace settings"
 echo ""
-echo "6. Branding (Admin → Appearance):"
+echo "6. Branding (Admin → Appearance) — usually seeded on Docker boot:"
 echo "   - App name: Sovereign Warden"
-echo "   - Upload company logo from demo/assets/"
+echo "   - Logo: platform/anythingllm/branding/logo-light.png"
+echo "   See platform/anythingllm/BRANDING.md"
 echo ""
 
 # Health check

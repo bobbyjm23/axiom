@@ -172,4 +172,45 @@ print("Patched MetaGenerator.js (sidebar inject)")
 PY
 fi
 
+# --- Durable branding: seed Admin Appearance defaults on boot (app name + logo) ---
+SERVER_INDEX="${TARGET}/server/index.js"
+if [[ -f "$SERVER_INDEX" ]] && ! grep -q "WARDEN_BRANDING_ENSURE" "$SERVER_INDEX"; then
+  python3 - <<'PY' "$SERVER_INDEX"
+import sys
+path = sys.argv[1]
+text = open(path).read()
+insert = '''
+// WARDEN_BRANDING_ENSURE
+setTimeout(() => {
+  try {
+    const path = require("path");
+    const fs = require("fs");
+    const candidate =
+      process.env.WARDEN_BRANDING_ENSURE ||
+      path.join(__dirname, "public/warden-branding/ensure-branding.js");
+    if (!fs.existsSync(candidate)) return;
+    const ensure = require(candidate);
+    Promise.resolve(typeof ensure === "function" ? ensure() : ensure).catch((err) => {
+      console.error("[warden-branding] Ensure failed:", err.message);
+    });
+  } catch (err) {
+    console.error("[warden-branding] Ensure load failed:", err.message);
+  }
+}, 2500);
+'''
+close_pat = '} catch (err) {\n    console.error("[warden-audit] Extension load failed:", err.message);\n  }\n}'
+needle = "mobileEndpoints(apiRouter);"
+cidx = text.find(close_pat)
+if cidx != -1:
+    at = cidx + len(close_pat)
+    text = text[:at] + insert + text[at:]
+elif needle in text:
+    text = text.replace(needle, needle + insert, 1)
+else:
+    raise SystemExit("Could not find injection point for branding ensure")
+open(path, "w").write(text)
+print("Patched server/index.js (branding ensure)")
+PY
+fi
+
 echo "==> Warden Audit patches applied."
