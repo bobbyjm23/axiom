@@ -98,6 +98,24 @@ a:hover { text-decoration: none; }
   width: auto;
 }
 
+/* Narrow phones: half-size logo + clear hero title from fixed header */
+@media (max-width: 400px) {
+  :root {
+    --header-height: 56px;
+  }
+
+  .l-header__logo svg,
+  .l-header__logo img {
+    height: 42px;
+  }
+
+  .block-hero__content {
+    align-items: flex-start;
+    padding-top: calc(var(--header-height) + 1.75rem);
+    padding-bottom: 11rem;
+  }
+}
+
 .l-header__logo .logo-light {
   display: block;
   filter: brightness(0) invert(1);

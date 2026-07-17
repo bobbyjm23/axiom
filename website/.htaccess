@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Sovereign Warden — staging"
+AuthUserFile /container/application/.htpasswd
+Require valid-user

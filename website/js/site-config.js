@@ -1,21 +1,15 @@
 /**
  * Site configuration — update before production deploy.
- * GTM container ID: replace with your Google Tag Manager container.
+ * Prefer GA4 measurement ID. Optional GTM container when published.
  */
 window.SW_SITE_CONFIG = {
-  gtmId: "GTM-XXXXXXX",
-  ga4MeasurementId: "G-XXXXXXXXXX",
+  gtmId: "GTM-WBBH4L7R",
+  ga4MeasurementId: "G-9HDYFEW7D4",
   siteUrl: "https://sovereignwarden.com.au",
   siteName: "Sovereign Warden",
   contactEmail: "hello@sovereignwarden.com",
   social: {
     linkedin: "https://www.linkedin.com/company/sovereign-warden",
-    twitter: "https://twitter.com/sovereignwarden",
-    facebook: "https://www.facebook.com/sovereignwarden",
-    youtube: "https://www.youtube.com/@sovereignwarden",
-    instagram: "https://www.instagram.com/sovereignwarden",
-    github: "https://github.com/sovereign-warden",
-    mastodon: "",
-    bluesky: ""
+    twitter: "https://twitter.com/sovereignwarden"
   }
 };
