@@ -22,7 +22,18 @@ cp config/whitelist.investor.json.example config/whitelist.investor.json
 
 # Development (mentor profile, hot reload)
 npm run dev
+
+# Vite only (survives Electron quit; good for keeping http://localhost:5173 up)
+npm run dev:web
+
+# Electron only (expects Vite already on 5173)
+npm run dev:electron
+
+# Fully detached (survives agent/shell exit — recommended for Cursor agents)
+npm run dev:detached
 ```
+
+> **Stability:** Agent-attached `npm run dev` is often SIGTERM’d when the agent session ends (~2–3 min). Use `npm run dev:detached` (double-fork daemon). Closing the Electron window on macOS does **not** quit the app (dock icon remains); Cmd+Q does. Auth/login requires Electron (browser at :5173 has no preload IPC). `npm run dev` no longer uses `concurrently -k`, so Vite keeps running if Electron exits.
 
 > **Note:** If Electron fails with `app.whenReady` undefined, ensure `ELECTRON_RUN_AS_NODE` is not set in your shell (Cursor sets this by default). The `npm run dev` script unsets it automatically.
 
@@ -93,7 +104,7 @@ Aeonik fonts are bundled for investor/advisor distribution only — not for publ
 ## Architecture
 
 - **Renderer:** Vite + React (login, home cards, doc explorer)
-- **Concept deck:** 11-slide narrative primer (market outlook, positioning, product, funnel)
+- **Concept deck:** 9-slide narrative primer (market outlook, positioning, product)
 - **Pitch deck:** Bundled `index.html` loaded in iframe (unchanged slide deck)
 - **Auth:** Main-process bcrypt validation; session tokens in memory + sessionStorage
 - **Content:** `app-bundle/` copied into installer via electron-builder `extraResources`

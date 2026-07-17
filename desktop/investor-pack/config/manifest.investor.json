@@ -30,7 +30,10 @@
       "children": [
         { "id": "team", "label": "Team and Hiring", "path": "operations/team-and-hiring.md" },
         { "id": "product", "label": "Product and Delivery", "path": "operations/product-and-delivery.md" },
-        { "id": "legal", "label": "Legal and Compliance", "path": "operations/legal-and-compliance.md" }
+        { "id": "legal", "label": "Legal and Compliance", "path": "operations/legal-and-compliance.md" },
+        { "id": "legal-hub", "label": "Legal Documentation Hub", "path": "operations/legal/README.md" },
+        { "id": "legal-checklist", "label": "Legal Checklist", "path": "operations/legal/legal-checklist.md" },
+        { "id": "entity-decision", "label": "Entity Structure Decision", "path": "operations/legal/entity-structure-decision.md" }
       ]
     },
     {
