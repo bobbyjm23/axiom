@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 40" role="img" aria-label="Harbour Advisory">
+  <g fill="none" stroke="#1D2B38" stroke-opacity="0.55" stroke-width="1.6" stroke-linecap="round">
+    <path d="M6 28c4-10 10-16 16-16s12 6 16 16"/>
+    <path d="M10 28c3-7 7.5-11 12-11s9 4 12 11"/>
+    <path d="M14.5 28c2-4.5 4.5-7 7.5-7s5.5 2.5 7.5 7"/>
+  </g>
+  <circle cx="22" cy="28" r="1.8" fill="#1D2B38" fill-opacity="0.55"/>
+  <text x="48" y="18" fill="#1D2B38" fill-opacity="0.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.12em">HARBOUR</text>
+  <text x="48" y="31" fill="#1D2B38" fill-opacity="0.45" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" letter-spacing="0.22em">ADVISORY</text>
+</svg>

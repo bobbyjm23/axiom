@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 40" role="img" aria-label="Atlas Accounting">
+  <g fill="none" stroke="#1D2B38" stroke-opacity="0.55" stroke-width="1.6" stroke-linejoin="round">
+    <path d="M18 7l12 24H6z"/>
+    <path d="M11 23h14"/>
+  </g>
+  <text x="40" y="17" fill="#1D2B38" fill-opacity="0.72" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="0.08em">ATLAS</text>
+  <text x="40" y="30" fill="#1D2B38" fill-opacity="0.42" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="500" letter-spacing="0.18em">ACCOUNTING</text>
+</svg>

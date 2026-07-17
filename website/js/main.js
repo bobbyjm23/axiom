@@ -144,7 +144,7 @@
 
     setHeaderState();
     setActiveNav();
-    observeInview(".sovereignty-compare, .product-orbit");
+    observeInview(".sovereignty-compare");
   }
 
   document.addEventListener("DOMContentLoaded", initNav);

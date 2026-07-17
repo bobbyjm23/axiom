@@ -7,7 +7,7 @@ window.SW_SITE_CONFIG = {
   ga4MeasurementId: "G-XXXXXXXXXX",
   siteUrl: "https://sovereignwarden.com.au",
   siteName: "Sovereign Warden",
-  contactEmail: "hello@sovereignwarden.com.au",
+  contactEmail: "hello@sovereignwarden.com",
   social: {
     linkedin: "https://www.linkedin.com/company/sovereign-warden",
     twitter: "https://twitter.com/sovereignwarden",

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" role="img" aria-label="Northshore Legal">
+  <g fill="#1D2B38" fill-opacity="0.55">
+    <path d="M8 32V8h5.2l7.8 14.6L28.8 8H34v24h-4.6V16.2L22.2 30h-3.2L11.6 16.2V32H8z"/>
+    <text x="44" y="26" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="600" letter-spacing="0.04em">NORTHSHORE</text>
+    <text x="158" y="26" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" letter-spacing="0.08em">LEGAL</text>
+  </g>
+  <rect x="152" y="12" width="1" height="16" fill="#1D2B38" fill-opacity="0.25"/>
+</svg>
