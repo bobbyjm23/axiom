@@ -6,7 +6,7 @@ Visual narrative primer for the investor/mentor pack — the reasoning and oppor
 
 **Audience flow:** Start here → Pitch Deck → Business Plan Explorer.
 
-The concept deck includes product slides (9–11) at the end: platform integrations, feature comparison, and sales funnel.
+The concept deck includes product slides (5–7) before positioning/close: sovereignty compare, platform integrations, and feature comparison.
 
 ## Open the deck
 
@@ -34,7 +34,7 @@ cp -R ../pitch-deck/assets .
 | Next slide | `→` · `Space` · `Page Down` · swipe left |
 | Previous slide | `←` · `Page Up` · swipe right |
 | First / last | `Home` / `End` |
-| Deep link | `#slide-5` (e.g. `index.html#slide-6` for costing) |
+| Deep link | `#slide-5` (e.g. `index.html#slide-5` for positioning) |
 
 ## Export to PDF
 
@@ -44,30 +44,28 @@ cp -R ../pitch-deck/assets .
 4. Enable **Background graphics**
 5. Each slide prints as a separate page (print CSS included)
 
-## Slide outline (11 slides)
+## Slide outline (9 slides)
 
 ### Act 1 — Market Outlook
 
-1. **The Concept** — Frame the deck; Market → Landscape → Position
+1. **The Concept** — Frame the deck; Market → Position
 2. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
 3. **The gap is shrinking** — Open-source vs frontier capability line chart + task comparison table
 4. **Where it's heading** — Rent vs own thesis; sovereign deployment (dark slide)
 
-### Act 2 — Landscape / Cetus
+### Act 2 — Product
 
-5. **First movers vs next generation** — Cetus implied burn/ROI trap; cannibalisation window (dark slide)
+5. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
+6. **Platform & integrations** — SW logo hub, Android/iOS/Desktop, service orbit nodes
+7. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
 
-### Act 3 — Our Position
+### Act 3 — Economics
 
-6. **The gap nobody owns** — CISO vs mid-market buyer; adoption-first
-7. **What Sovereign Warden proposes** — Two-SKU platform + architecture (dark slide)
-8. **Why this matters now** — Close + bridge to product slides (dark slide)
+8. **3-year TCO** — Claude Team vs Claude API vs self-hosted LLM
 
-### Act 4 — Product
+### Close
 
-9. **Platform & integrations** — Device hero, OS logos, integration grid
-10. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
-11. **Sales funnel** — Audit → Quick Start → On-prem + SLA; bridge to Pitch Deck (dark slide)
+9. **Why this matters now** — Window for productised sovereign AI (dark slide)
 
 ## What stays out (by design)
 

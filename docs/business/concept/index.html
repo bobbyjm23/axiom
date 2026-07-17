@@ -641,10 +641,6 @@
 
     .hide-logo-mark .logo-mark { display: none; }
 
-    body.dark-slide-active .logo-mark {
-      filter: brightness(0) invert(1);
-    }
-
     .logo-hero {
       display: block;
       width: clamp(13rem, 33.8vw, 19.5rem);
@@ -689,7 +685,7 @@
     }
 
     .slide--dark.slide-title { background: var(--navy); }
-    .slide-title h1 { max-width: 20ch; }
+    .slide-title h1 { max-width: 22ch; }
 
     .deck > .slide:first-child .slide-inner { margin-bottom: 10vh; }
 
@@ -859,181 +855,281 @@
       .gap-slide-grid { grid-template-columns: 1fr !important; }
     }
 
-    /* ── Product slides (9–11) ── */
-    .product-hero {
+    /* ── Sovereignty compare ── */
+    .sovereignty-compare {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: center;
+      gap: 1.75rem;
       margin-top: 1.5rem;
+      align-items: start;
     }
 
     @media (max-width: 900px) {
-      .product-hero { grid-template-columns: 1fr; }
+      .sovereignty-compare { grid-template-columns: 1fr; }
     }
 
-    .device-hero {
-      position: relative;
-      min-height: 18rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 1rem 0 0;
-    }
-
-    .device-desktop {
-      position: relative;
-      width: min(100%, 22rem);
-      z-index: 1;
-    }
-
-    .device-desktop__bezel {
-      background: var(--navy);
-      border-radius: 12px 12px 0 0;
-      padding: 0.65rem 0.65rem 0;
-      box-shadow: 0 12px 40px rgba(29, 43, 56, 0.18);
-    }
-
-    .device-desktop__screen {
-      background: var(--white);
-      border-radius: 6px 6px 0 0;
-      min-height: 11rem;
+    .sovereignty-panel {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 1rem;
-      position: relative;
+      gap: 0.85rem;
+    }
+
+    .sovereignty-panel__art {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem 0.85rem;
       overflow: hidden;
     }
 
-    .device-desktop__screen::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1.25rem;
-      background: var(--mint);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .device-desktop__screen img {
-      width: clamp(5rem, 40%, 7rem);
-      height: auto;
-      margin-top: 0.5rem;
-    }
-
-    .device-desktop__stand {
-      height: 0.75rem;
-      background: linear-gradient(180deg, #2a3d4d 0%, var(--navy) 100%);
-      border-radius: 0 0 4px 4px;
-    }
-
-    .device-desktop__base {
-      width: 40%;
-      height: 0.35rem;
-      background: var(--navy);
-      border-radius: 0 0 6px 6px;
-      margin: 0 auto;
-      opacity: 0.85;
-    }
-
-    .device-mobile {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 5.5rem;
-      z-index: 2;
-      filter: drop-shadow(0 8px 24px rgba(29, 43, 56, 0.22));
-    }
-
-    .device-mobile__frame {
-      background: var(--navy);
-      border-radius: 14px;
-      padding: 0.35rem;
-    }
-
-    .device-mobile__screen {
-      background: var(--white);
-      border-radius: 10px;
-      min-height: 8.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.75rem 0.5rem;
-    }
-
-    .device-mobile__screen img {
-      width: 2.75rem;
+    .sovereignty-panel__art svg {
+      display: block;
+      width: 100%;
       height: auto;
     }
 
-    .product-copy__section {
-      margin-bottom: 1.75rem;
-    }
-
-    .product-copy__section:last-child {
-      margin-bottom: 0;
-    }
-
-    .product-copy__subtitle {
-      font-size: 0.95rem;
+    .sovereignty-panel__title {
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--navy);
-      margin-bottom: 0.75rem;
+      margin: 0;
     }
 
-    .os-logos {
+    .sovereignty-panel__title--warn { color: #a04030; }
+    .sovereignty-panel__title--teal { color: var(--navy); }
+
+    .sovereignty-panel__title--teal .accent { color: var(--teal); }
+
+    .sovereignty-panel__caption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+      max-width: none;
+      line-height: 1.45;
+    }
+
+    .sovereignty-svg .office-fill { fill: var(--mint); }
+    .sovereignty-svg .office-stroke { fill: none; stroke: rgba(29, 43, 56, 0.22); stroke-width: 2; }
+    .sovereignty-svg .office-stroke--teal { stroke: var(--teal); stroke-width: 2.5; }
+    .sovereignty-svg .device-body { fill: var(--navy); }
+    .sovereignty-svg .device-screen { fill: #fff; }
+    .sovereignty-svg .rack-body { fill: var(--navy); }
+    .sovereignty-svg .rack-slot { fill: rgba(255, 255, 255, 0.18); }
+    .sovereignty-svg .rack-led { fill: var(--teal); }
+    .sovereignty-svg .cloud-shape { fill: rgba(29, 43, 56, 0.1); stroke: rgba(29, 43, 56, 0.35); stroke-width: 1.5; }
+    .sovereignty-svg .label {
+      font-family: var(--font);
+      font-size: 11px;
+      font-weight: 700;
+      fill: var(--navy);
+    }
+    .sovereignty-svg .label--muted { fill: var(--text-muted); font-weight: 400; }
+    .sovereignty-svg .label--warn { fill: #a04030; }
+    .sovereignty-svg .label--stack {
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .sovereignty-svg .map-outline {
+      fill: rgba(29, 43, 56, 0.22);
+      stroke: rgba(29, 43, 56, 0.45);
+      stroke-width: 1.2;
+      stroke-linejoin: round;
+    }
+    .sovereignty-svg .map-outline--warn {
+      fill: rgba(220, 80, 60, 0.18);
+      stroke: rgba(160, 64, 48, 0.75);
+    }
+    .sovereignty-svg .map-outline--teal {
+      fill: rgba(18, 234, 203, 0.22);
+      stroke: rgba(18, 234, 203, 0.75);
+    }
+    .sovereignty-svg .exit-path {
+      fill: none;
+      stroke: rgba(220, 80, 60, 0.85);
+      stroke-width: 2;
+      stroke-dasharray: 5 4;
+      stroke-linecap: round;
+    }
+    .sovereignty-svg .link-path {
+      fill: none;
+      stroke: var(--teal);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+    .sovereignty-svg .badge {
+      fill: rgba(18, 234, 203, 0.2);
+      stroke: var(--teal);
+      stroke-width: 1.25;
+    }
+    .sovereignty-svg .badge-text {
+      font-family: var(--font);
+      font-size: 9px;
+      font-weight: 700;
+      fill: var(--navy);
+    }
+
+    @keyframes sovereignty-exit {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.55; }
+      50% { stroke-dashoffset: -18; opacity: 1; }
+    }
+
+    @keyframes sovereignty-link {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 1; }
+    }
+
+    .slide.active .sovereignty-svg .exit-path {
+      animation: sovereignty-exit 2.2s ease-in-out infinite;
+    }
+
+    .slide.active .sovereignty-svg .link-path {
+      animation: sovereignty-link 2.4s ease-in-out infinite;
+    }
+
+    .slide.active .sovereignty-svg .link-path:nth-of-type(2) { animation-delay: 0.2s; }
+    .slide.active .sovereignty-svg .link-path:nth-of-type(3) { animation-delay: 0.4s; }
+    .slide.active .sovereignty-svg .link-path:nth-of-type(4) { animation-delay: 0.6s; }
+
+    /* ── Product slides (5–7) ── */
+    .product-orbit {
+      margin-top: 0.5rem;
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
+      justify-content: center;
     }
 
-    .os-logos img {
-      width: 2rem;
-      height: 2rem;
-      object-fit: contain;
+    .product-orbit__stage {
+      position: relative;
+      container-type: size;
+      width: min(100%, 980px);
+      aspect-ratio: 1.15 / 1;
+      max-height: min(68vh, 640px);
     }
 
-    .integration-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.65rem;
-      margin-top: 0.25rem;
-    }
-
-    @media (max-width: 700px) {
-      .integration-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .integration-tile {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.65rem 0.5rem;
+    .product-orbit__hub {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      min-height: 4.25rem;
+      gap: 1.15rem;
+      text-align: center;
     }
 
-    .integration-tile img {
-      width: 1.75rem;
-      height: 1.75rem;
+    .product-orbit__logo {
+      width: clamp(12rem, 30cqmin, 16rem);
+      height: auto;
+      display: block;
+    }
+
+    .product-orbit__platforms {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      max-width: none;
+    }
+
+    .product-orbit__os {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.35rem;
+    }
+
+    .product-orbit__os img {
+      width: 2.75rem;
+      height: 2.75rem;
       object-fit: contain;
     }
 
-    .integration-tile span {
-      font-size: 0.58rem;
+    .product-orbit__node {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      width: 4.9rem;
+    }
+
+    .product-orbit__node-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-orbit__node-icon img {
+      width: 4.55rem;
+      height: 4.55rem;
+      object-fit: contain;
+    }
+
+    .product-orbit__node span {
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--text-muted);
+      color: var(--navy);
       text-align: center;
       line-height: 1.2;
-      max-width: 100%;
+      max-width: 6rem;
+    }
+
+    .product-orbit__spokes {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .product-orbit__spokes line {
+      stroke: rgba(18, 234, 203, 0.45);
+      stroke-width: 2;
+      stroke-dasharray: 5 6;
+    }
+
+    .slide.active .product-orbit__spokes line {
+      animation: product-spoke-pulse 2.8s ease-in-out infinite;
+    }
+
+    .slide.active .product-orbit__spokes line:nth-child(odd) { animation-delay: 0.35s; }
+
+    @keyframes product-spoke-pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.9; }
+    }
+
+    @media (max-width: 900px) {
+      .product-orbit__stage {
+        max-height: min(62vh, 520px);
+      }
+      .product-orbit__logo { width: clamp(9rem, 28cqmin, 12rem); }
+      .product-orbit__node { width: 3.85rem; }
+      .product-orbit__node-icon img { width: 3.45rem; height: 3.45rem; }
+      .product-orbit__node span { font-size: 0.65rem; max-width: 5rem; }
+      .product-orbit__os img { width: 2.35rem; height: 2.35rem; }
+    }
+
+    @media (max-width: 700px) {
+      .product-orbit__stage {
+        aspect-ratio: 1 / 1.05;
+        max-height: none;
+        min-height: 28rem;
+      }
+      .product-orbit__logo { width: clamp(7rem, 32cqmin, 10rem); }
+      .product-orbit__platforms { font-size: 0.8rem; }
+      .product-orbit__node { width: 2.8rem; }
+      .product-orbit__node-icon img { width: 2.45rem; height: 2.45rem; }
+      .product-orbit__node span { font-size: 0.55rem; max-width: 3.5rem; }
+      .product-orbit__os img { width: 2rem; height: 2rem; }
     }
 
     .roadmap-track {
@@ -1258,6 +1354,68 @@
       font-size: 0.7rem;
     }
 
+    .tco-compare {
+      width: 100%;
+      max-width: 68rem;
+      margin-top: 1.1rem;
+      font-size: 0.72rem;
+      border-collapse: collapse;
+    }
+
+    .tco-compare th,
+    .tco-compare td {
+      padding: 0.55rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .tco-compare th {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .tco-compare th.tco-compare__num,
+    .tco-compare td.tco-compare__num {
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tco-compare td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+      width: 16%;
+      white-space: nowrap;
+    }
+
+    .tco-compare td.tco-compare__prose {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      max-width: 16rem;
+    }
+
+    .tco-compare tr.tco-compare__highlight td {
+      background: rgba(18, 234, 203, 0.08);
+    }
+
+    .tco-compare tr.tco-compare__highlight td:first-child {
+      color: var(--navy);
+    }
+
+    .tco-compare tr.tco-compare__highlight td.tco-compare__num {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .tco-compare tr:last-child td {
+      border-bottom: none;
+    }
+
     .check-partial { color: var(--text-muted); font-weight: 700; }
 
     @media print {
@@ -1284,11 +1442,10 @@
     <div class="slide-inner">
       <img class="logo-hero" src="assets/logo.png" alt="Sovereign Warden">
       <p class="eyebrow">Concept · July 2026</p>
-      <h1>The idea behind <span class="accent">Sovereign Warden</span></h1>
+      <h1>Private AI for organisations that can't use <span class="accent">Claude.</span></h1>
       <p class="lead">Before the numbers — why private AI for regulated Australian firms is inevitable, and where we sit in the landscape.</p>
       <div class="act-pills">
         <span class="act-pill">Market</span>
-        <span class="act-pill">Landscape</span>
         <span class="act-pill">Position</span>
       </div>
       <p class="confidential">Confidential — for accredited investor discussion only</p>
@@ -1433,38 +1590,6 @@
       <p class="eyebrow">Market · Tomorrow</p>
       <h2>The shift from renting intelligence to <span class="accent">owning</span> it.</h2>
       <p class="lead">Open-source models closed the capability gap — the next battle is where inference runs and who controls the stack.</p>
-      <div class="grid-2">
-        <div class="card card-muted">
-          <h3>Rent</h3>
-          <ul class="clean">
-            <li>Per-seat SaaS forever</li>
-            <li>US-hosted API calls</li>
-            <li>Vendor owns the economics</li>
-          </ul>
-          <div class="bar-chart" style="margin-top:1rem">
-            <div class="bar-row">
-              <span>Rent</span>
-              <div class="bar-track"><div class="bar-fill muted" style="width:85%"></div></div>
-              <span>Forever</span>
-            </div>
-          </div>
-        </div>
-        <div class="card card-accent">
-          <h3>Own</h3>
-          <ul class="clean">
-            <li>Open-weight models on your hardware</li>
-            <li>Prompts stay in Australia / on-prem</li>
-            <li>CapEx asset, not recurring rent</li>
-          </ul>
-          <div class="bar-chart" style="margin-top:1rem">
-            <div class="bar-row">
-              <span>Own</span>
-              <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
-              <span>Once</span>
-            </div>
-          </div>
-        </div>
-      </div>
       <blockquote>"The gap isn't intelligence anymore — it's sovereign deployment for firms that can't paste client data into Claude."</blockquote>
       <ul class="clean" style="margin-top:1rem">
         <li>Models are commoditising (Llama, Mistral, Qwen)</li>
@@ -1474,262 +1599,197 @@
     </div>
   </section>
 
-  <!-- 5 · First movers vs next generation -->
-  <section class="slide slide--dark" data-slide="5">
+  <!-- 5 · Product · Sovereignty -->
+  <section class="slide slide--mint" data-slide="5">
     <div class="slide-inner">
-      <p class="eyebrow">Landscape · Industry structure</p>
-      <h2>They priced like a <span class="accent">$50M</span> company. The stack costs weeks.</h2>
-      <p class="lead">First movers burned years of CapEx and investor capital building governance platforms — then had to recover it at $120k/year per logo. That price isn't the product. It's the cap table.</p>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Cetus AI — read between the lines</h3>
-          <p style="font-size:0.78rem;margin-top:0.35rem;max-width:none">Brookwater, QLD · Azure Marketplace June 2026 · board-led by 30-year enterprise execs</p>
-          <div class="gen-stat-row" style="margin-top:0.85rem">
-            <span>Public price (Observe only)</span>
-            <span>$120k/yr — before Copilot</span>
+      <p class="eyebrow">Product · Sovereignty</p>
+      <h2>Your prompts never leave the <span class="accent">office.</span></h2>
+      <p class="lead">Cloud assistants ship client data offshore. On-prem keeps inference inside your walls.</p>
+      <div class="sovereignty-compare">
+        <div class="sovereignty-panel">
+          <div class="sovereignty-panel__art" aria-hidden="true">
+            <svg class="sovereignty-svg" viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+              <rect class="office-fill" x="24" y="36" width="170" height="150" rx="10"/>
+              <rect class="office-stroke" x="24" y="36" width="170" height="150" rx="10"/>
+              <text class="label label--muted" x="36" y="56">Office</text>
+              <!-- laptops -->
+              <g transform="translate(48,120)">
+                <rect class="device-body" width="44" height="28" rx="3"/>
+                <rect class="device-screen" x="4" y="4" width="36" height="16" rx="1.5"/>
+                <rect class="device-body" x="8" y="28" width="28" height="3" rx="1"/>
+              </g>
+              <g transform="translate(108,118)">
+                <rect class="device-body" width="44" height="28" rx="3"/>
+                <rect class="device-screen" x="4" y="4" width="36" height="16" rx="1.5"/>
+                <rect class="device-body" x="8" y="28" width="28" height="3" rx="1"/>
+              </g>
+              <g transform="translate(78,78)">
+                <rect class="device-body" width="40" height="26" rx="3"/>
+                <rect class="device-screen" x="3.5" y="3.5" width="33" height="15" rx="1.5"/>
+                <rect class="device-body" x="7" y="26" width="26" height="3" rx="1"/>
+              </g>
+              <!-- Australia (office) -->
+              <g transform="translate(28,158) scale(0.36)" opacity="0.95">
+                <path class="map-outline" d="M69.7,5.4L68.1,16.5L57.7,18.0L55.2,14.8L56.4,12.0L57.8,9.2L56.7,9.5L53.3,8.9L48.9,7.6L46.8,7.4L45.8,9.0L43.4,12.1L41.1,16.0L35.7,13.2L34.3,14.0L33.7,14.1L32.5,16.2L30.5,17.1L28.8,18.6L28.5,19.9L27.7,19.9L25.2,24.4L16.2,29.5L13.5,29.4L9.1,33.2L7.3,40.0L7.1,41.3L7.4,44.6L13.5,64.1L25.3,61.5L45.2,55.7L50.9,57.4L53.4,60.5L55.9,64.1L58.2,60.9L59.3,61.6L60.0,63.5L63.9,69.0L70.6,72.5L75.5,71.1L78.2,73.9L86.3,68.4L88.1,63.9L91.0,58.7L93.1,53.2L93.7,46.1L93.5,39.3L89.5,37.3L87.6,33.5L86.0,32.8L84.7,30.6L83.0,28.4L78.5,24.6L77.7,20.7L75.4,15.1L72.3,11.7L69.6,5.8L69.7,5.4Z M75.1,76.8L76.2,82.3L77.2,83.6L77.4,83.8L77.6,83.8L77.5,84.0L77.8,84.4L78.2,84.3L79.0,84.5L79.8,84.3L80.1,83.8L80.1,84.3L80.8,83.7L81.2,82.9L82.1,82.8L82.4,81.0L82.9,78.3L78.2,78.6L75.4,77.0L75.1,76.8Z"/>
+              </g>
+              <!-- exit paths -->
+              <path class="exit-path" d="M194 90 C 210 82, 222 72, 238 68"/>
+              <path class="exit-path" d="M194 118 C 210 110, 222 95, 238 82"/>
+              <path class="exit-path" d="M194 148 C 210 140, 222 115, 238 95"/>
+              <!-- cloud -->
+              <g transform="translate(212,48)">
+                <path class="cloud-shape" d="M28 42c-7 0-12-4-13-10-4-1-8-5-8-10 0-6 5-11 11-11 2-5 7-9 13-9 8 0 14 5 15 12 5 1 10 5 10 11 0 6-5 11-11 11H28z"/>
+              </g>
+              <!-- frontier vendors (clear of dashed paths) -->
+              <g transform="translate(278,58)">
+                <text class="label label--warn label--stack" text-anchor="start" x="0" y="0">Anthropic</text>
+                <text class="label label--warn label--stack" text-anchor="start" x="0" y="16">OpenAI</text>
+                <text class="label label--warn label--stack" text-anchor="start" x="0" y="32">AWS</text>
+                <text class="label label--warn label--stack" text-anchor="start" x="0" y="48">Azure</text>
+              </g>
+              <!-- United States (cloud) -->
+              <g transform="translate(268,145) scale(0.45)" opacity="0.95">
+                <path class="map-outline map-outline--warn" d="M9.9,5.8L66.3,7.3L84.7,15.1L103.9,16.1L112.2,13.8L112.6,17.3L110.4,17.7L108.6,19.2L106.6,21.7L108.0,24.0L105.5,24.6L100.8,25.8L98.9,31.7L98.7,32.5L97.6,34.3L96.7,32.4L96.8,30.1L96.1,33.3L94.7,32.4L95.4,34.3L94.9,35.8L97.1,38.2L96.9,39.4L95.9,40.4L96.2,42.2L90.9,46.2L88.6,48.6L86.7,52.1L89.3,62.3L87.2,65.7L85.4,62.8L84.3,59.9L81.4,54.7L77.4,53.5L75.6,53.7L71.7,54.2L72.1,54.9L72.6,56.9L70.4,56.8L67.9,55.5L61.5,55.4L58.7,57.9L57.4,60.6L57.4,64.9L52.8,60.6L48.2,55.0L43.2,53.2L37.0,50.9L19.0,45.4L15.3,43.3L11.4,37.7L10.9,34.7L10.9,33.9L8.0,30.1L6.8,22.1L7.7,15.0L7.5,12.8L6.3,7.7L10.3,8.8L10.5,10.3L10.1,6.5L9.9,5.8Z"/>
+              </g>
+            </svg>
           </div>
-          <div class="gen-stat-row">
-            <span>Implied team</span>
-            <span>~20–40 FTE to sell &amp; ship this</span>
-          </div>
-          <div class="gen-stat-row">
-            <span>Implied burn</span>
-            <span>$3–5M/yr before profit</span>
-          </div>
-          <div class="gen-stat-row">
-            <span>Break-even math</span>
-            <span>~30–40 logos @ $120k just for payroll</span>
-          </div>
-          <div class="gen-stat-row">
-            <span>Years of CapEx in the product</span>
-            <span>2–3 yrs · compliance · Azure co-sell</span>
-          </div>
-          <div class="burn-bar-wrap">
-            <div class="burn-label"><span>Price vs reproducible build cost</span><span>$120k/yr vs ~$50k one-time today</span></div>
-            <div class="burn-track"><div class="burn-fill" style="width:92%"></div></div>
-          </div>
-          <p style="font-size:0.72rem;margin-top:0.75rem;max-width:none;color:rgba(255,255,255,0.55)">They can't drop to $12k QuickStart — their investors won't allow it.</p>
+          <h3 class="sovereignty-panel__title sovereignty-panel__title--warn">Leaves the building</h3>
+          <p class="sovereignty-panel__caption">Staff → cloud providers → overseas model</p>
         </div>
-        <div>
-          <div class="gen-compare" style="margin-top:0">
-            <div class="gen-card">
-              <h3>First generation</h3>
-              <div class="gen-stat-row"><span>Time to ship</span><span>Years of CapEx</span></div>
-              <div class="gen-stat-row"><span>Price anchor</span><span>Investor ROI</span></div>
-              <div class="gen-stat-row"><span>Entry point</span><span>$120k+ governance</span></div>
-              <div class="gen-stat-row"><span>Mid-market?</span><span>Structurally excluded</span></div>
-            </div>
-            <div class="gen-card gen-card--new">
-              <h3>Next generation · ~6 months old</h3>
-              <div class="gen-stat-row"><span>Time to ship</span><span>Weeks · OSS stack</span></div>
-              <div class="gen-stat-row"><span>Price anchor</span><span>Delivery cost</span></div>
-              <div class="gen-stat-row"><span>Entry point</span><span>$12k QuickStart</span></div>
-              <div class="gen-stat-row"><span>Mid-market?</span><span>Core ICP</span></div>
-            </div>
+        <div class="sovereignty-panel">
+          <div class="sovereignty-panel__art" aria-hidden="true">
+            <svg class="sovereignty-svg" viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+              <rect class="office-fill" x="36" y="28" width="268" height="164" rx="12"/>
+              <rect class="office-stroke office-stroke--teal" x="36" y="28" width="268" height="164" rx="12"/>
+              <text class="label label--muted" x="50" y="50">Your office</text>
+              <!-- central rack -->
+              <g transform="translate(148,78)">
+                <rect class="rack-body" width="44" height="72" rx="4"/>
+                <rect class="rack-slot" x="6" y="10" width="32" height="6" rx="1"/>
+                <rect class="rack-slot" x="6" y="22" width="32" height="6" rx="1"/>
+                <rect class="rack-slot" x="6" y="34" width="32" height="6" rx="1"/>
+                <rect class="rack-slot" x="6" y="46" width="32" height="6" rx="1"/>
+                <circle class="rack-led" cx="12" cy="62" r="2.5"/>
+                <circle class="rack-led" cx="22" cy="62" r="2.5"/>
+                <rect class="badge" x="6" y="-18" width="32" height="14" rx="7"/>
+                <text class="badge-text" x="13" y="-8">Local</text>
+              </g>
+              <!-- laptops -->
+              <g transform="translate(58,128)">
+                <rect class="device-body" width="42" height="26" rx="3"/>
+                <rect class="device-screen" x="3.5" y="3.5" width="35" height="15" rx="1.5"/>
+                <rect class="device-body" x="7" y="26" width="28" height="3" rx="1"/>
+              </g>
+              <g transform="translate(58,68)">
+                <rect class="device-body" width="42" height="26" rx="3"/>
+                <rect class="device-screen" x="3.5" y="3.5" width="35" height="15" rx="1.5"/>
+                <rect class="device-body" x="7" y="26" width="28" height="3" rx="1"/>
+              </g>
+              <g transform="translate(240,68)">
+                <rect class="device-body" width="42" height="26" rx="3"/>
+                <rect class="device-screen" x="3.5" y="3.5" width="35" height="15" rx="1.5"/>
+                <rect class="device-body" x="7" y="26" width="28" height="3" rx="1"/>
+              </g>
+              <g transform="translate(240,128)">
+                <rect class="device-body" width="42" height="26" rx="3"/>
+                <rect class="device-screen" x="3.5" y="3.5" width="35" height="15" rx="1.5"/>
+                <rect class="device-body" x="7" y="26" width="28" height="3" rx="1"/>
+              </g>
+              <!-- Australia (on-prem office) -->
+              <g transform="translate(42,162) scale(0.36)" opacity="0.95">
+                <path class="map-outline map-outline--teal" d="M69.7,5.4L68.1,16.5L57.7,18.0L55.2,14.8L56.4,12.0L57.8,9.2L56.7,9.5L53.3,8.9L48.9,7.6L46.8,7.4L45.8,9.0L43.4,12.1L41.1,16.0L35.7,13.2L34.3,14.0L33.7,14.1L32.5,16.2L30.5,17.1L28.8,18.6L28.5,19.9L27.7,19.9L25.2,24.4L16.2,29.5L13.5,29.4L9.1,33.2L7.3,40.0L7.1,41.3L7.4,44.6L13.5,64.1L25.3,61.5L45.2,55.7L50.9,57.4L53.4,60.5L55.9,64.1L58.2,60.9L59.3,61.6L60.0,63.5L63.9,69.0L70.6,72.5L75.5,71.1L78.2,73.9L86.3,68.4L88.1,63.9L91.0,58.7L93.1,53.2L93.7,46.1L93.5,39.3L89.5,37.3L87.6,33.5L86.0,32.8L84.7,30.6L83.0,28.4L78.5,24.6L77.7,20.7L75.4,15.1L72.3,11.7L69.6,5.8L69.7,5.4Z M75.1,76.8L76.2,82.3L77.2,83.6L77.4,83.8L77.6,83.8L77.5,84.0L77.8,84.4L78.2,84.3L79.0,84.5L79.8,84.3L80.1,83.8L80.1,84.3L80.8,83.7L81.2,82.9L82.1,82.8L82.4,81.0L82.9,78.3L78.2,78.6L75.4,77.0L75.1,76.8Z"/>
+              </g>
+              <!-- internal links -->
+              <path class="link-path" d="M100 80 C 120 80, 130 100, 148 110"/>
+              <path class="link-path" d="M100 140 C 120 140, 130 125, 148 120"/>
+              <path class="link-path" d="M240 80 C 220 80, 210 100, 192 110"/>
+              <path class="link-path" d="M240 140 C 220 140, 210 125, 192 120"/>
+            </svg>
           </div>
-          <div class="insight-callout" style="margin-top:1rem">
-            First movers can't compete on price — they can only compete on IRAP decks and board relationships. That window is closing.
-          </div>
-          <span class="buyer-chip">This is how industries get cannibalised — same outcome, 10× lower entry, zero legacy burn</span>
+          <h3 class="sovereignty-panel__title sovereignty-panel__title--teal">Stays <span class="accent">on-prem</span></h3>
+          <p class="sovereignty-panel__caption">Staff → your rack → answers stay local</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6 · The gap nobody owns -->
+  <!-- 6 · Platform & integrations -->
   <section class="slide slide--mint" data-slide="6">
-    <div class="slide-inner">
-      <p class="eyebrow">Position</p>
-      <h2>Mid-market firms need adoption first — not a module <span class="accent">ladder.</span></h2>
-      <p class="lead">50–250 staff firms can't wait 12 months or spend $120k before anyone logs in.</p>
-      <div class="grid-2">
-        <div class="card">
-          <p class="eyebrow" style="margin-bottom:0.5rem">Enterprise buyer</p>
-          <h3>CISO / CTO</h3>
-          <ul class="clean" style="margin-top:0.75rem">
-            <li>"What is our AI spend?"</li>
-            <li>Shadow AI inventory</li>
-            <li>Board compliance pack</li>
-            <li>$120k+ platform budget</li>
-          </ul>
-        </div>
-        <div class="card card-accent">
-          <p class="eyebrow" style="margin-bottom:0.5rem">Mid-market buyer</p>
-          <h3>Managing partner / COO</h3>
-          <ul class="clean" style="margin-top:0.75rem">
-            <li>"Can associates use AI on client files?"</li>
-            <li>Approved desktop + citations</li>
-            <li>Fixed-price pilot in weeks</li>
-            <li>$12–35k partner authority</li>
-          </ul>
-        </div>
-      </div>
-      <div class="connector-flow">
-        <span class="connector-node connector-node--warn">Shadow ChatGPT</span>
-        <span class="connector-arrow">→</span>
-        <span class="connector-node connector-node--teal">Approved tool</span>
-        <span class="connector-arrow">→</span>
-        <span class="connector-node">On-prem path (optional)</span>
-      </div>
-      <div class="footnote-stat">
-        <span class="stat">&lt;5%</span>
-        <span class="stat-label">sovereign AI adoption in mid-tier law today — mostly shadow tools + Copilot trials</span>
-      </div>
-      <div style="margin-top:0.75rem">
-        <span class="tag teal">Law</span>
-        <span class="tag teal">Accounting</span>
-        <span class="tag teal">Wealth</span>
-        <span class="tag warn">50–250 staff</span>
-        <span class="tag warn">Australia</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7 · What Sovereign Warden proposes -->
-  <section class="slide slide--dark" data-slide="7">
-    <div class="slide-inner">
-      <p class="eyebrow">Position · Product</p>
-      <h2>Two options.<br>One <span class="accent">platform.</span></h2>
-      <p class="lead">Land with employee adoption — convert to owned infrastructure when they're ready. Same codebase, profile switch.</p>
-      <div class="two-path">
-        <div class="card">
-          <span class="tag teal">Wedge</span>
-          <h3 style="margin-top:0.75rem">Sovereign Hosted (AU)</h3>
-          <p style="font-size:0.85rem;margin-top:0.5rem">Live in days · no CapEx</p>
-          <p style="font-size:0.78rem;margin-top:0.75rem"><strong>Competes with:</strong> Copilot, Macquarie</p>
-        </div>
-        <div class="divider">→</div>
-        <div class="card card-accent">
-          <span class="tag">Primary focus</span>
-          <h3 style="margin-top:0.75rem">Turnkey On-Prem</h3>
-          <p style="font-size:0.85rem;margin-top:0.5rem">Prompts never leave the rack</p>
-          <p style="font-size:0.78rem;margin-top:0.75rem"><strong>Competes with:</strong> Cetus Orchestrate, Premya</p>
-        </div>
-      </div>
-      <div class="pill-row-center">
-        <span class="tag teal">Claude-class desktop UX</span>
-        <span class="tag teal">Profile switch — zero rebuild</span>
-        <span class="tag teal">Published mid-market pricing</span>
-      </div>
-      <p class="muted-note" style="text-align:center;margin-left:auto;margin-right:auto">Not an AI governance FinOps platform in Year 1 — we win on employee adoption and sovereignty path.</p>
-    </div>
-  </section>
-
-  <!-- 8 · Close -->
-  <section class="slide slide--dark slide-title" data-slide="8">
-    <div class="slide-inner">
-      <p class="eyebrow">Close</p>
-      <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>
-      <p class="lead">Market proof exists (Cetus, Premya, Macquarie). The gap is speed, UX, and accessible pricing for firms too small for enterprise governance-first journeys.</p>
-      <div class="grid-3">
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/regulation.png" alt="">
-          <h3>Regulation</h3>
-          <p>Privacy Act scrutiny</p>
-        </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/economics.png" alt="">
-          <h3>Economics</h3>
-          <p>Copilot seat shock at scale</p>
-        </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/proof.png" alt="">
-          <h3>Proof</h3>
-          <p>Sovereign AI vendors validate demand</p>
-        </div>
-      </div>
-      <div class="bridge-cta">
-        <p><strong>Next:</strong> Open the Product deck for platform details, roadmap, and how buyers enter.</p>
-      </div>
-      <p style="margin-top:1.5rem;color:var(--teal);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
-    </div>
-  </section>
-
-  <!-- 9 · Platform & integrations -->
-  <section class="slide slide--mint" data-slide="9">
     <div class="slide-inner">
       <p class="eyebrow">Product · Today</p>
       <h2>Sovereign AI that works <span class="accent">where you work.</span></h2>
-      <div class="product-hero">
-        <div class="device-hero">
-          <div class="device-desktop">
-            <div class="device-desktop__bezel">
-              <div class="device-desktop__screen">
-                <img src="assets/logo.png" alt="Sovereign Warden">
-              </div>
-            </div>
-            <div class="device-desktop__stand"></div>
-            <div class="device-desktop__base"></div>
-          </div>
-          <div class="device-mobile">
-            <div class="device-mobile__frame">
-              <div class="device-mobile__screen">
-                <img src="assets/logo.png" alt="Sovereign Warden mobile">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-copy">
-          <div class="product-copy__section">
-            <p class="product-copy__subtitle">Available on all major operating systems</p>
-            <div class="os-logos">
-              <img src="assets/logos/windows.svg" alt="Windows">
-              <img src="assets/logos/apple.svg" alt="macOS">
-              <img src="assets/logos/linux.svg" alt="Linux">
+      <div class="product-orbit">
+        <div class="product-orbit__stage">
+          <svg class="product-orbit__spokes" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            
+            
+            <line x1="50" y1="50" x2="50.0" y2="8.6"/>
+            <line x1="50" y1="50" x2="74.3" y2="16.5"/>
+            <line x1="50" y1="50" x2="89.4" y2="37.2"/>
+            <line x1="50" y1="50" x2="89.4" y2="62.8"/>
+            <line x1="50" y1="50" x2="74.3" y2="83.5"/>
+            <line x1="50" y1="50" x2="50.0" y2="91.4"/>
+            <line x1="50" y1="50" x2="25.7" y2="83.5"/>
+            <line x1="50" y1="50" x2="10.6" y2="62.8"/>
+            <line x1="50" y1="50" x2="10.6" y2="37.2"/>
+            <line x1="50" y1="50" x2="25.7" y2="16.5"/>
+          </svg>
+          <div class="product-orbit__hub">
+            <img class="product-orbit__logo" src="assets/logo.png" alt="Sovereign Warden">
+            <p class="product-orbit__platforms">Android — iOS — Desktop</p>
+            <div class="product-orbit__os">
+              <img src="assets/logos/android.svg" alt="Android">
+              <img src="assets/logos/apple.svg" alt="iOS">
+              <img src="assets/logos/windows.svg" alt="Desktop">
             </div>
           </div>
-          <div class="product-copy__section">
-            <p class="product-copy__subtitle">We work where you work</p>
-            <div class="integration-grid">
-              <div class="integration-tile">
-                <img src="assets/logos/microsoft365.svg" alt="Microsoft 365">
-                <span>Microsoft 365</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/atlassian.svg" alt="Atlassian">
-                <span>Atlassian</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/google-workspace.svg" alt="Google Workspace">
-                <span>Google Workspace</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/xero.svg" alt="Xero">
-                <span>Xero</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/myob.svg" alt="MYOB">
-                <span>MYOB</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/leap.svg" alt="LEAP">
-                <span>LEAP</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/clio.svg" alt="Clio">
-                <span>Clio</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/xplan.svg" alt="Iress Xplan">
-                <span>Iress Xplan</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/midwinter.svg" alt="Midwinter">
-                <span>Midwinter</span>
-              </div>
-              <div class="integration-tile">
-                <img src="assets/logos/sharepoint.svg" alt="SharePoint">
-                <span>SharePoint</span>
-              </div>
-            </div>
+          <div class="product-orbit__node" style="--x: 50.0%; --y: 8.6%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/microsoft365.svg" alt=""></div>
+            <span>Microsoft 365</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 74.3%; --y: 16.5%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/atlassian.svg" alt=""></div>
+            <span>Atlassian</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 89.4%; --y: 37.2%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/google-workspace.svg" alt=""></div>
+            <span>Google Workspace</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 89.4%; --y: 62.8%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/xero.svg" alt=""></div>
+            <span>Xero</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 74.3%; --y: 83.5%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/myob.svg" alt=""></div>
+            <span>MYOB</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 50.0%; --y: 91.4%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/leap.svg" alt=""></div>
+            <span>LEAP</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 25.7%; --y: 83.5%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/clio.svg" alt=""></div>
+            <span>Clio</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 10.6%; --y: 62.8%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/xplan.svg" alt=""></div>
+            <span>Iress Xplan</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 10.6%; --y: 37.2%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/midwinter.svg" alt=""></div>
+            <span>Midwinter</span>
+          </div>
+          <div class="product-orbit__node" style="--x: 25.7%; --y: 16.5%">
+            <div class="product-orbit__node-icon"><img src="assets/logos/sharepoint.svg" alt=""></div>
+            <span>SharePoint</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 10 · Feature comparison -->
-  <section class="slide" data-slide="10">
+  <!-- 7 · Feature comparison -->
+  <section class="slide" data-slide="7">
     <div class="slide-inner">
       <p class="eyebrow">Product · Compare</p>
       <h2>Capability <span class="accent">by capability.</span></h2>
@@ -1863,47 +1923,95 @@
     </div>
   </section>
 
-  <!-- 11 · Sales funnel -->
-  <section class="slide slide--dark" data-slide="11">
+
+  <!-- 8 · 3-year TCO -->
+  <section class="slide slide--mint" data-slide="8">
     <div class="slide-inner">
-      <p class="eyebrow">Go-to-market · Funnel</p>
-      <h2>From relationship to <span class="accent">installation</span></h2>
-      <p class="lead">A complementary narrative to the live demo — how firms enter and progress with Sovereign Warden.</p>
-      <div class="funnel-steps">
-        <div class="funnel-step">
-          <div class="funnel-step__num">1</div>
-          <div class="funnel-step__body">
-            <h3>AI Readiness Audit</h3>
-            <p>Standalone consultancy to assess compliance posture and AI usage across the firm. Relationship-building entry point — no product commitment required.</p>
-            <span class="funnel-step__tag">One-off engagement</span>
-          </div>
+      <p class="eyebrow">Economics · 3-year TCO</p>
+      <h2>Owning the stack beats <span class="accent">renting</span> Claude.</h2>
+      <p class="lead">Indicative cost for ~100 seats — Claude Team, Claude API, and self-hosted LLM over three years.</p>
+      <table class="tco-compare">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th class="tco-compare__num">Upfront</th>
+            <th class="tco-compare__num">Ongoing</th>
+            <th class="tco-compare__num">3-year total</th>
+            <th>Pros</th>
+            <th>Cons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Claude Team<br><span style="font-weight:400;color:var(--text-muted)">(100 seats)</span></td>
+            <td class="tco-compare__num">A$0</td>
+            <td class="tco-compare__num">A$36,700/yr</td>
+            <td class="tco-compare__num"><strong>A$110,000</strong></td>
+            <td class="tco-compare__prose">Excellent AI quality, no infrastructure to manage, rapid deployment</td>
+            <td class="tco-compare__prose">Data processed externally, per-user licensing, limited customisation</td>
+          </tr>
+          <tr>
+            <td>Claude API</td>
+            <td class="tco-compare__num">A$0</td>
+            <td class="tco-compare__num">~A$53,500/yr</td>
+            <td class="tco-compare__num"><strong>A$160,000</strong></td>
+            <td class="tco-compare__prose">Integrates directly into your application, no seat licensing, scales with usage</td>
+            <td class="tco-compare__prose">Costs increase with adoption and can be difficult to predict</td>
+          </tr>
+          <tr class="tco-compare__highlight">
+            <td>Self-hosted LLM</td>
+            <td class="tco-compare__num">A$61,000</td>
+            <td class="tco-compare__num">A$3,000/yr</td>
+            <td class="tco-compare__num"><strong>A$70,000</strong></td>
+            <td class="tco-compare__prose">Complete data sovereignty, predictable long-term costs, unlimited users on existing hardware (within capacity)</td>
+            <td class="tco-compare__prose">Requires AI infrastructure, GPU management, monitoring, and ongoing maintenance</td>
+          </tr>
+          <tr class="tco-compare__highlight">
+            <td>Self-hosted LLM<br><span style="font-weight:400;color:var(--text-muted)">(rent to own)</span></td>
+            <td class="tco-compare__num">A$0</td>
+            <td class="tco-compare__num">~A$23,333/yr</td>
+            <td class="tco-compare__num"><strong>A$70,000</strong></td>
+            <td class="tco-compare__prose">Same sovereignty and capacity as self-hosted — CapEx spread over three years with A$0 upfront</td>
+            <td class="tco-compare__prose">Same operational burden as self-hosted; financing commitment over the term</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 9 · Close -->
+  <section class="slide slide--dark slide-title" data-slide="9">
+    <div class="slide-inner">
+      <p class="eyebrow">Close</p>
+      <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>
+      <p class="lead">Market proof exists (Cetus, Premya, Macquarie). The gap is speed, UX, and accessible pricing for firms too small for enterprise governance-first journeys.</p>
+      <div class="grid-3">
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/regulation.png" alt="">
+          <h3>Regulation</h3>
+          <p>Privacy Act scrutiny</p>
         </div>
-        <div class="funnel-step">
-          <div class="funnel-step__num">2</div>
-          <div class="funnel-step__body">
-            <h3>Hosted LLM Quick Start</h3>
-            <p>With the audit in place, begin using the product with sovereignty as the focus. Frontier models for inference; vector database and storage hosted within Australia.</p>
-            <span class="funnel-step__tag">Sovereignty-first hosted pilot</span>
-          </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/economics.png" alt="">
+          <h3>Economics</h3>
+          <p>Copilot seat shock at scale</p>
         </div>
-        <div class="funnel-step">
-          <div class="funnel-step__num">3</div>
-          <div class="funnel-step__body">
-            <h3>On-prem installation + SLA</h3>
-            <p>Full stack on customer infrastructure. Ongoing support agreement for production operations — prompts never leave the building.</p>
-            <span class="funnel-step__tag">Production + support contract</span>
-          </div>
+        <div class="card icon-card">
+          <img class="icon" src="assets/icons/proof.png" alt="">
+          <h3>Proof</h3>
+          <p>Sovereign AI vendors validate demand</p>
         </div>
       </div>
       <div class="bridge-cta">
         <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
       </div>
+      <p style="margin-top:1.5rem;color:var(--teal);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
     </div>
   </section>
 
 </div>
 
-<img class="logo-mark" src="assets/logo.png" alt="Sovereign Warden">
+<img class="logo-mark" id="logo-mark" src="assets/logo.svg" alt="Sovereign Warden">
 <div class="progress" id="progress"></div>
 <div class="slide-counter" id="counter"></div>
 <div class="nav-buttons">
@@ -1921,14 +2029,19 @@
     const counter = document.getElementById("counter");
     const prevBtn = document.getElementById("prev");
     const nextBtn = document.getElementById("next");
+    const logoMark = document.getElementById("logo-mark");
+    const LOGO_LIGHT = "assets/logo.svg";
+    const LOGO_DARK = "assets/logo-white.svg";
 
     function goTo(index) {
       if (index < 0 || index >= total) return;
       slides[current].classList.remove("active");
       current = index;
       slides[current].classList.add("active");
+      const isDark = slides[current].classList.contains("slide--dark");
       document.body.classList.toggle("hide-logo-mark", current === 0);
-      document.body.classList.toggle("dark-slide-active", slides[current].classList.contains("slide--dark"));
+      document.body.classList.toggle("dark-slide-active", isDark);
+      if (logoMark) logoMark.src = isDark ? LOGO_DARK : LOGO_LIGHT;
       progress.style.width = ((current + 1) / total * 100) + "%";
       counter.textContent = (current + 1) + " / " + total;
       history.replaceState(null, "", "#slide-" + (current + 1));
