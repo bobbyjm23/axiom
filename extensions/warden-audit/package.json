@@ -6,7 +6,9 @@
   "main": "server/index.js",
   "scripts": {
     "test": "node --test server/__tests__/*.test.js",
-    "migrate": "node server/migrate.js"
+    "migrate": "node server/migrate.js",
+    "demo:seed": "node scripts/demo-data.js seed",
+    "demo:clean": "node scripts/demo-data.js clean"
   },
   "dependencies": {
     "pg": "^8.13.1",

@@ -17,6 +17,23 @@ The stock AnythingLLM web UI includes **AI Readiness Audit** in the settings sid
 
 Log in to AnythingLLM first (same session / `anythingllm_authToken`). As **admin**: create organization → start baseline audit.
 
+### Demo scenario (wealth management)
+
+Load a fictional **Harbour Capital Wealth Management** baseline + 90-day follow-up review:
+
+```bash
+./scripts/seed-audit-demo.sh
+```
+
+Open **http://localhost:3000/settings/audit/** — you'll see baseline (score ~0.27) and follow-up (score ~0.67) engagements with pillars, metrics, and deliverables populated.
+
+Remove demo data:
+
+```bash
+./scripts/clean-audit-demo.sh
+```
+
+
 Optional shortcut: **Settings → Branding & Whitelabeling → Sidebar Footer Items** → add link `/settings/audit/` with label “AI Readiness Audit”.
 
 ### Desktop Electron client

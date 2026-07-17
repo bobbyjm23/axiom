@@ -45,7 +45,7 @@ fi
 echo ""
 echo "Manual checks (requires admin session in browser):"
 echo "  1. Open ${BASE}/settings/audit/ (Docker) or Settings → AI Readiness Audit (desktop build)"
-echo "  2. Create organization and bind instance"
+echo "  2. Create organization and bind instance — or run ./scripts/seed-audit-demo.sh for demo data"
 echo "  3. Start baseline engagement and save a pillar"
 echo "  4. Import metrics (admin) and generate deliverables"
 echo ""
