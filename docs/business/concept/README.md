@@ -6,7 +6,7 @@ Visual narrative primer for the investor/mentor pack — the reasoning and oppor
 
 **Audience flow:** Start here → Pitch Deck → Business Plan Explorer.
 
-The concept deck includes product slides (5–7) before positioning/close: sovereignty compare, platform integrations, and feature comparison.
+The concept deck opens with the sovereignty compare early (slide 2), then market outlook, then platform integrations and feature comparison.
 
 ## Open the deck
 
@@ -46,25 +46,14 @@ cp -R ../pitch-deck/assets .
 
 ## Slide outline (9 slides)
 
-### Act 1 — Market Outlook
-
 1. **The Concept** — Frame the deck; Market → Position
-2. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
-3. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
-4. **Where it's heading** — Rent vs own thesis; sovereign deployment (dark slide)
-
-### Act 2 — Product
-
-5. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
+2. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
+3. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
+4. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
+5. **Where it's heading** — Rent vs own thesis; sovereign deployment (dark slide)
 6. **Platform & integrations** — SW logo hub, Android/iOS/Desktop, service orbit nodes
 7. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
-
-### Act 3 — Economics
-
 8. **3-year TCO** — Claude Team vs Claude API vs self-hosted LLM
-
-### Close
-
 9. **Why this matters now** — Window for productised sovereign AI (dark slide)
 
 ## What stays out (by design)
