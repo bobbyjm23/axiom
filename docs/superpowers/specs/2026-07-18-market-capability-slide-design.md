@@ -1,7 +1,7 @@
 # Concept deck — Market · Capability slide redesign
 
 **Date:** 2026-07-18  
-**Status:** Approved (conversational design); awaiting spec review before implementation  
+**Status:** Spec approved; implementation plan at `docs/superpowers/plans/2026-07-18-market-capability-slide.md`  
 **Scope:** Refocus slide 3 (`Market · Capability`) in the Sovereign Warden Concept deck — less noise, one causal story
 
 ## Goal
