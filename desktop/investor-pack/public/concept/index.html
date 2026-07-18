@@ -24,6 +24,8 @@
     :root {
       --navy: #1D2B38;
       --teal: #12EACB;
+      --teal-ink: #0A7A6A;
+      --accent-readable: var(--teal-ink);
       --mint: #F2F7F6;
       --white: #ffffff;
       --text-muted: #525e6b;
@@ -41,8 +43,8 @@
       background: var(--mint);
       color: var(--navy);
       font-family: var(--font);
-      font-size: clamp(15px, 1.5vw, 17px);
-      line-height: 1.4375;
+      font-size: clamp(17px, 1.85vw, 20px);
+      line-height: 1.45;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -75,6 +77,7 @@
     .slide--dark {
       background: var(--navy);
       color: var(--white);
+      --accent-readable: var(--teal);
     }
     .slide--dark p,
     .slide--dark .lead,
@@ -88,7 +91,7 @@
     .slide--dark th { color: rgba(255, 255, 255, 0.55); }
     .slide--dark td { color: var(--white); }
     .slide--dark th, .slide--dark td { border-color: rgba(255, 255, 255, 0.12); }
-    .slide--dark .eyebrow { color: var(--teal); }
+    .slide--dark .eyebrow { color: var(--accent-readable); }
 
     .slide-inner {
       max-width: var(--container-max);
@@ -97,7 +100,7 @@
     }
 
     .eyebrow {
-      font-size: 0.8125rem;
+      font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -106,16 +109,16 @@
     }
 
     h1 {
-      font-size: clamp(2.125rem, 4.5vw, 3.375rem);
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
       font-weight: 400;
       line-height: 1.15;
       max-width: 18ch;
     }
 
-    h1 .accent, h2 .accent { color: var(--teal); }
+    h1 .accent, h2 .accent { color: var(--accent-readable); }
 
     h2 {
-      font-size: clamp(1.75rem, 3vw, 2.6875rem);
+      font-size: clamp(1.9rem, 3.1vw, 2.85rem);
       font-weight: 400;
       line-height: 1.2;
       margin-bottom: 1.25rem;
@@ -123,14 +126,14 @@
     }
 
     h3 {
-      font-size: 1.0625rem;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
       line-height: 1.3;
     }
 
     .lead {
-      font-size: clamp(1rem, 1.8vw, 1.125rem);
+      font-size: clamp(1.125rem, 2vw, 1.3rem);
       color: var(--text-muted);
       max-width: 44rem;
       margin-top: 1.25rem;
@@ -190,7 +193,7 @@
 
     .stat {
       font-size: clamp(2rem, 4vw, 2.75rem);
-      color: var(--teal);
+      color: var(--accent-readable);
       line-height: 1;
       font-weight: 400;
     }
@@ -230,7 +233,7 @@
       max-width: 56rem;
       border-collapse: collapse;
       margin-top: 1.25rem;
-      font-size: 0.875rem;
+      font-size: 1rem;
     }
 
     th, td {
@@ -242,7 +245,7 @@
     th {
       color: var(--text-muted);
       font-weight: 700;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -258,7 +261,7 @@
 
     .slide--dark .highlight-row td {
       background: rgba(18, 234, 203, 0.15);
-      color: var(--teal);
+      color: var(--accent-readable);
     }
 
     .arch-flow {
@@ -286,7 +289,7 @@
 
     .arch-box strong { color: var(--navy); font-family: var(--font); }
     .slide--dark .arch-box strong { color: var(--white); }
-    .arch-arrow { text-align: center; color: var(--teal); font-size: 0.75rem; }
+    .arch-arrow { text-align: center; color: var(--accent-readable); font-size: 0.75rem; }
 
     blockquote {
       border-left: 3px solid var(--teal);
@@ -345,20 +348,20 @@
 
     .timeline-item.active { border-color: var(--teal); }
     .timeline-item .phase {
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--teal);
+      color: var(--accent-readable);
       font-weight: 700;
       margin-bottom: 0.35rem;
     }
 
-    .timeline-item h3 { font-size: 0.9rem; }
-    .timeline-item p { font-size: 0.78rem; margin-top: 0.35rem; }
+    .timeline-item h3 { font-size: 1.15rem; }
+    .timeline-item p { font-size: 0.98rem; margin-top: 0.35rem; }
 
     .icon-card {
       text-align: center;
-      padding: 1.25rem 1rem;
+      padding: 1.35rem 1.1rem;
     }
 
     .icon-card .icon {
@@ -378,8 +381,8 @@
       filter: brightness(0) invert(1);
     }
 
-    .icon-card h3 { font-size: 0.95rem; }
-    .icon-card p { font-size: 0.78rem; margin: 0.35rem auto 0; max-width: 14rem; }
+    .icon-card h3 { font-size: 1.15rem; }
+    .icon-card p { font-size: 0.98rem; margin: 0.35rem auto 0; max-width: 16rem; }
 
     .tag {
       display: inline-block;
@@ -425,7 +428,7 @@
 
     .act-pill::after {
       content: "→";
-      color: var(--teal);
+      color: var(--accent-readable);
       margin-left: 0.15rem;
     }
 
@@ -486,7 +489,7 @@
       text-align: center;
     }
 
-    .whitespace-box h3 { color: var(--teal); font-size: 0.95rem; }
+    .whitespace-box h3 { color: var(--accent-readable); font-size: 0.95rem; }
     .whitespace-box p { font-size: 0.82rem; margin: 0.35rem auto 0; max-width: 28rem; }
 
     .insight-callout {
@@ -519,7 +522,7 @@
 
     .slide--dark .buyer-chip {
       background: rgba(18, 234, 203, 0.2);
-      color: var(--teal);
+      color: var(--accent-readable);
     }
 
     .connector-flow {
@@ -554,20 +557,20 @@
       color: var(--navy);
     }
 
-    .connector-arrow { color: var(--teal); font-weight: 700; }
+    .connector-arrow { color: var(--accent-readable); font-weight: 700; }
 
     .footnote-stat {
       margin-top: 1.25rem;
-      font-size: 0.78rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
       display: flex;
       align-items: baseline;
       gap: 0.5rem;
     }
 
-    .footnote-stat .stat { font-size: 1.25rem; }
+    .footnote-stat .stat { font-size: 1.5rem; font-weight: 700; color: var(--navy); }
 
-    .check-yes { color: var(--teal); font-weight: 700; }
+    .check-yes { color: var(--accent-readable); font-weight: 700; }
     .check-no { color: var(--text-muted); }
 
     .two-path {
@@ -582,7 +585,7 @@
     .two-path .divider {
       display: flex;
       align-items: center;
-      color: var(--teal);
+      color: var(--accent-readable);
       font-weight: 700;
       font-size: 0.85rem;
     }
@@ -718,7 +721,7 @@
       align-items: center;
       justify-content: center;
       flex: 0 0 1.75rem;
-      color: var(--teal);
+      color: var(--accent-readable);
       font-size: 1.35rem;
       font-weight: 700;
       line-height: 1;
@@ -739,16 +742,16 @@
     }
 
     .cap-panel__step {
-      font-size: 0.68rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--accent-readable);
       margin: 0 0 0.35rem;
     }
 
     .cap-panel__title {
-      font-size: 0.85rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--navy);
       margin: 0 0 0.85rem;
@@ -788,7 +791,7 @@
     .cap-bar--frontier { background: rgba(29, 43, 56, 0.28); }
 
     .cap-bar-group__label {
-      font-size: 0.65rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
@@ -801,7 +804,7 @@
       display: flex;
       gap: 1rem;
       margin-top: 0.75rem;
-      font-size: 0.68rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
 
@@ -866,13 +869,13 @@
     }
 
     .hw-compare__arrow {
-      color: var(--teal);
+      color: var(--accent-readable);
       font-weight: 700;
       flex: 0 0 auto;
     }
 
     .cap-panel__closer {
-      font-size: 0.78rem;
+      font-size: 0.95rem;
       color: var(--navy);
       line-height: 1.4;
       border-top: 1px solid var(--border);
@@ -923,7 +926,7 @@
     .gen-stat-row:last-child { border-bottom: none; }
 
     .gen-stat-row span:last-child {
-      color: var(--teal);
+      color: var(--accent-readable);
       font-weight: 700;
       text-align: right;
     }
@@ -1000,7 +1003,7 @@
     }
 
     .sovereignty-panel__title {
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--navy);
       margin: 0;
@@ -1009,10 +1012,10 @@
     .sovereignty-panel__title--warn { color: #a04030; }
     .sovereignty-panel__title--teal { color: var(--navy); }
 
-    .sovereignty-panel__title--teal .accent { color: var(--teal); }
+    .sovereignty-panel__title--teal .accent { color: var(--accent-readable); }
 
     .sovereignty-panel__caption {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--text-muted);
       margin: 0;
       max-width: none;
@@ -1307,7 +1310,7 @@
     }
 
     .roadmap-node--current .roadmap-node__label {
-      color: var(--teal);
+      color: var(--accent-readable);
     }
 
     .roadmap-node__label {
@@ -1320,7 +1323,7 @@
     }
 
     .roadmap-node--active .roadmap-node__label {
-      color: var(--teal);
+      color: var(--accent-readable);
     }
 
     .roadmap-node h3 {
@@ -1344,7 +1347,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--teal);
+      color: var(--accent-readable);
       margin-top: 0.5rem;
     }
 
@@ -1381,7 +1384,7 @@
       border-radius: 50%;
       background: rgba(18, 234, 203, 0.15);
       border: 2px solid rgba(18, 234, 203, 0.45);
-      color: var(--teal);
+      color: var(--accent-readable);
       font-weight: 700;
       font-size: 0.9rem;
       display: flex;
@@ -1410,14 +1413,14 @@
       padding: 0.25rem 0.6rem;
       border-radius: 50px;
       background: rgba(18, 234, 203, 0.12);
-      color: var(--teal);
+      color: var(--accent-readable);
     }
 
     .feature-compare {
       width: 100%;
       max-width: 56rem;
       margin-top: 1.25rem;
-      font-size: 0.78rem;
+      font-size: 0.95rem;
       border-collapse: collapse;
     }
 
@@ -1473,6 +1476,12 @@
       border-collapse: collapse;
     }
 
+    .tco-compare--xl {
+      font-size: 1.45rem;
+      margin-top: 2.5rem;
+      max-width: none;
+    }
+
     .tco-compare th,
     .tco-compare td {
       padding: 0.55rem 0.5rem;
@@ -1482,12 +1491,23 @@
       line-height: 1.35;
     }
 
+    .tco-compare--xl th,
+    .tco-compare--xl td {
+      padding: 0.85rem 0.75rem;
+      line-height: 1.3;
+    }
+
     .tco-compare th {
       font-size: 0.62rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--text-muted);
       font-weight: 700;
+    }
+
+    .tco-compare--xl th {
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
     }
 
     .tco-compare th.tco-compare__num,
@@ -1502,6 +1522,19 @@
       color: var(--navy);
       width: 16%;
       white-space: nowrap;
+    }
+
+    .tco-compare--xl td:first-child {
+      width: 28%;
+      white-space: normal;
+    }
+
+    .tco-compare__sub {
+      display: block;
+      font-weight: 400;
+      font-size: 0.72em;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
     }
 
     .tco-compare td.tco-compare__prose {
@@ -1525,6 +1558,63 @@
 
     .tco-compare tr:last-child td {
       border-bottom: none;
+    }
+
+    /* ── Product · Verticals ── */
+    .verticals {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      max-width: 56rem;
+    }
+
+    .verticals__col {
+      padding: 0;
+      border-top: 3px solid var(--teal);
+      padding-top: 1.15rem;
+    }
+
+    .verticals__name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 1rem;
+      line-height: 1.2;
+    }
+
+    .verticals__stack {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .verticals__stack li {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      max-width: none;
+    }
+
+    .verticals__stack li:last-child {
+      border-bottom: none;
+    }
+
+    .verticals__closer {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      max-width: none;
+    }
+
+    .verticals__closer .accent {
+      color: var(--accent-readable);
+    }
+
+    @media (max-width: 900px) {
+      .verticals { grid-template-columns: 1fr; }
     }
 
     .check-partial { color: var(--text-muted); font-weight: 700; }
@@ -1796,7 +1886,7 @@
     <div class="slide-inner">
       <p class="eyebrow">Market · Tomorrow</p>
       <h2>The shift from renting intelligence to <span class="accent">owning</span> it.</h2>
-      <table class="tco-compare">
+      <table class="tco-compare tco-compare--xl">
         <thead>
           <tr>
             <th>Option · 100 users</th>
@@ -1808,21 +1898,21 @@
         </thead>
         <tbody>
           <tr>
-            <td>Frontier<br><span style="font-weight:400;color:var(--text-muted)">Team + API</span></td>
+            <td>Claude / Copilot</td>
             <td class="tco-compare__num">A$0</td>
             <td class="tco-compare__num">A$90,200/yr</td>
             <td class="tco-compare__num"><strong>A$270,000</strong></td>
             <td class="tco-compare__num"><strong>A$451,000</strong></td>
           </tr>
           <tr class="tco-compare__highlight">
-            <td>On-premises</td>
+            <td>Sovereign Warden<span class="tco-compare__sub">Upfront</span></td>
             <td class="tco-compare__num">A$61,000</td>
             <td class="tco-compare__num">A$3,000/yr</td>
             <td class="tco-compare__num"><strong>A$70,000</strong></td>
             <td class="tco-compare__num"><strong>A$76,000</strong></td>
           </tr>
           <tr class="tco-compare__highlight">
-            <td>On-premises · rent to own</td>
+            <td>Sovereign Warden<span class="tco-compare__sub">Rent to Own</span></td>
             <td class="tco-compare__num">A$0</td>
             <td class="tco-compare__num">~A$30,333/yr</td>
             <td class="tco-compare__num"><strong>A$91,000</strong></td>
@@ -1832,8 +1922,45 @@
       </table>
     </div>
   </section>
-  <!-- 6 · Platform & integrations -->
+
+  <!-- 6 · Product · Verticals -->
   <section class="slide slide--mint" data-slide="6">
+    <div class="slide-inner">
+      <p class="eyebrow">Product · Verticals</p>
+      <h2>The AI decisions are <span class="accent">already made</span> for your industry.</h2>
+      <p class="lead">Prefabricated turnkey packs — integrations, agents, and workflows tuned per vertical. Not a bespoke build. Not a consulting journey.</p>
+      <div class="verticals">
+        <div class="verticals__col">
+          <h3 class="verticals__name">Legal</h3>
+          <ul class="verticals__stack">
+            <li>Integrations</li>
+            <li>Agents</li>
+            <li>Workflows</li>
+          </ul>
+        </div>
+        <div class="verticals__col">
+          <h3 class="verticals__name">Wealth</h3>
+          <ul class="verticals__stack">
+            <li>Integrations</li>
+            <li>Agents</li>
+            <li>Workflows</li>
+          </ul>
+        </div>
+        <div class="verticals__col">
+          <h3 class="verticals__name">Accounting</h3>
+          <ul class="verticals__stack">
+            <li>Integrations</li>
+            <li>Agents</li>
+            <li>Workflows</li>
+          </ul>
+        </div>
+      </div>
+      <p class="verticals__closer">Complete package. <span class="accent">Priced to sell at volume.</span></p>
+    </div>
+  </section>
+
+  <!-- 7 · Platform & integrations -->
+  <section class="slide slide--mint" data-slide="7">
     <div class="slide-inner">
       <p class="eyebrow">Product · Today</p>
       <h2>Sovereign AI that works <span class="accent">where you work.</span></h2>
@@ -1906,8 +2033,8 @@
       </div>
     </div>
   </section>
-  <!-- 7 · Feature comparison -->
-  <section class="slide" data-slide="7">
+  <!-- 8 · Feature comparison -->
+  <section class="slide" data-slide="8">
     <div class="slide-inner">
       <p class="eyebrow">Product · Compare</p>
       <h2>Capability <span class="accent">by capability.</span></h2>
@@ -2040,8 +2167,8 @@
       </table>
     </div>
   </section>
-  <!-- 8 · Close -->
-  <section class="slide slide--dark slide-title" data-slide="8">
+  <!-- 9 · Close -->
+  <section class="slide slide--dark slide-title" data-slide="9">
     <div class="slide-inner">
       <p class="eyebrow">Close</p>
       <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>
@@ -2066,7 +2193,7 @@
       <div class="bridge-cta">
         <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
       </div>
-      <p style="margin-top:1.5rem;color:var(--teal);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
+      <p style="margin-top:1.5rem;color: var(--accent-readable);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
     </div>
   </section>
 
