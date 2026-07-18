@@ -705,75 +705,186 @@
 
     .slide--dark .muted-note { color: rgba(255, 255, 255, 0.55); }
 
-    /* ── Line chart (capability gap) ── */
-    .gap-chart-wrap {
+    /* ── Market · Capability sequential story ── */
+    .cap-seq {
+      display: flex;
+      align-items: stretch;
+      gap: 0.75rem;
       margin-top: 1rem;
     }
 
-    .gap-chart {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .cap-seq__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 1.75rem;
+      color: var(--teal);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
     }
 
-    .chart-legend {
+    .cap-panel {
+      flex: 1.15;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+
+    .cap-panel--focus {
+      flex: 1;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 1px rgba(18, 234, 203, 0.18);
+    }
+
+    .cap-panel__step {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0 0 0.35rem;
+    }
+
+    .cap-panel__title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.85rem;
+    }
+
+    .cap-bars {
       display: flex;
-      gap: 1.25rem;
-      margin-top: 0.65rem;
-      font-size: 0.72rem;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.55rem;
+      height: 7.5rem;
+      padding: 0 0.15rem;
+    }
+
+    .cap-bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      min-width: 0;
+    }
+
+    .cap-bar-group__bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 6.25rem;
+    }
+
+    .cap-bar {
+      width: 0.85rem;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .cap-bar--oss { background: var(--teal); }
+    .cap-bar--frontier { background: rgba(29, 43, 56, 0.28); }
+
+    .cap-bar-group__label {
+      font-size: 0.65rem;
       color: var(--text-muted);
     }
 
-    .chart-legend span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+    .cap-bar-group__label--now {
+      color: var(--navy);
+      font-weight: 700;
     }
 
-    .legend-line {
-      width: 1.25rem;
-      height: 3px;
-      border-radius: 2px;
+    .cap-legend {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .cap-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .cap-legend__swatch {
+      width: 0.7rem;
+      height: 0.4rem;
+      border-radius: 1px;
       display: inline-block;
     }
 
-    .legend-line--frontier { background: rgba(29, 43, 56, 0.35); }
-    .legend-line--oss { background: var(--teal); }
+    .cap-legend__swatch--oss { background: var(--teal); }
+    .cap-legend__swatch--frontier { background: rgba(29, 43, 56, 0.28); }
 
-    .cap-table {
-      font-size: 0.72rem;
-      margin-top: 0;
+    .hw-compare {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
     }
 
-    .cap-table th,
-    .cap-table td {
-      padding: 0.45rem 0.55rem;
-      vertical-align: top;
-    }
-
-    .cap-table th:first-child,
-    .cap-table td:first-child {
-      width: 28%;
-    }
-
-    .cap-table .pct {
-      color: var(--navy);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .economics-callout {
-      margin-top: 1rem;
-      padding: 0.85rem 1rem;
+    .hw-pill {
+      flex: 1;
+      text-align: center;
+      padding: 0.75rem 0.5rem;
       border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--white);
+      background: rgba(29, 43, 56, 0.06);
+    }
+
+    .hw-pill--now {
+      background: rgba(18, 234, 203, 0.12);
+      border: 1px solid var(--teal);
+    }
+
+    .hw-pill__when {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hw-pill__level {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .hw-pill__note {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .hw-pill--now .hw-pill__note {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .hw-compare__arrow {
+      color: var(--teal);
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .cap-panel__closer {
       font-size: 0.78rem;
+      color: var(--navy);
+      line-height: 1.4;
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+      margin: 0;
       max-width: none;
     }
 
-    .economics-callout strong { display: block; margin-bottom: 0.35rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    @media (max-width: 900px) {
+      .cap-seq { flex-direction: column; }
+      .cap-seq__arrow { transform: rotate(90deg); flex-basis: auto; padding: 0.25rem 0; }
+    }
 
     /* ── First mover vs next gen ── */
     .gen-compare {
@@ -1499,86 +1610,72 @@
     </div>
   </section>
 
-  <!-- 3 · Open source catching frontier -->
+  <!-- 3 · Models converged / racks reachable -->
   <section class="slide slide--mint" data-slide="3">
     <div class="slide-inner">
       <p class="eyebrow">Market · Capability</p>
-      <h2>The gap is shrinking <span class="accent">faster</span> than many expected.</h2>
-      <p class="lead">Open source is close enough that many organisations accept a small quality trade-off for privacy, predictable costs, and control.</p>
-      <div class="grid-2 gap-slide-grid">
-        <div class="card gap-chart-wrap">
-          <h3 style="font-size:0.85rem;margin-bottom:0.5rem">Open-source vs frontier capability</h3>
-          <svg class="gap-chart" viewBox="0 0 420 220" role="img" aria-label="Line chart showing open-source model capability rising from roughly 40% three years ago to 90-95% today, approaching frontier models at 100%">
-            <defs>
-              <linearGradient id="ossFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#12EACB" stop-opacity="0.35"/>
-                <stop offset="100%" stop-color="#12EACB" stop-opacity="0.02"/>
-              </linearGradient>
-            </defs>
-            <!-- grid: y=168 (0%), y=114 (50%), y=87 (75%), y=60 (100%) -->
-            <line x1="52" y1="24" x2="52" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
-            <line x1="52" y1="168" x2="400" y2="168" stroke="rgba(29,43,56,0.12)" stroke-width="1"/>
-            <line x1="52" y1="114" x2="400" y2="114" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-            <line x1="52" y1="87" x2="400" y2="87" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-            <line x1="52" y1="60" x2="400" y2="60" stroke="rgba(29,43,56,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-            <!-- Y labels -->
-            <text x="44" y="172" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">0%</text>
-            <text x="44" y="118" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">50%</text>
-            <text x="44" y="91" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">75%</text>
-            <text x="44" y="64" text-anchor="end" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">100%</text>
-            <!-- X labels -->
-            <text x="90" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">3 yrs ago</text>
-            <text x="170" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">2 yrs ago</text>
-            <text x="250" y="186" text-anchor="middle" fill="#525e6b" font-size="9" font-family="Aeonik, system-ui, sans-serif">1 yr ago</text>
-            <text x="340" y="186" text-anchor="middle" fill="#1D2B38" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">Today</text>
-            <!-- area under OSS line -->
-            <path d="M 90,125 L 170,109 L 250,87 L 340,71 L 340,168 L 90,168 Z" fill="url(#ossFill)"/>
-            <!-- frontier line (100%) -->
-            <polyline points="90,60 170,60 250,60 340,60" fill="none" stroke="rgba(29,43,56,0.35)" stroke-width="2" stroke-dasharray="6 4"/>
-            <!-- open source line: ~40%, 55%, 75%, 93% — y=168 (0%) to y=60 (100%); today ~10% below 100% -->
-            <polyline points="90,125 170,109 250,87 340,71" fill="none" stroke="#12EACB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-            <!-- data points -->
-            <circle cx="90" cy="125" r="4" fill="#12EACB"/>
-            <circle cx="170" cy="109" r="4" fill="#12EACB"/>
-            <circle cx="250" cy="87" r="4" fill="#12EACB"/>
-            <circle cx="340" cy="71" r="5" fill="#12EACB" stroke="#1D2B38" stroke-width="1.5"/>
-            <!-- point labels -->
-            <text x="90" y="117" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">~40%</text>
-            <text x="170" y="101" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">50–60%</text>
-            <text x="250" y="79" text-anchor="middle" fill="#1D2B38" font-size="8" font-weight="700" font-family="Aeonik, system-ui, sans-serif">70–80%</text>
-            <text x="340" y="63" text-anchor="middle" fill="#1D2B38" font-size="9" font-weight="700" font-family="Aeonik, system-ui, sans-serif">90–95%</text>
-          </svg>
-          <div class="chart-legend">
-            <span><i class="legend-line legend-line--frontier"></i> Frontier (Claude, GPT, Gemini)</span>
-            <span><i class="legend-line legend-line--oss"></i> Best open-source (Llama, Mistral, Qwen)</span>
+      <h2>Models converged. <span class="accent">Racks became reachable.</span></h2>
+      <p class="lead">Open source met frontier capability. The cost of a capable inference box fell with it — so owning the rack is a real option.</p>
+
+      <div class="cap-seq">
+        <div class="cap-panel">
+          <p class="cap-panel__step">1 · Capability</p>
+          <p class="cap-panel__title">Open source catching frontier</p>
+          <div class="cap-bars" role="img" aria-label="Grouped bar chart: open-source capability rising toward frontier across three years ago, two years ago, one year ago, and today">
+            <div class="cap-bar-group">
+              <div class="cap-bar-group__bars">
+                <div class="cap-bar cap-bar--oss" style="height:40%"></div>
+                <div class="cap-bar cap-bar--frontier" style="height:100%"></div>
+              </div>
+              <span class="cap-bar-group__label">3 yrs</span>
+            </div>
+            <div class="cap-bar-group">
+              <div class="cap-bar-group__bars">
+                <div class="cap-bar cap-bar--oss" style="height:55%"></div>
+                <div class="cap-bar cap-bar--frontier" style="height:100%"></div>
+              </div>
+              <span class="cap-bar-group__label">2 yrs</span>
+            </div>
+            <div class="cap-bar-group">
+              <div class="cap-bar-group__bars">
+                <div class="cap-bar cap-bar--oss" style="height:75%"></div>
+                <div class="cap-bar cap-bar--frontier" style="height:100%"></div>
+              </div>
+              <span class="cap-bar-group__label">1 yr</span>
+            </div>
+            <div class="cap-bar-group">
+              <div class="cap-bar-group__bars">
+                <div class="cap-bar cap-bar--oss" style="height:92%"></div>
+                <div class="cap-bar cap-bar--frontier" style="height:100%"></div>
+              </div>
+              <span class="cap-bar-group__label cap-bar-group__label--now">Today</span>
+            </div>
           </div>
-          <p style="font-size:0.72rem;margin-top:0.65rem;max-width:none">The remaining gap is mostly at the cutting edge — not in everyday business use.</p>
+          <div class="cap-legend">
+            <span><i class="cap-legend__swatch cap-legend__swatch--oss"></i> Open source</span>
+            <span><i class="cap-legend__swatch cap-legend__swatch--frontier"></i> Frontier</span>
+          </div>
         </div>
-        <div>
-          <table class="cap-table">
-            <thead>
-              <tr>
-                <th>Task</th>
-                <th>Frontier</th>
-                <th>Open source</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>General reasoning</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
-              <tr><td>Coding</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
-              <tr><td>Writing</td><td class="pct">100%</td><td class="pct">~90%</td></tr>
-              <tr><td>Math</td><td class="pct">100%</td><td class="pct">~90–95%</td></tr>
-              <tr><td>Tool use / agents</td><td class="pct">100%</td><td class="pct">~85–90%</td></tr>
-              <tr><td>Long-context</td><td class="pct">100%</td><td class="pct">~80–90%</td></tr>
-              <tr><td>Speed</td><td>Very good</td><td>Often better on dedicated hardware</td></tr>
-              <tr><td>Privacy</td><td>Cloud</td><td><strong>Complete control</strong></td></tr>
-              <tr><td>Cost</td><td>Ongoing API fees</td><td><strong>Hardware + electricity</strong></td></tr>
-            </tbody>
-          </table>
-          <div class="economics-callout">
-            <strong>The economics are changing</strong>
-            Five years ago, frontier models were clearly superior. Today, organisations trade a small quality gap for complete privacy, predictable costs, deployment control, and customisation.
+
+        <div class="cap-seq__arrow" aria-hidden="true">→</div>
+
+        <div class="cap-panel cap-panel--focus">
+          <p class="cap-panel__step">2 · Hardware cost</p>
+          <p class="cap-panel__title">A capable inference box</p>
+          <div class="hw-compare">
+            <div class="hw-pill">
+              <div class="hw-pill__when">3 yrs ago</div>
+              <div class="hw-pill__level">High</div>
+              <div class="hw-pill__note">Lab / enterprise spend</div>
+            </div>
+            <span class="hw-compare__arrow" aria-hidden="true">→</span>
+            <div class="hw-pill hw-pill--now">
+              <div class="hw-pill__when">Today</div>
+              <div class="hw-pill__level">Reachable</div>
+              <div class="hw-pill__note">Dept / mid-market rack</div>
+            </div>
           </div>
+          <p class="cap-panel__closer">Open source on your own server rack is now a viable path.</p>
         </div>
       </div>
     </div>

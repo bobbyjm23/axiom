@@ -50,7 +50,7 @@ cp -R ../pitch-deck/assets .
 
 1. **The Concept** — Frame the deck; Market → Position
 2. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
-3. **The gap is shrinking** — Open-source vs frontier capability line chart + task comparison table
+3. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
 4. **Where it's heading** — Rent vs own thesis; sovereign deployment (dark slide)
 
 ### Act 2 — Product
