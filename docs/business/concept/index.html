@@ -705,75 +705,186 @@
 
     .slide--dark .muted-note { color: rgba(255, 255, 255, 0.55); }
 
-    /* ── Line chart (capability gap) ── */
-    .gap-chart-wrap {
+    /* ── Market · Capability sequential story ── */
+    .cap-seq {
+      display: flex;
+      align-items: stretch;
+      gap: 0.75rem;
       margin-top: 1rem;
     }
 
-    .gap-chart {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .cap-seq__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 1.75rem;
+      color: var(--teal);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
     }
 
-    .chart-legend {
+    .cap-panel {
+      flex: 1.15;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+
+    .cap-panel--focus {
+      flex: 1;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 1px rgba(18, 234, 203, 0.18);
+    }
+
+    .cap-panel__step {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0 0 0.35rem;
+    }
+
+    .cap-panel__title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.85rem;
+    }
+
+    .cap-bars {
       display: flex;
-      gap: 1.25rem;
-      margin-top: 0.65rem;
-      font-size: 0.72rem;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.55rem;
+      height: 7.5rem;
+      padding: 0 0.15rem;
+    }
+
+    .cap-bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      min-width: 0;
+    }
+
+    .cap-bar-group__bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 6.25rem;
+    }
+
+    .cap-bar {
+      width: 0.85rem;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .cap-bar--oss { background: var(--teal); }
+    .cap-bar--frontier { background: rgba(29, 43, 56, 0.28); }
+
+    .cap-bar-group__label {
+      font-size: 0.65rem;
       color: var(--text-muted);
     }
 
-    .chart-legend span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+    .cap-bar-group__label--now {
+      color: var(--navy);
+      font-weight: 700;
     }
 
-    .legend-line {
-      width: 1.25rem;
-      height: 3px;
-      border-radius: 2px;
+    .cap-legend {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .cap-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .cap-legend__swatch {
+      width: 0.7rem;
+      height: 0.4rem;
+      border-radius: 1px;
       display: inline-block;
     }
 
-    .legend-line--frontier { background: rgba(29, 43, 56, 0.35); }
-    .legend-line--oss { background: var(--teal); }
+    .cap-legend__swatch--oss { background: var(--teal); }
+    .cap-legend__swatch--frontier { background: rgba(29, 43, 56, 0.28); }
 
-    .cap-table {
-      font-size: 0.72rem;
-      margin-top: 0;
+    .hw-compare {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
     }
 
-    .cap-table th,
-    .cap-table td {
-      padding: 0.45rem 0.55rem;
-      vertical-align: top;
-    }
-
-    .cap-table th:first-child,
-    .cap-table td:first-child {
-      width: 28%;
-    }
-
-    .cap-table .pct {
-      color: var(--navy);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .economics-callout {
-      margin-top: 1rem;
-      padding: 0.85rem 1rem;
+    .hw-pill {
+      flex: 1;
+      text-align: center;
+      padding: 0.75rem 0.5rem;
       border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--white);
+      background: rgba(29, 43, 56, 0.06);
+    }
+
+    .hw-pill--now {
+      background: rgba(18, 234, 203, 0.12);
+      border: 1px solid var(--teal);
+    }
+
+    .hw-pill__when {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hw-pill__level {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .hw-pill__note {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .hw-pill--now .hw-pill__note {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .hw-compare__arrow {
+      color: var(--teal);
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .cap-panel__closer {
       font-size: 0.78rem;
+      color: var(--navy);
+      line-height: 1.4;
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+      margin: 0;
       max-width: none;
     }
 
-    .economics-callout strong { display: block; margin-bottom: 0.35rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    @media (max-width: 900px) {
+      .cap-seq { flex-direction: column; }
+      .cap-seq__arrow { transform: rotate(90deg); flex-basis: auto; padding: 0.25rem 0; }
+    }
 
     /* ── First mover vs next gen ── */
     .gen-compare {
