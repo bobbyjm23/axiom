@@ -32,3 +32,6 @@ data/
 .vscode/
 *.log
 node_modules/
+
+# Local brainstorm / companion sessions
+.superpowers/
