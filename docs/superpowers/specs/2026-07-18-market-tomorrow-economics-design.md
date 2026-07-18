@@ -1,7 +1,7 @@
 # Concept deck — Market · Tomorrow economics redesign
 
 **Date:** 2026-07-18  
-**Status:** Design approved conversationally; awaiting spec review before implementation  
+**Status:** Implemented — see plan `docs/superpowers/plans/2026-07-18-market-tomorrow-economics.md`  
 **Scope:** Refocus `Market · Tomorrow` on a basic 5-year cost table; remove the separate Economics · 3-year TCO slide
 
 ## Goal

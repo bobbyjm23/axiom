@@ -6,7 +6,7 @@ Visual narrative primer for the investor/mentor pack — the reasoning and oppor
 
 **Audience flow:** Start here → Pitch Deck → Business Plan Explorer.
 
-The concept deck opens with the sovereignty compare early (slide 2), then market outlook, then platform integrations and feature comparison.
+The concept deck opens with market context, then the sovereignty compare (slide 3), then capability/outlook, then platform integrations and feature comparison.
 
 ## Open the deck
 
@@ -34,7 +34,7 @@ cp -R ../pitch-deck/assets .
 | Next slide | `→` · `Space` · `Page Down` · swipe left |
 | Previous slide | `←` · `Page Up` · swipe right |
 | First / last | `Home` / `End` |
-| Deep link | `#slide-5` (e.g. `index.html#slide-5` for positioning) |
+| Deep link | `#slide-5` (e.g. `index.html#slide-5`) |
 
 ## Export to PDF
 
@@ -44,17 +44,16 @@ cp -R ../pitch-deck/assets .
 4. Enable **Background graphics**
 5. Each slide prints as a separate page (print CSS included)
 
-## Slide outline (9 slides)
+## Slide outline (8 slides)
 
 1. **The Concept** — Frame the deck; Market → Position
-2. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
-3. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
+2. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
+3. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
 4. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
-5. **Where it's heading** — Rent vs own thesis; sovereign deployment (dark slide)
+5. **Rent vs own** — 100-user cost table: Frontier vs on-prem vs rent-to-own (initial / ongoing / 3-year / 5-year)
 6. **Platform & integrations** — SW logo hub, Android/iOS/Desktop, service orbit nodes
 7. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
-8. **3-year TCO** — Claude Team vs Claude API vs self-hosted LLM
-9. **Why this matters now** — Window for productised sovereign AI (dark slide)
+8. **Why this matters now** — Window for productised sovereign AI (dark slide)
 
 ## What stays out (by design)
 
