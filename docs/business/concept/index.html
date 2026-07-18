@@ -359,6 +359,52 @@
     .timeline-item h3 { font-size: 1.15rem; }
     .timeline-item p { font-size: 0.98rem; margin-top: 0.35rem; }
 
+    /* ── Market · Today failure points ── */
+    .fail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem 1.5rem;
+      margin-top: 2rem;
+      max-width: 56rem;
+    }
+
+    .fail-grid__item {
+      border-top: 3px solid var(--teal);
+      padding-top: 1rem;
+    }
+
+    .fail-grid__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.5rem;
+      line-height: 1.25;
+    }
+
+    .fail-grid__body {
+      font-size: 1.02rem;
+      line-height: 1.4;
+      color: var(--text-muted);
+      margin: 0;
+      max-width: none;
+    }
+
+    .fail-grid__closer {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      max-width: none;
+    }
+
+    .fail-grid__closer .accent {
+      color: var(--accent-readable);
+    }
+
+    @media (max-width: 900px) {
+      .fail-grid { grid-template-columns: 1fr; }
+    }
+
     .icon-card {
       text-align: center;
       padding: 1.35rem 1.1rem;
@@ -1105,147 +1151,7 @@
     .slide.active .sovereignty-svg .link-path:nth-of-type(3) { animation-delay: 0.4s; }
     .slide.active .sovereignty-svg .link-path:nth-of-type(4) { animation-delay: 0.6s; }
 
-    /* ── Product slides (5–7) ── */
-    .product-orbit {
-      margin-top: 0.5rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .product-orbit__stage {
-      position: relative;
-      container-type: size;
-      width: min(100%, 980px);
-      aspect-ratio: 1.15 / 1;
-      max-height: min(68vh, 640px);
-    }
-
-    .product-orbit__hub {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.15rem;
-      text-align: center;
-    }
-
-    .product-orbit__logo {
-      width: clamp(12rem, 30cqmin, 16rem);
-      height: auto;
-      display: block;
-    }
-
-    .product-orbit__platforms {
-      margin: 0;
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--navy);
-      max-width: none;
-    }
-
-    .product-orbit__os {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.35rem;
-    }
-
-    .product-orbit__os img {
-      width: 2.75rem;
-      height: 2.75rem;
-      object-fit: contain;
-    }
-
-    .product-orbit__node {
-      position: absolute;
-      left: var(--x);
-      top: var(--y);
-      z-index: 2;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      width: 4.9rem;
-    }
-
-    .product-orbit__node-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .product-orbit__node-icon img {
-      width: 4.55rem;
-      height: 4.55rem;
-      object-fit: contain;
-    }
-
-    .product-orbit__node span {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--navy);
-      text-align: center;
-      line-height: 1.2;
-      max-width: 6rem;
-    }
-
-    .product-orbit__spokes {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .product-orbit__spokes line {
-      stroke: rgba(18, 234, 203, 0.45);
-      stroke-width: 2;
-      stroke-dasharray: 5 6;
-    }
-
-    .slide.active .product-orbit__spokes line {
-      animation: product-spoke-pulse 2.8s ease-in-out infinite;
-    }
-
-    .slide.active .product-orbit__spokes line:nth-child(odd) { animation-delay: 0.35s; }
-
-    @keyframes product-spoke-pulse {
-      0%, 100% { opacity: 0.35; }
-      50% { opacity: 0.9; }
-    }
-
-    @media (max-width: 900px) {
-      .product-orbit__stage {
-        max-height: min(62vh, 520px);
-      }
-      .product-orbit__logo { width: clamp(9rem, 28cqmin, 12rem); }
-      .product-orbit__node { width: 3.85rem; }
-      .product-orbit__node-icon img { width: 3.45rem; height: 3.45rem; }
-      .product-orbit__node span { font-size: 0.65rem; max-width: 5rem; }
-      .product-orbit__os img { width: 2.35rem; height: 2.35rem; }
-    }
-
-    @media (max-width: 700px) {
-      .product-orbit__stage {
-        aspect-ratio: 1 / 1.05;
-        max-height: none;
-        min-height: 28rem;
-      }
-      .product-orbit__logo { width: clamp(7rem, 32cqmin, 10rem); }
-      .product-orbit__platforms { font-size: 0.8rem; }
-      .product-orbit__node { width: 2.8rem; }
-      .product-orbit__node-icon img { width: 2.45rem; height: 2.45rem; }
-      .product-orbit__node span { font-size: 0.55rem; max-width: 3.5rem; }
-      .product-orbit__os img { width: 2rem; height: 2rem; }
-    }
-
+    /* ── Product slides ── */
     .roadmap-track {
       margin-top: 2rem;
       max-width: 56rem;
@@ -1617,6 +1523,163 @@
       .verticals { grid-template-columns: 1fr; }
     }
 
+    /* ── Product · Today platform (from website) ── */
+    .platform-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.25rem 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .platform-head__copy h2 {
+      margin-bottom: 0.75rem;
+      max-width: 18ch;
+    }
+
+    .platform-platforms {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      max-width: none;
+    }
+
+    .platform-os {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.55rem;
+      margin-left: auto;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .platform-os__label {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      max-width: none;
+    }
+
+    .platform-os__logos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .platform-os__logos img {
+      width: 2.35rem;
+      height: 2.35rem;
+      display: block;
+      object-fit: contain;
+    }
+
+    .platform-integrations-label {
+      margin: 0 0 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      max-width: none;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.85rem 1rem;
+    }
+
+    .platform-grid__item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--white);
+    }
+
+    .platform-grid__item img {
+      width: 2.75rem;
+      height: 2.75rem;
+      flex-shrink: 0;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .platform-grid__item span {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    @media (max-width: 1100px) {
+      .platform-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 700px) {
+      .platform-grid { grid-template-columns: repeat(2, 1fr); }
+      .platform-os { align-items: flex-start; margin-left: 0; }
+    }
+
+    /* ── Adneo pilot ask ── */
+    .adneo-beats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      max-width: 56rem;
+    }
+
+    .adneo-beats__col {
+      border-top: 3px solid var(--teal);
+      padding-top: 1.1rem;
+    }
+
+    .adneo-beats__label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-readable);
+      margin: 0 0 0.75rem;
+      max-width: none;
+    }
+
+    .adneo-beats__body {
+      font-size: 1.1rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0;
+      max-width: none;
+    }
+
+    .adneo-closer {
+      margin-top: 2.25rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      max-width: none;
+    }
+
+    .adneo-closer .accent {
+      color: var(--accent-readable);
+    }
+
+    @media (max-width: 900px) {
+      .adneo-beats { grid-template-columns: 1fr; }
+    }
+
     .check-partial { color: var(--text-muted); font-weight: 700; }
 
     @media print {
@@ -1656,46 +1719,31 @@
   <section class="slide slide--mint" data-slide="2">
     <div class="slide-inner">
       <p class="eyebrow">Market · Today</p>
-      <h2>AI is everywhere.<br>Approval <span class="accent">isn't.</span></h2>
-      <p class="lead">Every firm's staff already use Claude and ChatGPT — compliance and procurement are still catching up.</p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <p class="phase">2023–24</p>
-          <h3>Consumer boom</h3>
-          <p>ChatGPT goes mainstream — staff adopt before IT does</p>
+      <h2>Client confidentiality is <span class="accent">already at risk.</span></h2>
+      <p class="lead">Staff are using public AI today. Firms can’t prove client information stayed confidential — and the pressure is rising.</p>
+      <div class="fail-grid">
+        <div class="fail-grid__item">
+          <h3 class="fail-grid__title">Shadow AI</h3>
+          <p class="fail-grid__body">Client data pasted into Claude / ChatGPT without oversight.</p>
         </div>
-        <div class="timeline-item">
-          <p class="phase">2025</p>
-          <h3>Board mandate</h3>
-          <p>Every leadership team told to "do something with AI"</p>
+        <div class="fail-grid__item">
+          <h3 class="fail-grid__title">Broken privacy agreements</h3>
+          <p class="fail-grid__body">Cross-border processing that clients never consented to.</p>
         </div>
-        <div class="timeline-item active">
-          <p class="phase">2026</p>
-          <h3>Compliance reckoning</h3>
-          <p>Privacy Act scrutiny — shadow AI becomes a liability</p>
+        <div class="fail-grid__item">
+          <h3 class="fail-grid__title">No client assurance</h3>
+          <p class="fail-grid__body">Firms cannot guarantee confidentiality when asked.</p>
         </div>
-      </div>
-      <div class="grid-3">
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/shadow-ai.png" alt="">
-          <h3>Shadow AI</h3>
-          <p>Client data in public tools, daily</p>
+        <div class="fail-grid__item">
+          <h3 class="fail-grid__title">Policy pressure</h3>
+          <p class="fail-grid__body">Incoming government / Privacy Act expectations raise the bar.</p>
         </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/saas-default.png" alt="">
-          <h3>SaaS default</h3>
-          <p>Copilot, Claude — offshore inference</p>
-        </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/build-paralysis.png" alt="">
-          <h3>Build paralysis</h3>
-          <p>Custom projects stall 6–12 months</p>
+        <div class="fail-grid__item">
+          <h3 class="fail-grid__title">Cost vs ROI</h3>
+          <p class="fail-grid__body">Seat licences and API spend climb while outcomes stay unclear.</p>
         </div>
       </div>
-      <div class="footnote-stat">
-        <span class="stat">46%</span>
-        <span class="stat-label">of Australian businesses report AI innovation activity (ABS 2024–25)</span>
-      </div>
+      <p class="fail-grid__closer">Inference has to stay <span class="accent">inside the firm.</span></p>
     </div>
   </section>
   <!-- 3 · Product · Sovereignty -->
@@ -1922,7 +1970,6 @@
       </table>
     </div>
   </section>
-
   <!-- 6 · Product · Verticals -->
   <section class="slide slide--mint" data-slide="6">
     <div class="slide-inner">
@@ -1958,77 +2005,66 @@
       <p class="verticals__closer">Complete package. <span class="accent">Priced to sell at volume.</span></p>
     </div>
   </section>
-
   <!-- 7 · Platform & integrations -->
   <section class="slide slide--mint" data-slide="7">
     <div class="slide-inner">
-      <p class="eyebrow">Product · Today</p>
-      <h2>Sovereign AI that works <span class="accent">where you work.</span></h2>
-      <div class="product-orbit">
-        <div class="product-orbit__stage">
-          <svg class="product-orbit__spokes" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-            
-            
-            <line x1="50" y1="50" x2="50.0" y2="8.6"/>
-            <line x1="50" y1="50" x2="74.3" y2="16.5"/>
-            <line x1="50" y1="50" x2="89.4" y2="37.2"/>
-            <line x1="50" y1="50" x2="89.4" y2="62.8"/>
-            <line x1="50" y1="50" x2="74.3" y2="83.5"/>
-            <line x1="50" y1="50" x2="50.0" y2="91.4"/>
-            <line x1="50" y1="50" x2="25.7" y2="83.5"/>
-            <line x1="50" y1="50" x2="10.6" y2="62.8"/>
-            <line x1="50" y1="50" x2="10.6" y2="37.2"/>
-            <line x1="50" y1="50" x2="25.7" y2="16.5"/>
-          </svg>
-          <div class="product-orbit__hub">
-            <img class="product-orbit__logo" src="assets/logo.png" alt="Sovereign Warden">
-            <p class="product-orbit__platforms">Android — iOS — Desktop</p>
-            <div class="product-orbit__os">
-              <img src="assets/logos/android.svg" alt="Android">
-              <img src="assets/logos/apple.svg" alt="iOS">
-              <img src="assets/logos/windows.svg" alt="Desktop">
-            </div>
+      <div class="platform-head">
+        <div class="platform-head__copy">
+          <p class="eyebrow">Product · Today</p>
+          <h2>Sovereign AI that works <span class="accent">where you work.</span></h2>
+          <p class="platform-platforms">Desktop · Mobile · Browser extension</p>
+        </div>
+        <div class="platform-os" aria-label="Available on Apple, Chrome, Windows, and Android">
+          <p class="platform-os__label">Available on</p>
+          <div class="platform-os__logos">
+            <img src="assets/logos/apple.svg" alt="Apple">
+            <img src="assets/logos/chrome.svg" alt="Chrome">
+            <img src="assets/logos/windows.svg" alt="Windows">
+            <img src="assets/logos/android.svg" alt="Android">
           </div>
-          <div class="product-orbit__node" style="--x: 50.0%; --y: 8.6%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/microsoft365.svg" alt=""></div>
-            <span>Microsoft 365</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 74.3%; --y: 16.5%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/atlassian.svg" alt=""></div>
-            <span>Atlassian</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 89.4%; --y: 37.2%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/google-workspace.svg" alt=""></div>
-            <span>Google Workspace</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 89.4%; --y: 62.8%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/xero.svg" alt=""></div>
-            <span>Xero</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 74.3%; --y: 83.5%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/myob.svg" alt=""></div>
-            <span>MYOB</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 50.0%; --y: 91.4%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/leap.svg" alt=""></div>
-            <span>LEAP</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 25.7%; --y: 83.5%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/clio.svg" alt=""></div>
-            <span>Clio</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 10.6%; --y: 62.8%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/xplan.svg" alt=""></div>
-            <span>Iress Xplan</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 10.6%; --y: 37.2%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/midwinter.svg" alt=""></div>
-            <span>Midwinter</span>
-          </div>
-          <div class="product-orbit__node" style="--x: 25.7%; --y: 16.5%">
-            <div class="product-orbit__node-icon"><img src="assets/logos/sharepoint.svg" alt=""></div>
-            <span>SharePoint</span>
-          </div>
+        </div>
+      </div>
+      <p class="platform-integrations-label">Integrations</p>
+      <div class="platform-grid">
+        <div class="platform-grid__item">
+          <img src="assets/logos/microsoft365.svg" alt="">
+          <span>Microsoft 365</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/atlassian.svg" alt="">
+          <span>Atlassian</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/google-workspace.svg" alt="">
+          <span>Google Workspace</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/xero.svg" alt="">
+          <span>Xero</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/myob.svg" alt="">
+          <span>MYOB</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/leap.svg" alt="">
+          <span>LEAP</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/clio.svg" alt="">
+          <span>Clio</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/xplan.png" alt="">
+          <span>Iress Xplan</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/midwinter.png" alt="">
+          <span>Midwinter</span>
+        </div>
+        <div class="platform-grid__item">
+          <img src="assets/logos/sharepoint.svg" alt="">
+          <span>SharePoint</span>
         </div>
       </div>
     </div>
@@ -2038,14 +2074,13 @@
     <div class="slide-inner">
       <p class="eyebrow">Product · Compare</p>
       <h2>Capability <span class="accent">by capability.</span></h2>
-      <p class="lead">Product features mapped across Claude (Team / Enterprise), Sovereign Warden, and Cetus Songlines.</p>
+      <p class="lead">Product features mapped across Claude (Team / Enterprise) and Sovereign Warden.</p>
       <table class="feature-compare">
         <thead>
           <tr>
             <th>Feature</th>
             <th>Claude</th>
             <th class="feature-compare__sw">Sovereign Warden</th>
-            <th>Cetus</th>
           </tr>
         </thead>
         <tbody>
@@ -2053,122 +2088,126 @@
             <td>Chat assistant</td>
             <td><span class="check-yes">✓</span> Web, iOS, Android, desktop</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Desktop app</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Projects / workspaces</td>
             <td><span class="check-yes">✓</span> Files + custom instructions</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Isolated workspaces</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Document upload &amp; Q&amp;A</td>
             <td><span class="check-yes">✓</span> PDF, images, files</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Bulk ingest</td>
-            <td><span class="check-partial">~</span> SDK ingest</td>
           </tr>
           <tr>
             <td>RAG with source citations</td>
             <td><span class="check-partial">~</span> Project files</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Day 1</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Artifacts &amp; generated outputs</td>
             <td><span class="check-yes">✓</span> Docs, code, apps</td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> Chat responses</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Cross-session memory</td>
             <td><span class="check-yes">✓</span> User + project scoped</td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> Workspace context</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Web search</td>
             <td><span class="check-yes">✓</span></td>
             <td class="feature-compare__sw"><span class="check-no">—</span></td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>Code assistant</td>
             <td><span class="check-yes">✓</span> Claude Code, IDE plugins</td>
             <td class="feature-compare__sw"><span class="check-no">—</span></td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>MCP / tool connectors</td>
             <td><span class="check-yes">✓</span> Slack, M365, Drive, custom</td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> Roadmap</td>
-            <td><span class="check-partial">~</span> Python / Node SDK</td>
           </tr>
           <tr>
             <td>Multi-model routing</td>
             <td><span class="check-yes">✓</span> Opus, Sonnet, Haiku</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> LiteLLM gateway</td>
-            <td><span class="check-yes">✓</span> 19+ models</td>
           </tr>
           <tr>
             <td>Agent workflows</td>
             <td><span class="check-yes">✓</span> Managed agents, Cowork</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Agent workspaces</td>
-            <td><span class="check-no">—</span></td>
           </tr>
           <tr>
             <td>SSO &amp; RBAC</td>
             <td><span class="check-yes">✓</span> Team / Enterprise</td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> RBAC Day 1; SSO roadmap</td>
-            <td><span class="check-yes">✓</span></td>
           </tr>
           <tr>
             <td>Audit logs</td>
             <td><span class="check-partial">~</span> Enterprise</td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Prompt &amp; request logs</td>
-            <td><span class="check-yes">✓</span> Immutable, searchable</td>
           </tr>
           <tr>
             <td>AI cost dashboard</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> LiteLLM usage logs</td>
-            <td><span class="check-yes">✓</span> Per-model, per-user</td>
           </tr>
           <tr>
             <td>Inline policy enforcement</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-no">—</span></td>
-            <td><span class="check-yes">✓</span> PII redaction, injection block</td>
           </tr>
           <tr>
             <td>Shadow AI discovery</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-no">—</span></td>
-            <td><span class="check-yes">✓</span> 30+ vendors</td>
           </tr>
           <tr>
             <td>Self-hosted / on-prem</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Profile switch</td>
-            <td><span class="check-yes">✓</span> Orchestrate mode</td>
           </tr>
           <tr>
             <td>Air-gap deployment</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-partial">~</span> Roadmap</td>
-            <td><span class="check-yes">✓</span></td>
           </tr>
           <tr>
             <td>Client branding</td>
             <td><span class="check-no">—</span></td>
             <td class="feature-compare__sw"><span class="check-yes">✓</span> Logo, name, theme</td>
-            <td><span class="check-no">—</span></td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
-  <!-- 9 · Close -->
-  <section class="slide slide--dark slide-title" data-slide="9">
+  <!-- 9 · Adneo pilot ask -->
+  <section class="slide slide--dark" data-slide="9">
+    <div class="slide-inner">
+      <p class="eyebrow">Adneo · Pilot ask</p>
+      <h2>Pilot Adneo to <span class="accent">sharpen the offer.</span></h2>
+      <p class="lead">I know the firm inside out — what AI needs to do here, and how to ship it. This is a live build you are delivered and own.</p>
+      <div class="adneo-beats">
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">1 · What I need</p>
+          <p class="adneo-beats__body">The inference box, plus my time at my current full-time rate for the pilot.</p>
+        </div>
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">2 · What you get</p>
+          <p class="adneo-beats__body">A working Sovereign Warden implementation inside Adneo — with full shareholder visibility end to end.</p>
+        </div>
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">3 · What I ask next</p>
+          <p class="adneo-beats__body">Help open the doors that turn this pilot into the next conversations.</p>
+        </div>
+      </div>
+      <p class="adneo-closer">Delivered in <span class="accent">90 days</span> — then we decide together. Build once in Adneo. Prove it. Then sell the package.</p>
+    </div>
+  </section>
+  <!-- 10 · Close -->
+  <section class="slide slide--dark slide-title" data-slide="10">
     <div class="slide-inner">
       <p class="eyebrow">Close</p>
       <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>

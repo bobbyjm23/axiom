@@ -44,17 +44,18 @@ cp -R ../pitch-deck/assets .
 4. Enable **Background graphics**
 5. Each slide prints as a separate page (print CSS included)
 
-## Slide outline (9 slides)
+## Slide outline (10 slides)
 
 1. **The Concept** — Frame the deck; Market → Position
-2. **Where AI is today** — Universal adoption vs compliance gap; timeline + shadow AI
+2. **Where AI is today** — Confidentiality at risk: shadow AI, broken privacy agreements, policy pressure, cost vs ROI
 3. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
 4. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
 5. **Rent vs own** — 100-user cost table: Claude/Copilot vs Sovereign Warden (initial / ongoing / 3-year / 5-year)
 6. **Verticals** — Legal · Wealth · Accounting as prefabricated turnkey packs (volume model)
-7. **Platform & integrations** — SW logo hub, Android/iOS/Desktop, service orbit nodes
-8. **Feature comparison** — Claude vs Sovereign Warden vs Cetus
-9. **Why this matters now** — Window for productised sovereign AI (dark slide)
+7. **Platform & integrations** — OS availability + integration logo grid (aligned with website)
+8. **Feature comparison** — Claude vs Sovereign Warden
+9. **Adneo · Pilot ask** — Box + full-time rate; 90-day delivery; visibility; open doors to sharpen the offer
+10. **Why this matters now** — Window for productised sovereign AI (dark slide)
 
 ## What stays out (by design)
 

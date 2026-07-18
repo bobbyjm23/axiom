@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Windows">
-  <path fill="#0078D4" d="M3 12.5V3.5l8.5 1.5v7.5H3zm9.5 0V5l8.5-1.5v9H12.5zm-9.5 9V14h8.5v7.5L3 20.5zm9.5 0V14H21v7.5l-8.5 1.5V21.5z"/>
-</svg>
+<svg fill="#0078D4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Windows 11</title><path d="M0,0H11.377V11.372H0ZM12.623,0H24V11.372H12.623ZM0,12.623H11.377V24H0Zm12.623,0H24V24H12.623"/></svg>

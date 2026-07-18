@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="LEAP">
-  <rect width="24" height="24" rx="4" fill="#003366"/>
-  <text x="12" y="15.5" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="7" font-weight="700">LEAP</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.94 169.94" role="img" aria-label="LEAP">
+  <path fill="#112b65" d="M24.38,0h121.17c13.47,0,24.38,10.92,24.38,24.38v121.17c0,13.47-10.92,24.38-24.38,24.38H24.38c-13.47,0-24.38-10.92-24.38-24.38V24.38C0,10.92,10.92,0,24.38,0"/>
+  <polygon fill="#ff7f19" points="72.67 72.54 130.01 81.07 139.04 129.2 147.43 59.67 87.1 32.2 72.67 72.54"/>
+  <polygon fill="#ff7f19" points="72.67 72.54 68.3 84.79 16.47 137.74 86.82 105.09 98.98 81.92 72.67 72.54"/>
 </svg>
