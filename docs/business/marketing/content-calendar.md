@@ -136,7 +136,7 @@ More on residency and the Privacy Act: sovereignwarden.com/articles/privacy-act-
 
 The shock is rarely the first Copilot seat. It is seat 50.
 
-License maths looks tidy on a pilot. It gets less tidy when adoption spreads across a 50–150 person firm, when “AI features” multiply across Microsoft 365, and when nobody modelled residency, retention, or the cost of answers you cannot source from firm matter data.
+License maths looks tidy on a pilot. It gets less tidy when adoption spreads across a 50–250 person firm, when “AI features” multiply across Microsoft 365, and when nobody modelled residency, retention, or the cost of answers you cannot source from firm matter data.
 
 We are not arguing that Copilot has no place. We are arguing that many mid-market firms under-cost the path from curiosity to firm-wide habit — and over-assume that a productivity suite equals a sovereign assistant for client work.
 
@@ -226,7 +226,7 @@ Partners do not ask for magic. They ask who saw the prompt.
 
 That question ends a lot of AI demos. Generative tools that cannot show access patterns, retention, and whether a conversation left the firm boundary fail the partner test — even if the draft looked sharp.
 
-Auditability is not bureaucracy for its own sake. It is how a 50–150 lawyer (or advisory) firm answers clients, insurers, and internal risk when someone asks what the assistant did with matter context. Citations answer “what did we rely on?” Audit answers “who touched it, and under what controls?”
+Auditability is not bureaucracy for its own sake. It is how a 50–250 lawyer (or advisory) firm answers clients, insurers, and internal risk when someone asks what the assistant did with matter context. Citations answer “what did we rely on?” Audit answers “who touched it, and under what controls?”
 
 Approved AI has to clear both bars. Sovereign Warden is designed so the interesting part — ChatGPT-class usefulness on firm documents — does not require you to hide the boring part: observability and residency you can describe in plain English.
 
@@ -264,7 +264,7 @@ When we have a named proof point we are willing to put next to a conversation, w
 
 **Body draft**
 
-What “approved AI” looks like in a 50–150 lawyer firm.
+What “approved AI” looks like in a 50–250 lawyer firm.
 
 Not a banned list taped to the intranet. Not a personal ChatGPT Plus funded on a credit card. Approved usually means: a default path people will actually use; answers grounded in firm documents with sources; residency and access controls IT and risk can describe; and an audit trail that survives a partner question after a tense matter.
 

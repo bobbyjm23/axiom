@@ -19,7 +19,7 @@ Use this to create or update the Company Page. Voice: company page first; founde
 | Phase | Button | Destination |
 |-------|--------|-------------|
 | 1 | Visit website | https://sovereignwarden.com?utm_source=linkedin&utm_medium=company&utm_campaign=profile |
-| 2 | Book appointment | Fit-call / Calendly URL with same UTM pattern `utm_campaign=fit-call` |
+| 2 | Book appointment | `https://sovereignwarden.com/?utm_source=linkedin&utm_medium=company&utm_campaign=fit-call#contact` (or Calendly with same UTM pattern) |
 
 ## About (paste)
 

@@ -69,6 +69,7 @@
 | [marketing/content-calendar.md](marketing/content-calendar.md) | Posting schedule + drafts |
 | [marketing/paid-media.md](marketing/paid-media.md) | $500/mo LinkedIn + Google |
 | [marketing/tracking-and-kpis.md](marketing/tracking-and-kpis.md) | UTMs, tags, KPIs |
+| [marketing/sovereignty-brief-outline.md](marketing/sovereignty-brief-outline.md) | Phase 1 lead magnet outline |
 
 ### Operations
 

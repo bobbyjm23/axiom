@@ -186,7 +186,7 @@ Phase 1 Google:
 https://sovereignwarden.com/?utm_source=google&utm_medium=paid&utm_campaign=YYYY-MM-{theme}
 
 Phase 2:
-https://sovereignwarden.com/#contact?utm_source={linkedin|google}&utm_medium=paid&utm_campaign=fit-call
+https://sovereignwarden.com/?utm_source={linkedin|google}&utm_medium=paid&utm_campaign=fit-call#contact
 (or booking URL with the same utm_campaign=fit-call)
 ```
 
