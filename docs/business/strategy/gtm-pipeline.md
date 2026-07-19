@@ -58,7 +58,8 @@
 
 | Channel | Timing |
 |---------|--------|
-| LinkedIn founder content | Week 1+ |
+| LinkedIn company + founder amplify | Week 1+ — see [marketing/README.md](../marketing/README.md) |
+| Paid LinkedIn + Google ($500/mo) | Week 2+ after profile + tracking — [marketing/paid-media.md](../marketing/paid-media.md) |
 | Law Society NSW/QLD/VIC | Q3–Q4 2026 |
 | CPA Australia / CA ANZ | Q3–Q4 2026 |
 | Referral partners (cybersecurity) | Month 3+ post-Adneo case study |

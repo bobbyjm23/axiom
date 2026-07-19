@@ -59,6 +59,17 @@
 | [mid-market-track-a-strategy.md](mid-market-track-a-strategy.md) | Track A GTM (long-form) |
 | [competitor-matrix.md](competitor-matrix.md) | Full feature matrix |
 
+### Marketing
+
+| Document | Topic |
+|----------|-------|
+| [marketing/README.md](marketing/README.md) | Marketing OS index, phases, weekly rhythm |
+| [marketing/master-checklist.md](marketing/master-checklist.md) | Stand-up checklist |
+| [marketing/linkedin-company-profile.md](marketing/linkedin-company-profile.md) | Company page paste pack |
+| [marketing/content-calendar.md](marketing/content-calendar.md) | Posting schedule + drafts |
+| [marketing/paid-media.md](marketing/paid-media.md) | $500/mo LinkedIn + Google |
+| [marketing/tracking-and-kpis.md](marketing/tracking-and-kpis.md) | UTMs, tags, KPIs |
+
 ### Operations
 
 | Document | Topic |
