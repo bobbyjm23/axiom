@@ -1467,12 +1467,33 @@
     }
 
     /* ── Product · Verticals ── */
+    .capabilities {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.75rem;
+      max-width: 74rem;
+    }
+
+    .capabilities__item {
+      flex: 1;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: rgba(18, 234, 203, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.6rem 1rem;
+    }
+
     .verticals {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
       margin-top: 2rem;
-      max-width: 56rem;
+      max-width: 74rem;
     }
 
     .verticals__col {
@@ -1520,7 +1541,77 @@
     }
 
     @media (max-width: 900px) {
+      .capabilities { flex-direction: column; }
       .verticals { grid-template-columns: 1fr; }
+    }
+
+    .cost-table {
+      width: 100%;
+      max-width: 74rem;
+      margin-top: 2.5rem;
+      border-collapse: collapse;
+      font-size: 1.2rem;
+    }
+    .cost-table th,
+    .cost-table td {
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: middle;
+    }
+    .cost-table thead th {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--navy);
+    }
+    .cost-table th.cost-table__num { text-align: right; }
+    .cost-table td.cost-table__num {
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .cost-table td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+      width: 12%;
+    }
+    .cost-table tbody tr:last-child td { border-bottom: none; }
+    .cost-table__own {
+      color: var(--navy);
+      font-weight: 700;
+      background: rgba(18, 234, 203, 0.08);
+    }
+    .cost-table__save {
+      color: var(--accent-readable);
+      font-weight: 700;
+    }
+    .cost-assumptions {
+      margin-top: 1.75rem;
+      max-width: 74rem;
+    }
+    .cost-assumptions__title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-readable);
+      margin: 0 0 0.4rem;
+    }
+    .cost-assumptions__body {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-width: 74rem;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .cost-table { font-size: 0.95rem; }
+      .cost-table th,
+      .cost-table td { padding: 0.6rem 0.5rem; }
+      .cost-assumptions__body { font-size: 1rem; }
     }
 
     /* ── Product · Today platform (from website) ── */
@@ -1933,41 +2024,41 @@
   <section class="slide slide--mint" data-slide="5">
     <div class="slide-inner">
       <p class="eyebrow">Market · Tomorrow</p>
-      <h2>The shift from renting intelligence to <span class="accent">owning</span> it.</h2>
-      <table class="tco-compare tco-compare--xl">
+      <h2>3-Year Total Cost <span class="accent">Comparison</span></h2>
+      <table class="cost-table">
         <thead>
           <tr>
-            <th>Option · 100 users</th>
-            <th class="tco-compare__num">Initial</th>
-            <th class="tco-compare__num">Ongoing</th>
-            <th class="tco-compare__num">3-year</th>
-            <th class="tco-compare__num">5-year</th>
+            <th>Users</th>
+            <th class="cost-table__num">Claude + Claude API (3 Years)</th>
+            <th class="cost-table__num">Sovereign Warden Turnkey (3 Years)</th>
+            <th class="cost-table__num">Customer Saving</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Claude / Copilot</td>
-            <td class="tco-compare__num">A$0</td>
-            <td class="tco-compare__num">A$90,200/yr</td>
-            <td class="tco-compare__num"><strong>A$270,000</strong></td>
-            <td class="tco-compare__num"><strong>A$451,000</strong></td>
+            <td>20</td>
+            <td class="cost-table__num">A$84,000</td>
+            <td class="cost-table__num cost-table__own">A$65,000</td>
+            <td class="cost-table__num cost-table__save">A$19,000 (23%)</td>
           </tr>
-          <tr class="tco-compare__highlight">
-            <td>Sovereign Warden<span class="tco-compare__sub">Upfront</span></td>
-            <td class="tco-compare__num">A$61,000</td>
-            <td class="tco-compare__num">A$3,000/yr</td>
-            <td class="tco-compare__num"><strong>A$70,000</strong></td>
-            <td class="tco-compare__num"><strong>A$76,000</strong></td>
+          <tr>
+            <td>50</td>
+            <td class="cost-table__num">A$210,000</td>
+            <td class="cost-table__num cost-table__own">A$110,000</td>
+            <td class="cost-table__num cost-table__save">A$100,000 (48%)</td>
           </tr>
-          <tr class="tco-compare__highlight">
-            <td>Sovereign Warden<span class="tco-compare__sub">Rent to Own</span></td>
-            <td class="tco-compare__num">A$0</td>
-            <td class="tco-compare__num">~A$30,333/yr</td>
-            <td class="tco-compare__num"><strong>A$91,000</strong></td>
-            <td class="tco-compare__num"><strong>A$98,800</strong></td>
+          <tr>
+            <td>100</td>
+            <td class="cost-table__num">A$420,000</td>
+            <td class="cost-table__num cost-table__own">A$180,000</td>
+            <td class="cost-table__num cost-table__save">A$240,000 (57%)</td>
           </tr>
         </tbody>
       </table>
+      <div class="cost-assumptions">
+        <p class="cost-assumptions__title">Assumptions</p>
+        <p class="cost-assumptions__body">Medium-to-heavy AI usage, enterprise-grade on-premises infrastructure, and a A$5,000/year software support &amp; SLA.</p>
+      </div>
     </div>
   </section>
   <!-- 6 · Product · Verticals -->
@@ -1976,29 +2067,50 @@
       <p class="eyebrow">Product · Verticals</p>
       <h2>The AI decisions are <span class="accent">already made</span> for your industry.</h2>
       <p class="lead">Prefabricated turnkey packs — integrations, agents, and workflows tuned per vertical. Not a bespoke build. Not a consulting journey.</p>
+      <div class="capabilities">
+        <span class="capabilities__item">Integrations</span>
+        <span class="capabilities__item">Agents</span>
+        <span class="capabilities__item">Workflows</span>
+      </div>
       <div class="verticals">
         <div class="verticals__col">
           <h3 class="verticals__name">Legal</h3>
           <ul class="verticals__stack">
-            <li>Integrations</li>
-            <li>Agents</li>
-            <li>Workflows</li>
+            <li>Legal Research</li>
+            <li>Contract Review &amp; Analysis</li>
+            <li>Document Drafting</li>
+            <li>Knowledge Management</li>
+            <li>Litigation Support &amp; eDiscovery</li>
           </ul>
         </div>
         <div class="verticals__col">
           <h3 class="verticals__name">Wealth</h3>
           <ul class="verticals__stack">
-            <li>Integrations</li>
-            <li>Agents</li>
-            <li>Workflows</li>
+            <li>Client Preparation</li>
+            <li>Advice Drafting</li>
+            <li>Knowledge Search</li>
+            <li>Compliance</li>
+            <li>Investment Research</li>
           </ul>
         </div>
         <div class="verticals__col">
           <h3 class="verticals__name">Accounting</h3>
           <ul class="verticals__stack">
-            <li>Integrations</li>
-            <li>Agents</li>
-            <li>Workflows</li>
+            <li>Bookkeeping</li>
+            <li>Financial Reporting</li>
+            <li>Tax Preparation</li>
+            <li>Knowledge Search</li>
+            <li>Compliance Monitoring</li>
+          </ul>
+        </div>
+        <div class="verticals__col">
+          <h3 class="verticals__name">Health</h3>
+          <ul class="verticals__stack">
+            <li>Clinical Documentation</li>
+            <li>Patient Summaries</li>
+            <li>Knowledge Search</li>
+            <li>Appointment Administration</li>
+            <li>Clinical Decision Support</li>
           </ul>
         </div>
       </div>
@@ -2132,7 +2244,7 @@
           <tr>
             <td>Multi-model routing</td>
             <td><span class="check-yes">✓</span> Opus, Sonnet, Haiku</td>
-            <td class="feature-compare__sw"><span class="check-yes">✓</span> LiteLLM gateway</td>
+            <td class="feature-compare__sw"><span class="check-yes">✓</span> Model gateway</td>
           </tr>
           <tr>
             <td>Agent workflows</td>
@@ -2152,7 +2264,7 @@
           <tr>
             <td>AI cost dashboard</td>
             <td><span class="check-no">—</span></td>
-            <td class="feature-compare__sw"><span class="check-partial">~</span> LiteLLM usage logs</td>
+            <td class="feature-compare__sw"><span class="check-partial">~</span> Usage logs</td>
           </tr>
           <tr>
             <td>Inline policy enforcement</td>
@@ -2186,53 +2298,46 @@
   <!-- 9 · Adneo pilot ask -->
   <section class="slide slide--dark" data-slide="9">
     <div class="slide-inner">
-      <p class="eyebrow">Adneo · Pilot ask</p>
-      <h2>Pilot Adneo to <span class="accent">sharpen the offer.</span></h2>
-      <p class="lead">I know the firm inside out — what AI needs to do here, and how to ship it. This is a live build you are delivered and own.</p>
+      <p class="eyebrow">Adneo · Pilot</p>
+      <h2>Adneo gets the first <span class="accent">working edge.</span></h2>
+      <p class="lead">A live Sovereign Warden build inside the firm — owned by Adneo, visible to shareholders, ready to use.</p>
       <div class="adneo-beats">
         <div class="adneo-beats__col">
-          <p class="adneo-beats__label">1 · What I need</p>
-          <p class="adneo-beats__body">The inference box, plus my time at my current full-time rate for the pilot.</p>
+          <p class="adneo-beats__label">1 · What Adneo runs</p>
+          <p class="adneo-beats__body">Private AI on Adneo’s own footprint — client work stays inside the perimeter from day one.</p>
         </div>
         <div class="adneo-beats__col">
-          <p class="adneo-beats__label">2 · What you get</p>
-          <p class="adneo-beats__body">A working Sovereign Warden implementation inside Adneo — with full shareholder visibility end to end.</p>
+          <p class="adneo-beats__label">2 · What Adneo owns</p>
+          <p class="adneo-beats__body">A production-ready implementation with full end-to-end visibility — not a vendor-hosted trial.</p>
         </div>
         <div class="adneo-beats__col">
-          <p class="adneo-beats__label">3 · What I ask next</p>
-          <p class="adneo-beats__body">Help open the doors that turn this pilot into the next conversations.</p>
+          <p class="adneo-beats__label">3 · What Adneo unlocks</p>
+          <p class="adneo-beats__body">Proof for the next conversations — the firm that can show sovereign AI working, not just tech demo.</p>
         </div>
       </div>
-      <p class="adneo-closer">Delivered in <span class="accent">90 days</span> — then we decide together. Build once in Adneo. Prove it. Then sell the package.</p>
+      <p class="adneo-closer">Live in <span class="accent">45 days</span>. Build once in Adneo. Prove it. Then package what already works.</p>
     </div>
   </section>
-  <!-- 10 · Close -->
-  <section class="slide slide--dark slide-title" data-slide="10">
+  <!-- 10 · Next steps -->
+  <section class="slide slide--dark" data-slide="10">
     <div class="slide-inner">
-      <p class="eyebrow">Close</p>
-      <h1>The window is open for productised <span class="accent">sovereign AI.</span></h1>
-      <p class="lead">Market proof exists (Cetus, Premya, Macquarie). The gap is speed, UX, and accessible pricing for firms too small for enterprise governance-first journeys.</p>
-      <div class="grid-3">
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/regulation.png" alt="">
-          <h3>Regulation</h3>
-          <p>Privacy Act scrutiny</p>
+      <p class="eyebrow">Next steps</p>
+      <h2>If this lands, <span class="accent">here’s the path.</span></h2>
+      <p class="lead">One meeting that combines a warm intro with a live product demo — then an angel bridge with partners who open the right doors.</p>
+      <div class="adneo-beats">
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">1 · Intro + demo</p>
+          <p class="adneo-beats__body">If interested — a warm intro to Nick (and other parties for the same concept talk), in the same meeting as a live product demonstration.</p>
         </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/economics.png" alt="">
-          <h3>Economics</h3>
-          <p>Copilot seat shock at scale</p>
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">2 · Angel bridge</p>
+          <p class="adneo-beats__body">Looking for strategic partners who open the rolodex — and help turn those conversations into the next ones.</p>
         </div>
-        <div class="card icon-card">
-          <img class="icon" src="assets/icons/proof.png" alt="">
-          <h3>Proof</h3>
-          <p>Sovereign AI vendors validate demand</p>
+        <div class="adneo-beats__col">
+          <p class="adneo-beats__label">3 · First refusal</p>
+          <p class="adneo-beats__body">Partners get first right of refusal on the angel round that scales what the pilot proves.</p>
         </div>
       </div>
-      <div class="bridge-cta">
-        <p><strong>Next:</strong> Open the Pitch Deck for unit economics, traction, and the angel bridge ask.</p>
-      </div>
-      <p style="margin-top:1.5rem;color: var(--accent-readable);font-size:1.1rem">Private AI for organisations that can't use Claude.</p>
     </div>
   </section>
 

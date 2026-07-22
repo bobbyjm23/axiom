@@ -50,12 +50,12 @@ cp -R ../pitch-deck/assets .
 2. **Where AI is today** — Confidentiality at risk: shadow AI, broken privacy agreements, policy pressure, cost vs ROI
 3. **Sovereignty** — Cloud leaves the building vs on-prem stays local (SVG compare)
 4. **Models converged / racks reachable** — Open-source vs frontier bar groups → inference-box before/after
-5. **Rent vs own** — 100-user cost table: Claude/Copilot vs Sovereign Warden (initial / ongoing / 3-year / 5-year)
-6. **Verticals** — Legal · Wealth · Accounting as prefabricated turnkey packs (volume model)
+5. **Rent vs own** — 3-year total cost comparison: Claude + Claude API vs Sovereign Warden Turnkey (20 / 50 / 100 users)
+6. **Verticals** — Legal · Wealth · Accounting · Health as prefabricated turnkey packs (volume model)
 7. **Platform & integrations** — OS availability + integration logo grid (aligned with website)
 8. **Feature comparison** — Claude vs Sovereign Warden
-9. **Adneo · Pilot ask** — Box + full-time rate; 90-day delivery; visibility; open doors to sharpen the offer
-10. **Why this matters now** — Window for productised sovereign AI (dark slide)
+9. **Adneo · Pilot** — Adneo gets the first working edge (runs / owns / unlocks); live in 45 days
+10. **Next steps** — Intro + demo in one meeting; angel bridge with partners; first right of refusal
 
 ## What stays out (by design)
 
